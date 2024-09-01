@@ -1,0 +1,14 @@
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\bin\Debug\net6.0\MantenimientoWeb.Dominio.deps.json
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\bin\Debug\net6.0\MantenimientoWeb.Dominio.runtimeconfig.json
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\bin\Debug\net6.0\MantenimientoWeb.Dominio.dll
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\bin\Debug\net6.0\MantenimientoWeb.Dominio.pdb
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.csproj.AssemblyReference.cache
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.AssemblyInfoInputs.cache
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.AssemblyInfo.cs
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.dll
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\refint\MantenimientoWeb.Dominio.dll
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.pdb
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\MantenimientoWeb.Dominio.genruntimeconfig.cache
+C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb.Dominio\obj\Debug\net6.0\ref\MantenimientoWeb.Dominio.dll

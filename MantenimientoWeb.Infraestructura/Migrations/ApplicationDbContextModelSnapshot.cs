@@ -61,6 +61,109 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.ClasificacionProductoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Clasificaciones");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Producto de Consumo"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "Producto Industriales"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nombre = "Producto de Servicio"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nombre = "Producto Duradero"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nombre = "Producto No Duraderos"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Nombre = "Producto de Lujo"
+                        });
+                });
+
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.EmpaquetamientoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Empaquetamientos");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Empaquetamiento Primario"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "Empaquetamiento Secundario"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nombre = "Empaquetamiento Terciario"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nombre = "Empaquetamiento Especializado"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nombre = "Empaquetamiento de Seguridad"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Nombre = "Empaquetamiento para Marketing"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Nombre = "Empaquetamiento Ecológico"
+                        });
+                });
+
             modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.EmpresaModel", b =>
                 {
                     b.Property<int>("Id")
@@ -126,6 +229,108 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Monedas");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            SimboloMoneda = "$"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            SimboloMoneda = "R$"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            SimboloMoneda = "C$"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            SimboloMoneda = "S/"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            SimboloMoneda = "Bs"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            SimboloMoneda = "€"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            SimboloMoneda = "£"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            SimboloMoneda = "₽"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            SimboloMoneda = "CHF"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            SimboloMoneda = "kr"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            SimboloMoneda = "¥"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            SimboloMoneda = "₹"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            SimboloMoneda = "₩"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            SimboloMoneda = "P"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            SimboloMoneda = "ر.س"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            SimboloMoneda = "₺"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            SimboloMoneda = "₪"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            SimboloMoneda = "Rp"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            SimboloMoneda = "฿"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            SimboloMoneda = "₵"
+                        });
                 });
 
             modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.PaisModel", b =>
@@ -818,6 +1023,90 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                         {
                             Id = 2,
                             Nombre = "Proveedor"
+                        });
+                });
+
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.TransporteModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Vehiculo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Transportes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Vehiculo = "Vehículo de Pasajero"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Vehiculo = "Vehículo de Carga"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Vehiculo = "Vehículo Especial (Construccion y Agrícola)"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Vehiculo = "Aviones Comerciales"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Vehiculo = "Helicópteros"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Vehiculo = "Aviones Privados y de Negocios"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Vehiculo = "Barcos de Carga"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Vehiculo = "Embarcaciones Especializadas"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Vehiculo = "Trenes de Carga"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Vehiculo = "Vehículos Blindados"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Vehiculo = "Vehículos de Transporte de Carga Peligrosa"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Vehiculo = "Vehículos Eléctricos"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Vehiculo = "Vehículos Híbridos"
                         });
                 });
 

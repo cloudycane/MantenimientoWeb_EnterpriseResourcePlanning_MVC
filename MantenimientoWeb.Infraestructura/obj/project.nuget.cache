@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VT9cG+abjIo=",
+  "dgSpecHash": "VKnT6z73HOQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj",
+  "projectFilePath": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gesel\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\gesel\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

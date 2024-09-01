@@ -18,7 +18,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         }
 
         // GET: ProductosController/Create
-        public ActionResult Create()
+        public ActionResult Crear()
         {
             return View();
         }
@@ -26,7 +26,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         // POST: ProductosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Crear(IFormCollection collection)
         {
             try
             {

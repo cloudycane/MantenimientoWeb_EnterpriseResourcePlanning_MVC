@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
 
 namespace MantenimientoWeb.Proyecto.ViewModels
 {
@@ -19,7 +20,9 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         [Display(Name = "Fecha de Creación del Producto")]
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaExpiracion { get; set; } // Lo dejaria como nullable porque algunos materiales no se saben su caducacion...
-        
+        public int MonedaId { get; set; } //FK 
+        public SelectList MonedaSelectList { get; set; } // MVC rendering
+
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         [Range(0, int.MaxValue, ErrorMessage = "El campo {0} no admite valores negativos")]
         public double PrecioOriginal { get; set; }
@@ -29,11 +32,9 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         public string LugarFabricacion { get; set; }
 
         public int CategoriaId { get; set; } // FK 
+        public SelectList CategoriaSelectList { get; set; } // MVC rendering
         public int ClasificacionId { get; set; } // FK 
-
-        [Required(ErrorMessage = "El campo {0} es requerido.")]
-        [Range(0, int.MaxValue, ErrorMessage = "El campo {0} no admite valores negativos")]
-        public double CostoPedido { get; set; }
+        public SelectList ClasificacionSelectList { get; set; } // MVC rendering
 
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         [Range(0, int.MaxValue, ErrorMessage = "El campo {0} no admite valores negativos")]
@@ -120,7 +121,9 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         [StringLength(1000, ErrorMessage = "El campo {0} tiene un máximo de caracteres de {1}")]
         public string InstruccionesDeManejo { get; set; }
         public int TransporteId { get; set; } // FK Transporte
+        public SelectList TransporteSelectList { get; set; }
         public int EmpaquetamientoId { get; set; } // FK Empaque
+        public SelectList EmpaquetamientoSelectList { get; set; }
         
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         [StringLength(1000, ErrorMessage = "El campo {0} tiene un máximo de caracteres de {1}")]
@@ -131,7 +134,7 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         private double CalcularEOQ()
         {
             if (CostoMantenimiento == 0) return 0; 
-            return Math.Sqrt((2 * DemandaAnual * CostoPedido) / CostoMantenimiento);
+            return Math.Sqrt((2 * DemandaAnual * PrecioOriginal) / CostoMantenimiento);
         }
 
         private int CalcularSugerenciaJIT()

@@ -1,4 +1,7 @@
-﻿input:hover, select:hover {
+﻿body{
+    background-color: azure;
+}
+input:hover, select:hover {
     border-width: 2px;
     border-color: deepskyblue;
 }
@@ -40,4 +43,11 @@ i{
 }
 #btnHiddenDivCategoria, #btnHiddenDivStockActual, #btnHiddenDPD, #btnHiddenRestock, #btnHiddenColchon{
     font-size: x-small;
+}
+form {
+    margin-top: 2%;
+
+}
+button{
+    margin-bottom: 2%;
 }

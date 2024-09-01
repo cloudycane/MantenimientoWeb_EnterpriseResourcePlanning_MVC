@@ -21,11 +21,75 @@ namespace MantenimientoWeb.Infraestructura.Data
         public DbSet<TipoEmpresaModel> TipoEmpresas { get; set; }
         public DbSet<CategoriaProductoModel> Categorias { get; set; }
         public DbSet<MonedaProductoModel> Monedas { get; set; }
-
+        public DbSet<ClasificacionProductoModel> Clasificaciones { get; set; }
+        public DbSet<TransporteModel> Transportes { get; set; }
+        public DbSet<EmpaquetamientoModel> Empaquetamientos { get; set; }
+        
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<EmpaquetamientoModel>().HasData(
+                new EmpaquetamientoModel { Id = 1, Nombre = "Empaquetamiento Primario" }, 
+                new EmpaquetamientoModel { Id = 2, Nombre = "Empaquetamiento Secundario" }, 
+                new EmpaquetamientoModel { Id = 3, Nombre = "Empaquetamiento Terciario" }, 
+                new EmpaquetamientoModel { Id = 4, Nombre = "Empaquetamiento Especializado" }, 
+                new EmpaquetamientoModel { Id = 5, Nombre = "Empaquetamiento de Seguridad" }, 
+                new EmpaquetamientoModel { Id = 6, Nombre = "Empaquetamiento para Marketing" },
+                new EmpaquetamientoModel { Id = 7, Nombre = "Empaquetamiento Ecológico" }
+                );
+
+            modelBuilder.Entity<TransporteModel>().HasData(
+                new TransporteModel { Id = 1, Vehiculo = "Vehículo de Pasajero"}, 
+                new TransporteModel { Id = 2, Vehiculo = "Vehículo de Carga"}, 
+                new TransporteModel { Id = 3, Vehiculo = "Vehículo Especial (Construccion y Agrícola)"}, 
+                new TransporteModel { Id = 4, Vehiculo = "Aviones Comerciales"}, 
+                new TransporteModel { Id = 5, Vehiculo = "Helicópteros"},
+                new TransporteModel { Id = 6, Vehiculo = "Aviones Privados y de Negocios"}, 
+                new TransporteModel { Id = 7, Vehiculo = "Barcos de Carga"},
+                new TransporteModel { Id = 8, Vehiculo = "Embarcaciones Especializadas"}, 
+                new TransporteModel { Id = 9, Vehiculo = "Trenes de Carga"}, 
+                new TransporteModel { Id = 10, Vehiculo = "Vehículos Blindados"}, 
+                new TransporteModel { Id = 11, Vehiculo = "Vehículos de Transporte de Carga Peligrosa"},
+                new TransporteModel { Id = 12, Vehiculo = "Vehículos Eléctricos"}, 
+                new TransporteModel { Id = 13, Vehiculo = "Vehículos Híbridos"}
+                );
+
+            modelBuilder.Entity<ClasificacionProductoModel>().HasData(
+                
+                new ClasificacionProductoModel { Id = 1, Nombre = "Producto de Consumo"}, 
+                new ClasificacionProductoModel { Id = 2, Nombre = "Producto Industriales"}, 
+                new ClasificacionProductoModel { Id = 3, Nombre = "Producto de Servicio"}, 
+                new ClasificacionProductoModel { Id = 4, Nombre = "Producto Duradero"}, 
+                new ClasificacionProductoModel { Id = 5, Nombre = "Producto No Duraderos"}, 
+                new ClasificacionProductoModel { Id = 6, Nombre = "Producto de Lujo"}
+                
+                ); 
+
+            modelBuilder.Entity<MonedaProductoModel>().HasData(
+
+                new MonedaProductoModel { Id = 1, SimboloMoneda = "$" }, 
+                new MonedaProductoModel { Id = 2, SimboloMoneda = "R$" }, 
+                new MonedaProductoModel { Id = 3, SimboloMoneda = "C$" },
+                new MonedaProductoModel { Id = 4, SimboloMoneda = "S/" }, 
+                new MonedaProductoModel { Id = 5, SimboloMoneda = "Bs" }, 
+                new MonedaProductoModel { Id = 6, SimboloMoneda = "€" }, 
+                new MonedaProductoModel { Id = 7, SimboloMoneda = "£" }, 
+                new MonedaProductoModel { Id = 8, SimboloMoneda = "₽" }, 
+                new MonedaProductoModel { Id = 9, SimboloMoneda = "CHF" }, 
+                new MonedaProductoModel { Id = 10, SimboloMoneda = "kr" }, 
+                new MonedaProductoModel { Id = 11, SimboloMoneda = "¥" }, 
+                new MonedaProductoModel { Id = 12, SimboloMoneda = "₹" }, 
+                new MonedaProductoModel { Id = 13, SimboloMoneda = "₩" }, 
+                new MonedaProductoModel { Id = 14, SimboloMoneda = "P"}, 
+                new MonedaProductoModel { Id = 15, SimboloMoneda = "ر.س" }, 
+                new MonedaProductoModel { Id = 16, SimboloMoneda = "₺" }, 
+                new MonedaProductoModel { Id = 17, SimboloMoneda = "₪" }, 
+                new MonedaProductoModel { Id = 18, SimboloMoneda = "Rp" }, 
+                new MonedaProductoModel { Id = 19, SimboloMoneda = "฿" }, 
+                new MonedaProductoModel { Id = 20, SimboloMoneda = "₵" }
+
+                );
 
             modelBuilder.Entity<PaisModel>().HasData(
                 // Podria hacerlo usando 'for' method, crear un diccionario o lista y indexar

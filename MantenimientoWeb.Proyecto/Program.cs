@@ -11,16 +11,19 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
+// USECASES
 builder.Services.AddScoped<GetPaisesQuery>();
 builder.Services.AddScoped<GetCategoriasQuery>();
 builder.Services.AddScoped<GetTipoEmpresaQuery>();
+builder.Services.AddScoped<GetMonedasQuery>();
+// REPOSITORIO y SERVICIOS 
+builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
 builder.Services.AddScoped<IPaisRepository, PaisRepository>();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<ITipoEmpresaRepository, TipoEmpresaRepository>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
-
+builder.Services.AddScoped<IMonedaRepository, MonedaRepository>();
 
 var app = builder.Build();
 

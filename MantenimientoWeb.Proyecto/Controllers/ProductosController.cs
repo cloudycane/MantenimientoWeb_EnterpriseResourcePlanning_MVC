@@ -1,13 +1,35 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using MantenimientoWeb.Aplicacion.Servicios.UseCases;
+using MantenimientoWeb.Dominio.Interfaces;
+using MantenimientoWeb.Proyecto.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MantenimientoWeb.Proyecto.Controllers
 {
     public class ProductosController : Controller
     {
-        // GET: ProductosController
-        public ActionResult Index()
+        private readonly GetMonedasQuery _getMonedasQuery;
+        private readonly GetCategoriasQuery _getCategoriasQuery;
+        private readonly IProductoService _productoService;
+
+        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService)
         {
+            _getCategoriasQuery = getCategoriasQuery;
+            _getMonedasQuery = getMonedasQuery;
+            _productoService = productoService;
+        }
+
+
+        // GET: ProductosController
+        public async Task<IActionResult> Index()
+        {
+            var monedas = await _productoService.GetMonedasAsync();
+
+            var viewModel = new ListadoProductoModel
+            {
+                //Productos = productos
+            };
+
             return View();
         }
 
@@ -18,9 +40,19 @@ namespace MantenimientoWeb.Proyecto.Controllers
         }
 
         // GET: ProductosController/Create
-        public ActionResult Crear()
+        public async Task<IActionResult> Crear()
         {
-            return View();
+            var monedas = await _getMonedasQuery.ExecuteAsync();
+            var categorias = await _getCategoriasQuery.ExecuteAsync();
+            var viewModel = new ProductoViewModel
+            {
+                //SELECT LIST ITEM DE MONEDA
+                MonedaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(monedas, "Id", "SimboloMoneda"),
+                //SELECT LIST ITEM DE CATEGORIA 
+                CategoriaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(categorias, "Id", "Nombre")
+            };
+
+            return View(viewModel);
         }
 
         // POST: ProductosController/Create

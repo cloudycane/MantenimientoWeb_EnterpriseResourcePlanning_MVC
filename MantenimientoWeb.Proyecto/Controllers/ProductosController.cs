@@ -8,15 +8,21 @@ namespace MantenimientoWeb.Proyecto.Controllers
 {
     public class ProductosController : Controller
     {
+        private readonly GetEmpaquetamientoQuery _getEmpaquetamientoQuery;
+        private readonly GetClasificacionesQuery _getClasificacionesQuery;
         private readonly GetMonedasQuery _getMonedasQuery;
         private readonly GetCategoriasQuery _getCategoriasQuery;
+        private readonly GetTransportesQuery _getTransportesQuery; 
         private readonly IProductoService _productoService;
 
-        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService)
+        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService, GetClasificacionesQuery getClasificacionesQuery, GetTransportesQuery getTransportesQuery, GetEmpaquetamientoQuery getEmpaquetamientoQuery)
         {
             _getCategoriasQuery = getCategoriasQuery;
             _getMonedasQuery = getMonedasQuery;
             _productoService = productoService;
+            _getClasificacionesQuery = getClasificacionesQuery;
+            _getTransportesQuery = getTransportesQuery;
+            _getEmpaquetamientoQuery = getEmpaquetamientoQuery;
         }
 
 
@@ -44,12 +50,22 @@ namespace MantenimientoWeb.Proyecto.Controllers
         {
             var monedas = await _getMonedasQuery.ExecuteAsync();
             var categorias = await _getCategoriasQuery.ExecuteAsync();
+            var clasificaciones = await _getClasificacionesQuery.ExecuteAsync();
+            var transportes = await _getTransportesQuery.ExecuteAsync();
+            var empaquetamientos = await _getEmpaquetamientoQuery.ExecuteAsync();
+            
             var viewModel = new ProductoViewModel
             {
                 //SELECT LIST ITEM DE MONEDA
                 MonedaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(monedas, "Id", "SimboloMoneda"),
                 //SELECT LIST ITEM DE CATEGORIA 
-                CategoriaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(categorias, "Id", "Nombre")
+                CategoriaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(categorias, "Id", "Nombre"),
+                //SELECT LIST ITEM DE CLASIFICACIONES
+                ClasificacionSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(clasificaciones, "Id", "Nombre"),
+                //SELECT LIST ITEM DE TRANSPORTES 
+                TransporteSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(transportes, "Id", "Vehiculo"),
+                //SELECT LIST ITEM DE EMPAQUETAMIENTOS
+                EmpaquetamientoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(empaquetamientos, "Id", "Nombre")
             };
 
             return View(viewModel);

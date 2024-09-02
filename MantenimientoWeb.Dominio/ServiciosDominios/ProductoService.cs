@@ -14,10 +14,19 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         private readonly IMonedaRepository _monedaRepository;
         // Categoria Repository
         private readonly ICategoriaRepository _categoriaRepository;
-        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository)
+        // Clasificaciones Repository 
+        private readonly IClasificacionRepository _clasificacionRepository;
+        // Transporte Repository 
+        private readonly ITransporteRepository _transporteRepository; 
+        // Empaquetamiento Repository 
+        private readonly IEmpaquetamientoRepository _empaquetamientoRepository;
+        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository, IClasificacionRepository clasificacionRepository, ITransporteRepository transporteRepository, IEmpaquetamientoRepository empaquetamientoRepository)
         {
             _monedaRepository = monedaRepository;
             _categoriaRepository = categoriaRepository;
+            _clasificacionRepository = clasificacionRepository;
+            _transporteRepository = transporteRepository;
+            _empaquetamientoRepository = empaquetamientoRepository;
         }
 
         public async Task<IEnumerable<MonedaProductoModel>> GetMonedasAsync()
@@ -29,5 +38,19 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             return await _categoriaRepository.ObtenerListadoCategoriaAsync();
         }
      
+        public async Task<IEnumerable<ClasificacionProductoModel>> GetClasificacionAsync()
+        {
+            return await _clasificacionRepository.ObtenerListadoClasificacionAsync();
+        }
+
+        public async Task<IEnumerable<TransporteModel>> GetTransporteAsync()
+        {
+            return await _transporteRepository.ObtenerListadoTransporteAsync();
+        }
+
+        public async Task<IEnumerable<EmpaquetamientoModel>> GetEmpaquetamientosAsync()
+        {
+            return await _empaquetamientoRepository.ObtenerListadoEmpaquetamientoAsync();
+        }
     }
 }

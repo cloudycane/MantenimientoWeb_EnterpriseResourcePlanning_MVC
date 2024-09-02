@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace MantenimientoWeb.Dominio.Interfaces
 {
-    public interface IProductoService
+    public interface IEmpaquetamientoRepository
     {
-        Task<IEnumerable<MonedaProductoModel>> GetMonedasAsync();
-        Task<IEnumerable<TransporteModel>> GetTransporteAsync();
+        Task<IEnumerable<EmpaquetamientoModel>> ObtenerListadoEmpaquetamientoAsync();
     }
 }

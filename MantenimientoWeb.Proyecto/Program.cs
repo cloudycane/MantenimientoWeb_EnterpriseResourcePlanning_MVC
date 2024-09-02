@@ -12,13 +12,21 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // USECASES
+builder.Services.AddScoped<GetEmpaquetamientoQuery>();
+builder.Services.AddScoped<GetTransportesQuery>();
+builder.Services.AddScoped<GetClasificacionesQuery>();
 builder.Services.AddScoped<GetPaisesQuery>();
 builder.Services.AddScoped<GetCategoriasQuery>();
 builder.Services.AddScoped<GetTipoEmpresaQuery>();
 builder.Services.AddScoped<GetMonedasQuery>();
-// REPOSITORIO y SERVICIOS 
+// SERVICIOS 
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
+
+// REPOSITORIOS
+builder.Services.AddScoped<IEmpaquetamientoRepository, EmpaquetamientoRepository>();
+builder.Services.AddScoped<ITransporteRepository, TransporteRepository>();
+builder.Services.AddScoped<IClasificacionRepository, ClasificacionRepository>();
 builder.Services.AddScoped<IPaisRepository, PaisRepository>();
 builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<ITipoEmpresaRepository, TipoEmpresaRepository>();

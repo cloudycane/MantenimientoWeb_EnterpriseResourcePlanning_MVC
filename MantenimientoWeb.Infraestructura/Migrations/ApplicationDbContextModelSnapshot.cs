@@ -31,14 +31,16 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Descripcion")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
 
                     b.HasData(
                         new
@@ -75,7 +77,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clasificaciones");
+                    b.ToTable("Clasificaciones", (string)null);
 
                     b.HasData(
                         new
@@ -124,7 +126,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Empaquetamientos");
+                    b.ToTable("Empaquetamientos", (string)null);
 
                     b.HasData(
                         new
@@ -200,7 +202,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasIndex("TipoEmpresaId");
 
-                    b.ToTable("Empresas");
+                    b.ToTable("Empresas", (string)null);
 
                     b.HasData(
                         new
@@ -224,11 +226,12 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("SimboloMoneda")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Monedas");
+                    b.ToTable("Monedas", (string)null);
 
                     b.HasData(
                         new
@@ -347,7 +350,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Paises");
+                    b.ToTable("Paises", (string)null);
 
                     b.HasData(
                         new
@@ -997,6 +1000,118 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.ProductoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ClasificacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ConsunmoDiarioPromedio")
+                        .HasColumnType("int");
+
+                    b.Property<double>("CostoMantenimiento")
+                        .HasColumnType("float");
+
+                    b.Property<int>("DemandaAnual")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EmpaquetamientoId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("EsFragil")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("EsPerecedero")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("FechaCreacion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaExpiracion")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("InstruccionesDeManejo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LeadTime")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LugarFabricacion")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MonedaId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NivelActual")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NotasAdicionales")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PlazoEntrega")
+                        .HasColumnType("int");
+
+                    b.Property<double>("PrecioOriginal")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("ProductoPeligrosa")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("RequiereRefrigacion")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("StockActual")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockMinimo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StockSeguridad")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TemperaturaAlmacenimiento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TransporteId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("VidaUtil")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.HasIndex("ClasificacionId");
+
+                    b.HasIndex("EmpaquetamientoId");
+
+                    b.HasIndex("MonedaId");
+
+                    b.HasIndex("TransporteId");
+
+                    b.ToTable("Productos", (string)null);
+                });
+
             modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.TipoEmpresaModel", b =>
                 {
                     b.Property<int>("Id")
@@ -1011,7 +1126,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoEmpresas");
+                    b.ToTable("TipoEmpresas", (string)null);
 
                     b.HasData(
                         new
@@ -1040,7 +1155,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Transportes");
+                    b.ToTable("Transportes", (string)null);
 
                     b.HasData(
                         new
@@ -1125,6 +1240,49 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                     b.Navigation("Pais");
 
                     b.Navigation("TipoEmpresa");
+                });
+
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.ProductoModel", b =>
+                {
+                    b.HasOne("MantenimientoWeb.Dominio.Entidades.CategoriaProductoModel", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MantenimientoWeb.Dominio.Entidades.ClasificacionProductoModel", "Clasificacion")
+                        .WithMany()
+                        .HasForeignKey("ClasificacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MantenimientoWeb.Dominio.Entidades.EmpaquetamientoModel", "Empaquetamiento")
+                        .WithMany()
+                        .HasForeignKey("EmpaquetamientoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MantenimientoWeb.Dominio.Entidades.MonedaProductoModel", "Moneda")
+                        .WithMany()
+                        .HasForeignKey("MonedaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MantenimientoWeb.Dominio.Entidades.TransporteModel", "Transporte")
+                        .WithMany()
+                        .HasForeignKey("TransporteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Categoria");
+
+                    b.Navigation("Clasificacion");
+
+                    b.Navigation("Empaquetamiento");
+
+                    b.Navigation("Moneda");
+
+                    b.Navigation("Transporte");
                 });
 #pragma warning restore 612, 618
         }

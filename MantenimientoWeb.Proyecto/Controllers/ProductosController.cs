@@ -1,8 +1,10 @@
 ﻿using MantenimientoWeb.Aplicacion.Servicios.UseCases;
+using MantenimientoWeb.Dominio.Entidades;
 using MantenimientoWeb.Dominio.Interfaces;
 using MantenimientoWeb.Proyecto.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MantenimientoWeb.Proyecto.Controllers
 {
@@ -29,14 +31,14 @@ namespace MantenimientoWeb.Proyecto.Controllers
         // GET: ProductosController
         public async Task<IActionResult> Index()
         {
-            var monedas = await _productoService.GetMonedasAsync();
+            var producto = await _productoService.ObtenerProductosAsync();
 
             var viewModel = new ListadoProductoModel
             {
-                //Productos = productos
+                Productos = producto
             };
 
-            return View();
+            return View(viewModel);
         }
 
         // GET: ProductosController/Details/5
@@ -74,17 +76,70 @@ namespace MantenimientoWeb.Proyecto.Controllers
         // POST: ProductosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Crear(IFormCollection collection)
+        public async Task<IActionResult> Crear(ProductoViewModel viewModel)
         {
-            try
+           if(ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                var producto = new ProductoModel
+                {
+                    Nombre = viewModel.Nombre,
+                    Description = viewModel.Descripcion,
+                    FechaCreacion = viewModel.FechaCreacion,
+                    FechaExpiracion = viewModel.FechaExpiracion,
+                    MonedaId = viewModel.MonedaId,
+                    PrecioOriginal = viewModel.PrecioOriginal,
+                    LugarFabricacion = viewModel.LugarFabricacion,
+                    CategoriaId = viewModel.CategoriaId,
+                    ClasificacionId = viewModel.ClasificacionId,
+                    CostoMantenimiento = viewModel.CostoMantenimiento,
+                    NivelActual = viewModel.NivelActual,
+                    PlazoEntrega = viewModel.PlazoEntrega,
+                    DemandaAnual = viewModel.DemandaAnual,
+                    StockActual = viewModel.StockActual,
+                    ConsunmoDiarioPromedio = viewModel.ConsumoDiarioPromedio, 
+                    LeadTime = viewModel.LeadTime,
+                    StockSeguridad = viewModel.StockSeguridad,
+                    StockMinimo = viewModel.StockMinimo,
+                    EsPerecedero = viewModel.EsPerecedero,
+                    EsFragil = viewModel.EsFragil,
+                    RequiereRefrigacion = viewModel.RequiereRefrigacion,
+                    ProductoPeligrosa = viewModel.ProductoPeligrosa,
+                    VidaUtil = viewModel.VidaUtil,
+                    TemperaturaAlmacenimiento = viewModel.TemperaturaAlmacenimiento,
+                    InstruccionesDeManejo = viewModel.InstruccionesDeManejo,
+                    TransporteId = viewModel.TransporteId,
+                    EmpaquetamientoId = viewModel.EmpaquetamientoId,
+                    NotasAdicionales = viewModel.NotasAdicionales,
+                };
+                await _productoService.CreateProductoAsync(producto);
+                return RedirectToAction("Index");   
             }
-            catch
-            {
-                return View();
-            }
+            var categorias = await _productoService.GetCategoriasAsync();
+            var monedas = await _productoService.GetMonedasAsync();
+            var clasificacion = await _productoService.GetClasificacionAsync();
+            var transporte = await _productoService.GetTransporteAsync();
+            var empaquetamiento = await _productoService.GetEmpaquetamientosAsync();
+
+            await CargarSelectListsAsync(viewModel);
+            return View(viewModel);
+        
         }
+
+        private async Task CargarSelectListsAsync(ProductoViewModel viewModel)
+        {
+            var monedas = await _productoService.GetMonedasAsync();
+            var categorias = await _productoService.GetCategoriasAsync();
+            var clasificaciones = await _productoService.GetClasificacionAsync();
+            var transportes = await _productoService.GetTransporteAsync();
+            var empaquetamientos = await _productoService.GetEmpaquetamientosAsync();
+
+            viewModel.MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda");
+            viewModel.CategoriaSelectList = new SelectList(categorias, "Id", "Nombre");
+            viewModel.ClasificacionSelectList = new SelectList(clasificaciones, "Id", "Nombre");
+            viewModel.TransporteSelectList = new SelectList(transportes, "Id", "Vehiculo");
+            viewModel.EmpaquetamientoSelectList = new SelectList(empaquetamientos, "Id", "Nombre");
+        }
+
 
         // GET: ProductosController/Edit/5
         public ActionResult Edit(int id)

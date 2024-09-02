@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,15 @@ namespace MantenimientoWeb.Dominio.Entidades
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaExpiracion { get; set; }
         public int MonedaId { get; set; }
+        
         public MonedaProductoModel Moneda {  get; set; }
         public double PrecioOriginal { get; set; }
         public string LugarFabricacion { get; set; }
         public int CategoriaId { get; set; }
+        
         public CategoriaProductoModel Categoria { get; set; }
         public int ClasificacionId {  get; set; }
+        
         public ClasificacionProductoModel Clasificacion {  get; set; } 
         public double CostoMantenimiento { get; set; }
         public int NivelActual { get; set; }
@@ -38,9 +42,12 @@ namespace MantenimientoWeb.Dominio.Entidades
         public int TemperaturaAlmacenimiento { get; set; }
         public string InstruccionesDeManejo { get; set; }
         public int TransporteId { get; set; }
+        
         public TransporteModel Transporte { get; set; }
         public int EmpaquetamientoId { get; set; }
         // public EmpaquetamientoModel Empaquetamiento 
+      
+        public EmpaquetamientoModel Empaquetamiento { get; set; }
         public string NotasAdicionales {  get; set; }
 
     }

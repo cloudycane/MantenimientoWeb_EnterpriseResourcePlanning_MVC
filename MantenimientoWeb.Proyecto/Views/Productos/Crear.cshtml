@@ -38,13 +38,13 @@
                 <span asp-validation-for="FechaCreacion" class="text-danger"></span>
             </div>
             <div class="col-lg-3">
-                <label asp-for="FechaExpiracion"><i class="bi bi-arrow-right-short"></i>Fecha de Expiración</label>
+                <label asp-for="FechaExpiracion"><i class="bi bi-arrow-right-short"></i>Fecha de Expiración (opcional)</label>
                 <input asp-for="FechaExpiracion" type="date" class="form-control" />
                 <span asp-validation-for="FechaExpiracion" class="text-danger"></span>
             </div>
             <div class="col-lg-1">
                 <label asp-for="MonedaId">Moneda</label>
-                <select class="form-control" asp-items="Model.MonedaSelectList"><option>-?-</option></select>
+                <select asp-for="MonedaId" class="form-control" asp-items="Model.MonedaSelectList"><option>-?-</option></select>
                 <span asp-validation-for="MonedaId" class="text-danger"></span>
             </div>
             <div class="col-lg-2">
@@ -60,13 +60,13 @@
 
             <div class="col-lg-2">
                 <label asp-for="CategoriaId"><i class="bi bi-arrow-right-short"></i>Categoría</label>
-                <select class="form-control" asp-items="Model.CategoriaSelectList"><option>--Select--</option></select>
+                <select asp-for="CategoriaId" class="form-control" asp-items="Model.CategoriaSelectList"><option>--Select--</option></select>
             
             </div>
 
             <div class="col-lg-2">
                 <label asp-for="ClasificacionId"><i class="bi bi-arrow-right-short"></i>Clasificación</label>
-                <select class="form-control" asp-items="Model.ClasificacionSelectList"><option>--Select--</option></select>
+                <select asp-for="ClasificacionId" class="form-control" asp-items="Model.ClasificacionSelectList"><option>--Select--</option></select>
                 <span asp-validation-for="ClasificacionId" class="text-danger"></span>
             </div>
             <div class="col-lg-3">
@@ -75,7 +75,7 @@
                 <span asp-validation-for="CostoMantenimiento" class="text-danger"></span>
             </div>
             <div class="col-lg-2">
-                <label asp-for="NivelActual"><i class="bi bi-arrow-right-short"></i>Precio Mantenimiento</label>
+                <label asp-for="NivelActual"><i class="bi bi-arrow-right-short"></i>Nivel Actual</label>
                 <input asp-for="NivelActual" class="form-control" />
                 <span asp-validation-for="NivelActual" class="text-danger"></span>
             </div>
@@ -152,11 +152,11 @@
                 </div>
                 <div class="col-lg-4">
                     <label asp-for="TransporteId"><i class="bi bi-arrow-right-short"></i>Tipo de Transporte</label>
-                    <select class="form-control" asp-items="Model.TransporteSelectList"><option>--Seleccionar un vehículo</option></select>
+                    <select asp-for="TransporteId" class="form-control" asp-items="Model.TransporteSelectList"><option>--Seleccionar un vehículo</option></select>
                 </div>
                 <div class="col-lg-4">
                     <label asp-for="EmpaquetamientoId"><i class="bi bi-arrow-right-short"></i>Tipo de Empaquetamiento</label>
-                    <select class="form-control" asp-items="Model.EmpaquetamientoSelectList"><option>--Seleccionar una clase</option></select>
+                    <select asp-for="EmpaquetamientoId" class="form-control" asp-items="Model.EmpaquetamientoSelectList"><option>--Seleccionar una clase</option></select>
                 </div>
                 <div class="col-lg-4">
                     <label asp-for="NotasAdicionales"><i class="bi bi-arrow-right-short"></i>Notas Adicionales</label>

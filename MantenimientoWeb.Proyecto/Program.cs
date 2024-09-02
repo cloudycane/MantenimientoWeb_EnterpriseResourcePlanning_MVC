@@ -32,7 +32,7 @@ builder.Services.AddScoped<IEmpresaRepository, EmpresaRepository>();
 builder.Services.AddScoped<ITipoEmpresaRepository, TipoEmpresaRepository>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<IMonedaRepository, MonedaRepository>();
-
+builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -20,13 +20,26 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         private readonly ITransporteRepository _transporteRepository; 
         // Empaquetamiento Repository 
         private readonly IEmpaquetamientoRepository _empaquetamientoRepository;
-        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository, IClasificacionRepository clasificacionRepository, ITransporteRepository transporteRepository, IEmpaquetamientoRepository empaquetamientoRepository)
+        // Producto Repository 
+        private readonly IProductoRepository _productoRepository;
+        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository, IClasificacionRepository clasificacionRepository, ITransporteRepository transporteRepository, IEmpaquetamientoRepository empaquetamientoRepository, IProductoRepository productoRepository)
         {
             _monedaRepository = monedaRepository;
             _categoriaRepository = categoriaRepository;
             _clasificacionRepository = clasificacionRepository;
             _transporteRepository = transporteRepository;
             _empaquetamientoRepository = empaquetamientoRepository;
+            _productoRepository = productoRepository;
+        }
+        public async Task CreateProductoAsync(ProductoModel producto)
+        {
+            await _productoRepository.CreateAsync(producto);
+        }
+
+
+        public async Task<IEnumerable<ProductoModel>> ObtenerProductosAsync()
+        {
+            return await _productoRepository.ObtenerListadoProductosAsync();
         }
 
         public async Task<IEnumerable<MonedaProductoModel>> GetMonedasAsync()

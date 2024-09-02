@@ -24,11 +24,14 @@ namespace MantenimientoWeb.Infraestructura.Data
         public DbSet<ClasificacionProductoModel> Clasificaciones { get; set; }
         public DbSet<TransporteModel> Transportes { get; set; }
         public DbSet<EmpaquetamientoModel> Empaquetamientos { get; set; }
+        public DbSet<ProductoModel> Productos { get; set; }
         
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
             modelBuilder.Entity<EmpaquetamientoModel>().HasData(
                 new EmpaquetamientoModel { Id = 1, Nombre = "Empaquetamiento Primario" }, 
                 new EmpaquetamientoModel { Id = 2, Nombre = "Empaquetamiento Secundario" }, 

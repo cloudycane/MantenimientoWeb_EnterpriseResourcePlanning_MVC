@@ -9,7 +9,7 @@ namespace MantenimientoWeb.Dominio.Entidades
     public class CategoriaProductoModel
     {
         public int Id { get; set; }
-        public string? Nombre { get; set; }
-        public string? Descripcion { get; set; }
+        public string Nombre { get; set; }
+        public string Descripcion { get; set; }
     }
 }

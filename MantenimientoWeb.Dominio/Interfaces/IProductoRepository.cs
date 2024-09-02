@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MantenimientoWeb.Dominio.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
 {
     public interface IProductoRepository
     {
+        Task CreateAsync(ProductoModel producto);
+        Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync();
     }
 }

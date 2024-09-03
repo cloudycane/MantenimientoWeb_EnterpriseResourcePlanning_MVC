@@ -14,6 +14,7 @@ html {
 }
 
 body {
+  
   margin-bottom: 60px;
 }
 
@@ -23,4 +24,67 @@ h1{
 h4{
     text-align: justify;
     font-weight: lighter;
+}
+#dashboardNav{
+    margin-top: 60px;
+    display: block;
+    float: left;
+    margin: 2%;
+    
+}
+li{
+    margin-bottom: 3%;
+}
+
+#empresaBtn, #productoBtn, #buscarBtn{
+    background-color: #7fc8f8;
+    color: white;
+}
+#empresaBtn:hover, #productoBtn:hover, #buscarBtn:hover{
+    background-color: #5aa9e6;
+    color: white;
+}
+#sidebar {
+    background-color: #f8f9fa; 
+    height: 100vh; 
+    padding-top: 20px;
+    border-right: 1px solid #ddd; 
+}
+
+#sidebar ul.nav-pills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    padding-left: 0; /* Remove default padding */
+}
+
+    #sidebar ul.nav-pills li a {
+        width: 100%; /* Make links take full width */
+        text-align: left; /* Align text to the left */
+        padding: 10px 15px; /* Padding for links */
+    }
+
+
+@media (max-width: 767px) {
+    #sidebar {
+        position: absolute;
+        z-index: 1000;
+        left: -250px; 
+        width: 250px; 
+        transition: all 0.3s ease-in-out;
+    }
+
+        #sidebar.active {
+            left: 0; /* Show the sidebar */
+        }
+
+    .content-area {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Adjust content area for larger screens */
+.content-area {
+    padding-left: 30px;
 }

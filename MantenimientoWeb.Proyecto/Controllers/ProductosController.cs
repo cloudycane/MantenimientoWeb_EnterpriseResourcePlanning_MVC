@@ -112,6 +112,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     NotasAdicionales = viewModel.NotasAdicionales,
                 };
                 await _productoService.CreateProductoAsync(producto);
+                TempData["success"] = "El producto ha sido creado con éxito";
                 return RedirectToAction("Index");   
             }
             var categorias = await _productoService.GetCategoriasAsync();

@@ -66,7 +66,9 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     TipoEmpresaId = viewModel.TipoEmpresaId,
                 };
 
+                TempData["success"] = "La empresa ha sido creada con éxito";
                 _empresaService.CreateEmpresa(empresa);
+                
 
                 return RedirectToAction("Index");
             }

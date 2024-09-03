@@ -1,16 +1,7 @@
-﻿body {
-    background-color: azure;
-}
-#formBackground{
-    background-color: azure;
-}
+﻿
 input:hover, select:hover {
     border-width: 2px;
     border-color: deepskyblue;
-}
-#registrarBoton{
-    float: right;
-    margin-top: 2%;
 }
 
 #crearBoton{

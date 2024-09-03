@@ -19,6 +19,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             _getTipoEmpresaQuery = getTipoEmpresaQuery;
         }
 
+        
         public async Task<IActionResult> Index()
         {
             var empresas = await _empresaService.ObtenerEmpresasAsync();       

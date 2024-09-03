@@ -18,13 +18,17 @@
         <div class="row">
             
             <div id="sidebar" class="col-lg-2 col-md-3 col-sm-3 sidebar-offcanvas">
-                <ul class="nav nav-pills nav-stacked">
-                    <li><a id="empresaBtn" class="btn" asp-action="Index" asp-controller="RegistroEmpresa"><h3>Empresa <i class="bi bi-building"></i></h3></a></li>
-                    <li><a id="productoBtn" class="btn" asp-action="Index" asp-controller="Productos"><h3>Producto <i class="bi bi-box-seam"></i></h3></a></li>
-                    <li><a id="buscarBtn" class="btn"><h3> Buscar <i class="bi bi-zoom-in"></i></h3></a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
+                <center>
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a id="inicioBtn" class="btn" asp-action="Index" asp-controller=""><h3>Inicio <i class="bi bi-house-door"></i></h3></a></li>
+                        <li><a id="empresaBtn" class="btn" asp-action="UILandingVenta" asp-controller="LandingPages"><h3>Venta <i class="bi bi-archive"></i></h3></a></li>
+                        <li><a id="productoBtn" class="btn" asp-action="UILandingCompra" asp-controller="LandingPages"><h3>Compra <i class="bi bi-box-seam"></i></h3></a></li>
+                        <li><a id="buscarBtn" class="btn" asp-action="UILandingBuscar" asp-controller="LandingPages"><h3> Buscar <i class="bi bi-zoom-in"></i></h3></a></li>
+                        <li><a id="calculosBtn" class="btn" asp-action="UILandingProduccion" asp-controller="LandingPages"><h3>Producción<i class="bi bi-calculator"></i></h3></a></li>
+                        <li><a id="pronBtn" class="btn" asp-action="UILandingAlmacen" asp-controller="LandingPages"><h3>Almacén<i class="bi bi-bar-chart-line"></i></h3></a></li>
+                    </ul>
+                </center>
+                
             </div>
 
             <div class="col-lg-10 col-md-9 col-sm-9 content-area">

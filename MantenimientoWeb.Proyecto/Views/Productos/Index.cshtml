@@ -1,1 +1,47 @@
-﻿
+﻿@model ListadoProductoModel
+
+@{
+    ViewData["Title"] = "Listado de Productos";
+}
+
+
+<link rel="stylesheet" href="~/css/indexProducto.css" />
+
+<div class="container" id="productoIndex">
+
+    
+    <div class="dropdown" style="margin-bottom: 2%;">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Ver Opciones
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">Ver Fabricantes</a></li>
+            <li><a class="dropdown-item" href="#">Ver Métodos Transportes</a></li>
+            <li><a class="dropdown-item" href="#">Categorías</a></li>
+            <li><a class="dropdown-item" href="#">Clasificaciones</a></li>
+            <li><a class="dropdown-item" href="#">Tipos de Empaquetamientos</a></li>
+            <li><a class="dropdown-item" href="#">Especificaciones Productos</a></li>
+        </ul>
+    </div>
+    <a style="margin-bottom: 2%; float: right;" asp-action="Crear" class="btn btn-primary">Crear Nuevo Producto <i class="bi bi-plus-square"></i></a>
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre del Producto</th>
+                <th>Fecha Fabricación y Fabricación </th>
+                <th>Lugar de Fabricación</th>
+                <th>Empaquetamiento y Transporte</th>
+                <th>Categoría y Clasificación</th>
+                <th>Precio Original</th>
+                <th>Coste de Mantenimiento</th>
+                <th>Stock Actual</th>
+                <th>Stock Mínimo</th>
+                <th>Especificaciones</th>
+                <th>Notas Adicionales</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    </table>
+
+</div>

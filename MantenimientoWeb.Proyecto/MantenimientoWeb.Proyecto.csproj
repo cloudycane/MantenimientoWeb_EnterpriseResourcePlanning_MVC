@@ -25,4 +25,8 @@
     <ProjectReference Include="..\MantenimientoWeb.Infraestructura\MantenimientoWeb.Infraestructura.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\" />
+  </ItemGroup>
+
 </Project>

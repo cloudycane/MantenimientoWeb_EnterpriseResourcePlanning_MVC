@@ -1,6 +1,7 @@
 ﻿using MantenimientoWeb.Aplicacion.Servicios.UseCases;
 using MantenimientoWeb.Dominio.Entidades;
 using MantenimientoWeb.Dominio.Interfaces;
+using MantenimientoWeb.Infraestructura.Data;
 using MantenimientoWeb.Proyecto.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         private readonly GetPaisesQuery _getPaisesQuery;
         private readonly GetTipoEmpresaQuery _getTipoEmpresaQuery;
         private readonly IEmpresaService _empresaService;
+        
 
         public RegistroEmpresaController(GetPaisesQuery getPaisesQuery, IEmpresaService empresaService, GetTipoEmpresaQuery getTipoEmpresaQuery)
         {

@@ -18,7 +18,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Documentacion()
         {
             return View();
         }

@@ -8,11 +8,7 @@
 
 <!--Vamos a crear unas vistas parciales y hacer un onclick jscrìpt para mostrar el partial view y esconder el listado-->
 <div class="container" id="empresaIndex">
-    <a asp-action="UILandingVenta" asp-controller="LandingPages" class="btn btn-primary" style="margin-bottom:20px" onclick=""><i class="bi bi-arrow-left-circle"></i>Volver al Inicio</a>
-    <a asp-action="" asp-controller="" class="btn btn-primary" style="margin-bottom:20px" onclick="">Ordenar Alfabeticamente</a>
-    <a asp-action="" asp-controller="" class="btn btn-primary" style="margin-bottom:20px" onclick="">Ordenar Por Identificación</a>
-    <a asp-action="" asp-controller="" class="btn btn-primary" style="margin-bottom:20px" onclick="">Ordenar Por Proveedores</a>
-    <a asp-action="" asp-controller="" class="btn btn-primary" style="margin-bottom:20px" onclick="">Ordenar Por Clientes</a>
+    <partial name="_OrganizarOpcionEmpresa" />
     <a asp-action="" class="btn btn-primary" style="margin-bottom: 20px; float: right;">Registrar Nueva Empresa</a>
   
     <table class="table table-bordered">

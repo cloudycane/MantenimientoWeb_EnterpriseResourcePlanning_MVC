@@ -2,10 +2,63 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-    <div class="text-center">
-        <h1 class="display-4">Mantenimiento Web</h1>
-        <h3 style="text-align: justify">Este proyecto es un simple Enterprise Resource Planning Software o ERP en la nube. Facilita el control y abastecimiento de productos, permite automatizar procesos, generar informes, y mejorar el servicio al cliente, un Inventory System Management (IMS) ante tu mano.  </h3>
-    </div>
+<div class="container" style="margin-top: 3%;">
     
+    <div class="text-center">
+        <h1 class="display-4"><strong>Mantenimiento Web</strong></h1>
+        <h3 style="text-align: justify">Este proyecto es un simple Enterprise Resource Planning Software (ERP) en la nube con fines educativos. Facilita el control y abastecimiento de productos, permite automatizar procesos, generar informes, y mejorar el servicio al cliente, un Inventory System Management (IMS) ante tu mano.  </h3>
+    </div>
+
+    <div class="col-lg-6 text-center" style="margin-top: 4%; ">
+        <h3><strong>Importancia de los Inventarios</strong></h3>
+        <div id="infoImportancia">
+            <table class="table table-bordered">
+                <tr>
+                    <td>
+                        <h3><strong>Cantidad</strong></h3>
+                        <p>Disponer del artículo en la cantidad necesaria.</p>
+                    </td>
+                    <td>
+                        <h3><strong>Oportunidad</strong></h3>
+                        <p>Tener los productos en el momento o lugar deseado.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h3><strong>Calidad</strong></h3>
+                        <p>Garantizar una calidad conveniente del bien en el momento de ser utilizado.</p>
+                    </td>
+                    <td>
+                        <h3><strong>Precio</strong></h3>
+                        <p>Disfrutar del artículo con los requisitos anteriores y al precio más económico.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-lg-6" style="margin-top: 4%;">
+        <h3 class="text-center"><strong>Retos para la gestión de Inventarios</strong></h3>
+        <table class="table table-bordered">
+            <tr>
+                <td>
+                    <ul>
+                        <li>Reducir los requerimientos de almacenimiento.</li>
+                        <li>Aminorar o disminuir los daños, errores y averías a los bienes por manejo.</li>
+                        <li>Cumplimiento de compromisos comerciales.</li>
+                        <li>Cumplimiento de especificaciones del artículo o producto.</li>
+                        <li>Atención inmediata de ventas.</li>
+                        <li>Recortar al máximo el ciclo de pedido.</li>
+                        <li>Respuesta del 100% con pedidos perfectos.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <div class="col-lg-12">
+        <a style="float: left; margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Index" asp-controller="" class="btn"><h3> Ver la Planificación del Proyecto</h3></a>
+        <a style="float: right; margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Documentacion" asp-controller="Home" class="btn"><h3> Ver la Documentación del Proyecto</h3></a>
+    </div>
 </div>
+

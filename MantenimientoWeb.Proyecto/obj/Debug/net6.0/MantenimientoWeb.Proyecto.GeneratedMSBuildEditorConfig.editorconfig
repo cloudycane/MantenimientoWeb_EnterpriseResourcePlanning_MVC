@@ -18,12 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb_EnterpriseResourcePlanning_MVC\MantenimientoWeb.Proyecto
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Home/Documentacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N1bWVudGFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingAlmacen.cshtml]
@@ -38,12 +38,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ0NvbXByYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingProduccion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ1Byb2R1Y2Npb24uY3NodG1s
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ0VtcHJlc2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingVenta.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ1ZlbnRhLmNzaHRtbA==
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingProduccion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ1Byb2R1Y2Npb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Productos/Crear.cshtml]
@@ -68,6 +68,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Shared/_Notificacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Shared/_OrganizarOpcionEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Pcmdhbml6YXJPcGNpb25FbXByZXNhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Shared/_OrganizarOpcionProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Pcmdhbml6YXJPcGNpb25Qcm9kdWN0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Shared/_ValidationScriptsPartial.cshtml]

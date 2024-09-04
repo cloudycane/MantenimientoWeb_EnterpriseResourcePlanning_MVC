@@ -16,7 +16,7 @@
     <hr />
 
     <div class="container">
-        <form asp-action="Registrar" method="post">
+        <form asp-action="Registrar" method="post" style="margin-top: 6%;">
             <div asp-validation-summary="ModelOnly"></div>
             <div class="row">
                 <div class="col-lg-6">
@@ -56,7 +56,7 @@
                 </div>
                 
                 
-                <a asp-action="Index" class="col-lg-3 m-4 btn btn-info"> Volver al Inicio</a>
+                <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="col-lg-3 m-4 btn btn-info"> Volver al Inicio</a>
                 <div class="col-lg-4"></div>
                 <button type="submit" class="col-lg-3 m-4 btn btn-primary" id="registrarBoton">Registrar</button>
 

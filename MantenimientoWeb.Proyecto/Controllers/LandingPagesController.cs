@@ -6,7 +6,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
     public class LandingPagesController : Controller
     {
         // GET: LandingPagesController
-        public ActionResult UILandingVenta()
+        public ActionResult UILandingEmpresa()
         {
             return View();
         }

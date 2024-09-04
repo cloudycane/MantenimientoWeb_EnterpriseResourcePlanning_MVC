@@ -10,19 +10,7 @@
 <div class="container" id="productoIndex">
 
     
-    <div class="dropdown" style="margin-bottom: 2%;">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Ver Opciones
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">Ver Fabricantes</a></li>
-            <li><a class="dropdown-item" href="#">Ver Métodos Transportes</a></li>
-            <li><a class="dropdown-item" href="#">Categorías</a></li>
-            <li><a class="dropdown-item" href="#">Clasificaciones</a></li>
-            <li><a class="dropdown-item" href="#">Tipos de Empaquetamientos</a></li>
-            <li><a class="dropdown-item" href="#">Especificaciones Productos</a></li>
-        </ul>
-    </div>
+    <partial name="_OrganizarOpcionProducto" />
     <a style="margin-bottom: 2%; float: right;" asp-action="Crear" class="btn btn-primary">Crear Nuevo Producto <i class="bi bi-plus-square"></i></a>
     
     <table class="table table-bordered">

@@ -11,5 +11,6 @@ namespace MantenimientoWeb.Dominio.Interfaces
     {
         Task CreateAsync(ProductoModel producto);
         Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync();
+        Task<IEnumerable<EmpresaModel>> ObtenerProveedoresAsync();
     }
 }

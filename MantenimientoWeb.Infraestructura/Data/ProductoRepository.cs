@@ -17,6 +17,11 @@ namespace MantenimientoWeb.Infraestructura.Data
             _context = context;
         }
 
+        public async Task<IEnumerable<EmpresaModel>> ObtenerProveedoresAsync()
+        {
+            return await _context.Empresas.Where(e => e.TipoEmpresa.Nombre == "Proveedor").ToListAsync();
+        }
+
         public async Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync()
         {
             return await _context.Productos.Include(c => c.Categoria).Include(m => m.Moneda).Include(cl => cl.Clasificacion).Include(t => t.Transporte).Include(e => e.Empaquetamiento).ToListAsync();

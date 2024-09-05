@@ -14,10 +14,11 @@ namespace MantenimientoWeb.Proyecto.Controllers
         private readonly GetClasificacionesQuery _getClasificacionesQuery;
         private readonly GetMonedasQuery _getMonedasQuery;
         private readonly GetCategoriasQuery _getCategoriasQuery;
-        private readonly GetTransportesQuery _getTransportesQuery; 
+        private readonly GetTransportesQuery _getTransportesQuery;
+        private readonly GetTipoEmpresaQuery _getTipoEmpresaQuery;
         private readonly IProductoService _productoService;
 
-        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService, GetClasificacionesQuery getClasificacionesQuery, GetTransportesQuery getTransportesQuery, GetEmpaquetamientoQuery getEmpaquetamientoQuery)
+        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService, GetClasificacionesQuery getClasificacionesQuery, GetTransportesQuery getTransportesQuery, GetEmpaquetamientoQuery getEmpaquetamientoQuery, GetTipoEmpresaQuery getTipoEmpresaQuery)
         {
             _getCategoriasQuery = getCategoriasQuery;
             _getMonedasQuery = getMonedasQuery;
@@ -25,6 +26,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             _getClasificacionesQuery = getClasificacionesQuery;
             _getTransportesQuery = getTransportesQuery;
             _getEmpaquetamientoQuery = getEmpaquetamientoQuery;
+            _getTipoEmpresaQuery = getTipoEmpresaQuery;
         }
 
 
@@ -55,9 +57,11 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var clasificaciones = await _getClasificacionesQuery.ExecuteAsync();
             var transportes = await _getTransportesQuery.ExecuteAsync();
             var empaquetamientos = await _getEmpaquetamientoQuery.ExecuteAsync();
-            
+            var proveedor = await _productoService.GetProveedoresAsync();
             var viewModel = new ProductoViewModel
             {
+                //SELECT LIST ITEM DE PROVEEDORES 
+                ProveedorSelectList = new SelectList(proveedor, "Id", "RazonSocial"),
                 //SELECT LIST ITEM DE MONEDA
                 MonedaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(monedas, "Id", "SimboloMoneda"),
                 //SELECT LIST ITEM DE CATEGORIA 

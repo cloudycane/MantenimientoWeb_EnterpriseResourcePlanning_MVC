@@ -37,7 +37,7 @@ hr{
     cursor: pointer;
 }
 i{
-    color: darkcyan;
+    color: white;
 }
 #btnHiddenDivCategoria, #btnHiddenDivStockActual, #btnHiddenDPD, #btnHiddenRestock, #btnHiddenColchon{
     font-size: x-small;

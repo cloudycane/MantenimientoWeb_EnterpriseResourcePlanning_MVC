@@ -103,6 +103,12 @@ namespace MantenimientoWeb.Proyecto.ViewModels
                 return CalcularSugeridoCompras();
             }
         }
+        // PROVEEDOR 
+
+        public int ProveedorId { get; set; }
+        public SelectList ProveedorSelectList { get; set; }
+
+
         // ESPECIFICACIONES DEL PRODUCTO 
 
         public bool EsPerecedero { get; set; }

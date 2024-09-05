@@ -65,5 +65,10 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         {
             return await _empaquetamientoRepository.ObtenerListadoEmpaquetamientoAsync();
         }
+
+        public async Task<IEnumerable<EmpresaModel>> GetProveedoresAsync()
+        {
+            return await _productoRepository.ObtenerProveedoresAsync();
+        }
     }
 }

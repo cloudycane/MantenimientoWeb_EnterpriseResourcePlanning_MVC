@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1P56QLxClSSyREm17R0xAg3gs/lRnwTIc0wVbWMvGbk=",
+  "Hash": "EfnPurXKV4+mkUlY22Y8FnsdRE+V+e6SI6HlVN52rIY=",
   "Source": "MantenimientoWeb.Proyecto",
   "BasePath": "_content/MantenimientoWeb.Proyecto",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\indexProducto.css"
+    },
+    {
+      "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\inicioIndex.css",
+      "SourceId": "MantenimientoWeb.Proyecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\",
+      "BasePath": "_content/MantenimientoWeb.Proyecto",
+      "RelativePath": "css/inicioIndex.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\inicioIndex.css"
     },
     {
       "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\registroEmpresa.css",
@@ -205,6 +224,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\crearFormProducto.js"
+    },
+    {
+      "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\js\\dashboardBehaviour.js",
+      "SourceId": "MantenimientoWeb.Proyecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\",
+      "BasePath": "_content/MantenimientoWeb.Proyecto",
+      "RelativePath": "js/dashboardBehaviour.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\dashboardBehaviour.js"
     },
     {
       "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\js\\site.js",

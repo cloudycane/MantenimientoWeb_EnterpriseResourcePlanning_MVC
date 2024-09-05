@@ -114,6 +114,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     TransporteId = viewModel.TransporteId,
                     EmpaquetamientoId = viewModel.EmpaquetamientoId,
                     NotasAdicionales = viewModel.NotasAdicionales,
+                    ProveedorId = viewModel.ProveedorId,
                 };
                 await _productoService.CreateProductoAsync(producto);
                 TempData["success"] = "El producto ha sido creado con éxito";
@@ -124,6 +125,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var clasificacion = await _productoService.GetClasificacionAsync();
             var transporte = await _productoService.GetTransporteAsync();
             var empaquetamiento = await _productoService.GetEmpaquetamientosAsync();
+            var proveedor = await _productoService.GetProveedoresAsync();
 
             await CargarSelectListsAsync(viewModel);
             return View(viewModel);
@@ -137,12 +139,14 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var clasificaciones = await _productoService.GetClasificacionAsync();
             var transportes = await _productoService.GetTransporteAsync();
             var empaquetamientos = await _productoService.GetEmpaquetamientosAsync();
+            var proveedor = await _productoService.GetProveedoresAsync();
 
             viewModel.MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda");
             viewModel.CategoriaSelectList = new SelectList(categorias, "Id", "Nombre");
             viewModel.ClasificacionSelectList = new SelectList(clasificaciones, "Id", "Nombre");
             viewModel.TransporteSelectList = new SelectList(transportes, "Id", "Vehiculo");
             viewModel.EmpaquetamientoSelectList = new SelectList(empaquetamientos, "Id", "Nombre");
+            viewModel.ProveedorSelectList = new SelectList(proveedor, "Id", "RazonSocial");
         }
 
 

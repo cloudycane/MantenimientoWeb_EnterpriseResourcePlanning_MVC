@@ -2,14 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container" style="margin-top: 3%;">
+<link rel="stylesheet" href="./css/inicioIndex.css" />
+
+<div class="container" id="divIndex">
     
     <div class="text-center">
+
         <h1 class="display-4"><strong>Mantenimiento Web</strong></h1>
-        <h3 style="text-align: justify">Este proyecto es un simple Enterprise Resource Planning Software (ERP) en la nube con fines educativos. Facilita el control y abastecimiento de productos, permite automatizar procesos, generar informes, y mejorar el servicio al cliente, un Inventory System Management (IMS) ante tu mano.  </h3>
+        <h3 id="descripcion">Este proyecto es un simple Enterprise Resource Planning Software (ERP) en la nube con fines educativos. Facilita el control y abastecimiento de productos, permite automatizar procesos, generar informes, y mejorar el servicio al cliente, un Inventory System Management (IMS) ante tu mano.  </h3>
+    
     </div>
 
-    <div class="col-lg-6 text-center" style="margin-top: 4%; ">
+    <div class="col-lg-6 text-center" id="impoInventario">
         <h3><strong>Importancia de los Inventarios</strong></h3>
         <div id="infoImportancia">
             <table class="table table-bordered">
@@ -57,8 +61,10 @@
         
     </div>
     <div class="col-lg-12">
-        <a style="float: left; margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Index" asp-controller="" class="btn"><h3> Ver la Planificación del Proyecto</h3></a>
-        <a style="float: right; margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Documentacion" asp-controller="Home" class="btn"><h3> Ver la Documentación del Proyecto</h3></a>
+       <center>
+           <a style="margin-top: 6%; background-color: cornflowerblue; color: white;" asp-action="Documentacion" asp-controller="Home" class="btn"><h3> Ver la Documentación del Proyecto</h3></a>
+       </center>
+       
     </div>
 </div>
 

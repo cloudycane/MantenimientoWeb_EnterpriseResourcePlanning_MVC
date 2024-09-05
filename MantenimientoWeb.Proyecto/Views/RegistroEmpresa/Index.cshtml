@@ -4,54 +4,62 @@
    
 }
 
-<link rel="stylesheet" href="~/css/registroEmpresa.css" />
-
 <div class="container" id="empresaIndex">
     <partial name="_OrganizarOpcionEmpresa" />
     <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="btn btn-primary">Volver al anterior</a>
-    <a asp-action="" class="btn btn-primary" style="margin-bottom: 20px; float: right;">Registrar Nueva Empresa</a>
-  
+    <partial name="_PaginacionEmpresa" />
+    <a asp-action="" class="btn btn-primary" style="margin-bottom: 20px; margin-right: 10px; float: right;">Registrar Nueva Empresa</a>
+
     <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th class="col-sm-2">CIF/NIF/Identificación</th>
-                <th class="col-sm-2">Razón Social</th>
-                <th class="col-sm-2">Email</th>
-                <th class="col-sm-2">Dirección</th>
-                <th class="col-sm-2">País</th>
-                <th class="col-sm-2">Tipo Empresa</th>
-                <th class="col-sm-2">Acción</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var empresa in Model.Empresas)
-            {
+        
+            <thead>
                 <tr>
-                    <td class="col-sm-2">@empresa.CIF</td>
-                    <td class="col-sm-2">@empresa.RazonSocial</td>
-                    <td class="col-sm-2">@empresa.CorreoElectronico</td>
-                    <td class="col-sm-2">@empresa.Direccion</td>
-                    <td class="col-sm-2">@empresa.Pais.Nombre</td>
-                  
-                    <td class="col-sm-2">
-                        @if (empresa.TipoEmpresa.Nombre == "Cliente")
-                    {
-                        <i class="bi bi-person-workspace"></i> <p>Cliente</p>
-                    }
-                    else
-                    {
-                        <i class="bi bi-building-fill-gear"></i> <p>Proveedor</p>
-                    }
-                    </td>
-                    <td class="col-sm-2">
-                        <a class="btn btn-warning">Editar</a>
-                        <a class="btn btn-info">Detalles</a>
-                        <a class="btn btn-danger">Eliminar</a>
-                    </td>
+                    <th class="col-sm-2">CIF/NIF/Identificación</th>
+                    <th class="col-sm-2">Razón Social</th>
+                    <th class="col-sm-2">Email</th>
+                    <th class="col-sm-2">Dirección</th>
+                    <th class="col-sm-2">País</th>
+                    <th class="col-sm-2">Tipo Empresa</th>
+                    <th class="col-sm-2">Acción</th>
                 </tr>
-            }
-        </tbody>
+            </thead>
+            <tbody>
+                @foreach (var empresa in Model.Empresas)
+                {
+                    <tr>
+                        <td class="col-sm-2">@empresa.CIF</td>
+                        <td class="col-sm-2">@empresa.RazonSocial</td>
+                        <td class="col-sm-2">@empresa.CorreoElectronico</td>
+                        <td class="col-sm-2">@empresa.Direccion</td>
+                        <td class="col-sm-2">@empresa.Pais.Nombre</td>
+
+                        <td class="col-sm-2">
+                            @if (empresa.TipoEmpresa.Nombre == "Cliente")
+                            {
+                                <i class="bi bi-person-workspace"></i> <p>Cliente</p>
+                            }
+                            else
+                            {
+                                <i class="bi bi-building-fill-gear"></i> <p>Proveedor</p>
+                            }
+                        </td>
+                        <td class="col-sm-2">
+                            <a class="btn btn-warning">Editar</a>
+                            <a class="btn btn-info">Detalles</a>
+                            <a class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        
     </table>
+    </div>
+
+
+
+<link rel="stylesheet" href="~/css/registroEmpresa.css" />
+
+
+  
+   
     
-    
-</div>

@@ -36,13 +36,13 @@ li{
     margin-bottom: 3%;
 }
 
-#empresaBtn, #productoBtn, #buscarBtn, #inicioBtn, #calculosBtn, #pronBtn{
+#empresaBtn, #compraBtn, #buscarBtn, #inicioBtn, #prodBtn, #invBtn{
     
     background-color: cornflowerblue;
     color: white;
     
 }
-#empresaBtn:hover, #productoBtn:hover, #buscarBtn:hover, #inicioBtn:hover, #calculosBtn:hover, #pronBtn:hover{
+#empresaBtn:hover, #empresaBtn:hover, #buscarBtn:hover, #inicioBtn:hover, #prodBtn:hover, #invBtn:hover{
     background-color: #5aa9e6;
     color: white;
 }

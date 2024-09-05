@@ -12,6 +12,8 @@ namespace MantenimientoWeb.Proyecto.Controllers
         private readonly GetPaisesQuery _getPaisesQuery;
         private readonly GetTipoEmpresaQuery _getTipoEmpresaQuery;
         private readonly IEmpresaService _empresaService;
+
+        private readonly ApplicationDbContext _context;
         
 
         public RegistroEmpresaController(GetPaisesQuery getPaisesQuery, IEmpresaService empresaService, GetTipoEmpresaQuery getTipoEmpresaQuery)
@@ -22,13 +24,18 @@ namespace MantenimientoWeb.Proyecto.Controllers
         }
 
         
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 4)
         {
+
             var empresas = await _empresaService.ObtenerEmpresasAsync();       
+
+            var paginatedList = empresas.Skip((pageNumber -1)*pageSize).Take(pageSize).ToList();
 
             var viewModel = new ListadoEmpresasViewModel
             {
-                Empresas = empresas 
+                Empresas = paginatedList, 
+                PaginaActual = pageNumber,
+                PaginasTotal = (int)Math.Ceiling(empresas.Count() / (double)pageSize)
             };
             return View(viewModel);
         }

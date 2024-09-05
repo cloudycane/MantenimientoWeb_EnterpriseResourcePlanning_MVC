@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\indexProducto.css"
     },
     {
+      "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\inicioIndex.css",
+      "PackagePath": "staticwebassets\\css\\inicioIndex.css"
+    },
+    {
       "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\registroEmpresa.css",
       "PackagePath": "staticwebassets\\css\\registroEmpresa.css"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\js\\crearFormProducto.js",
       "PackagePath": "staticwebassets\\js\\crearFormProducto.js"
+    },
+    {
+      "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\js\\dashboardBehaviour.js",
+      "PackagePath": "staticwebassets\\js\\dashboardBehaviour.js"
     },
     {
       "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\js\\site.js",

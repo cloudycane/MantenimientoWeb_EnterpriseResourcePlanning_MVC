@@ -25,12 +25,37 @@ namespace MantenimientoWeb.Infraestructura.Data
         public DbSet<TransporteModel> Transportes { get; set; }
         public DbSet<EmpaquetamientoModel> Empaquetamientos { get; set; }
         public DbSet<ProductoModel> Productos { get; set; }
-        
+        public DbSet<TipoMateriaPrimaModel> TipoMateriaPrimas { get; set; }
+        public DbSet<TipoProductoModel> TipoProductos { get; set; }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<ProductoModel>()
+                .HasOne(p => p.Proveedor)
+                .WithMany()
+                .HasForeignKey(p => p.ProveedorId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<TipoProductoModel>().HasData(
+                new TipoProductoModel { Id = 1, Nombre = "Insumo o Materia Prima"}, 
+                new TipoProductoModel { Id = 2, Nombre = "Consumo o Producto Comercial"}
+                
+                );
+
+
+            modelBuilder.Entity<TipoMateriaPrimaModel>().HasData(
+                new TipoMateriaPrimaModel { Id = 1, Nombre = "Origen Vegetal"}, 
+                new TipoMateriaPrimaModel { Id = 2, Nombre = "Origen Animal"}, 
+                new TipoMateriaPrimaModel { Id = 3, Nombre = "Minerales"},
+                new TipoMateriaPrimaModel { Id = 4, Nombre = "Origen Sintético/Derivada del petróleo"}, 
+                new TipoMateriaPrimaModel { Id = 5, Nombre = "Químicas"}, 
+                new TipoMateriaPrimaModel { Id = 6, Nombre = "Energéticas"},
+                new TipoMateriaPrimaModel { Id = 7, Nombre = "Industriales"}
+                
+                
+                );
 
             modelBuilder.Entity<EmpaquetamientoModel>().HasData(
                 new EmpaquetamientoModel { Id = 1, Nombre = "Empaquetamiento Primario" }, 

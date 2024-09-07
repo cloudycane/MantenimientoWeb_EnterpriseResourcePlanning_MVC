@@ -14,17 +14,17 @@ namespace MantenimientoWeb.Proyecto.ViewModels
 
         [Required]
         [Display(Name = "Unidades de Compra en Año" )]
-        [Range(1, int.MaxValue, ErrorMessage = "El campo {0} no admite valores negativos.")]
+        [Range(1, int.MaxValue, ErrorMessage = "El campo {0} no admite valores 0 y negativos.")]
         public int UnidadesDeCompraEnAño {  get; set; }
 
         [Required]
         [Display(Name = "Cantidad de Producto")]
-        [Range(1, int.MaxValue, ErrorMessage = "El campo {0} no admite valores negativos.")]
+        [Range(1, int.MaxValue, ErrorMessage = "El campo {0} no admite valores 0 y negativos.")]
         public int Cantidad {  get; set; }
 
         [Required]
         [Display(Name = "Precio de Compra")]
-        [Range(1, int.MaxValue, ErrorMessage = "Eñ campo {0} no admite valores negativos.")]
+        [Range(1, int.MaxValue, ErrorMessage = "El campo {0} no admite valores 0 y negativos.")]
         public double PrecioCompra {  get; set; }
 
         // CALCULOS INVENTARIOS: PRECIO MANTENIMIENTO
@@ -49,10 +49,6 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         }
         private double CalcularCostoTotalMantenimiento()
         {
-            if (Cantidad == 0)
-            {
-                throw new InvalidOperationException("Cantidad cannot be zero.");
-            }
             double CostoTotalMantenimiento = CostoPercentual * PrecioCompra * ((UnidadesDeCompraEnAño / (double)Cantidad) / 2);
             return CostoTotalMantenimiento;
         }

@@ -20,7 +20,7 @@ namespace MantenimientoWeb.Infraestructura.Data
 
         public async Task<IEnumerable<InventarioModel>> ObtenerListadoInventarioAsync()
         {
-            return await _context.Inventario.Include(p => p.Producto).Include(e => e.EstadoProducto).ToListAsync();
+            return await _context.Inventario.Include(p => p.Producto).Include(e => e.EstadoProducto).Include(m => m.Producto.Moneda).ToListAsync();
         }
 
         public async Task CreateAsync(InventarioModel inventario)

@@ -1,3 +1,42 @@
 ﻿@model ListadoInventarioModel
 
+@{
+    ViewData["Title"] = "Listado de Inventario";
+}
 
+<div class="container" style="margin-top: 4%;">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Estado del Producto</th>
+                <th>Unidades De Compra En Año</th>
+                <th>Cantidad de Producto</th>
+                <th>Precio de Compra</th>
+                <th>Costo Percentual</th>
+                <th>Costo Total Mantenimiento</th>
+                <th>CostoPedido</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inventario in Model.Inventarios)
+            {
+                <tr>
+                    <td>@inventario.Producto.Nombre</td>
+                    <td>@inventario.EstadoProducto.Nombre</td>
+                    <td>@inventario.UnidadesDeCompraEnAño</td>
+                    <td>@inventario.Cantidad</td>
+                    <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.PrecioCompra</td>
+                    <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.CostoPercentual</td>
+                    <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.CostoTotalMantenimiento</td>
+                    <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.CostoPedido</td>
+                </tr>
+                
+            }
+        </tbody>
+    </table>
+
+
+
+</div>

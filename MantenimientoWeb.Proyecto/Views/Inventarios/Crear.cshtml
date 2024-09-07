@@ -4,11 +4,10 @@
     ViewData["Title"] = "Crear Inventario";
 }
 
-
 <h1 class="text-center"><u>Creación de Inventario</u></h1>
 
-<div class="container" style="margin-top: 6%;">
-    <form asp-action="Crear" method="post">
+<div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%;">
+    <form asp-action="Crear" method="post" style="margin-top: 4%; margin-bottom: 4%;">
         <div class="col-lg-6 mb-4">
             <label asp-for="ProductoId">Elige un producto: </label>
             <select asp-for="ProductoId" asp-items="Model.ProductoSelectList" class="form-select"><option>--Seleccionar Producto--</option></select>
@@ -33,6 +32,6 @@
             <span asp-validation-for="PrecioCompra"></span>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="float: right">Registrar Inventario</button>
+        <button type="submit" class="btn btn-primary" style="float: right; margin-bottom: 4%;">Registrar Inventario</button>
     </form>
 </div>

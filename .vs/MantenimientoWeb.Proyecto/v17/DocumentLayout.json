@@ -3,30 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\viewmodels\\inventarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\viewmodels\\inventarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\views\\inventarios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\inventarios\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\controllers\\inventarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\controllers\\inventarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.dominio\\entidades\\estadoproductomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|solutionrelative:mantenimientoweb.dominio\\entidades\\estadoproductomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -35,32 +11,36 @@
       "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\inventarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\viewmodels\\listadoinventariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\viewmodels\\listadoinventariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\views\\registroempresa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\registroempresa\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.dominio\\serviciosdominios\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|solutionrelative:mantenimientoweb.dominio\\serviciosdominios\\inventarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\views\\shared\\_paginacionproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\shared\\_paginacionproducto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.dominio\\interfaces\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|solutionrelative:mantenimientoweb.dominio\\interfaces\\iproductoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.dominio\\serviciosdominios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|solutionrelative:mantenimientoweb.dominio\\serviciosdominios\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\views\\shared\\_paginacionempresa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\views\\shared\\_paginacionempresa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\viewmodels\\listadoproductomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\viewmodels\\listadoproductomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E88C28E0-9BDE-493A-A90E-9A694846F80E}|MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.infraestructura\\data\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E88C28E0-9BDE-493A-A90E-9A694846F80E}|MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj|solutionrelative:mantenimientoweb.infraestructura\\data\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E88C28E0-9BDE-493A-A90E-9A694846F80E}|MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.infraestructura\\data\\inventariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E88C28E0-9BDE-493A-A90E-9A694846F80E}|MantenimientoWeb.Infraestructura\\MantenimientoWeb.Infraestructura.csproj|solutionrelative:mantenimientoweb.infraestructura\\data\\inventariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.dominio\\entidades\\inventariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5A29F38-2A62-4D5E-8CA3-3FDD9C6B0423}|MantenimientoWeb.Dominio\\MantenimientoWeb.Dominio.csproj|solutionrelative:mantenimientoweb.dominio\\entidades\\inventariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|c:\\users\\gesel\\source\\repos\\mantenimientoweb.proyecto\\mantenimientoweb_enterpriseresourceplanning_mvc\\mantenimientoweb.proyecto\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BBB6F31-EC43-49B8-8C53-0057AF17D11B}|MantenimientoWeb.Proyecto\\MantenimientoWeb.Proyecto.csproj|solutionrelative:mantenimientoweb.proyecto\\viewmodels\\productoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,158 +58,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EstadoProductoModel.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Entidades\\EstadoProductoModel.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\Entidades\\EstadoProductoModel.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Entidades\\EstadoProductoModel.cs",
-              "RelativeToolTip": "MantenimientoWeb.Dominio\\Entidades\\EstadoProductoModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:56:57.36Z",
+              "DocumentIndex": 6,
+              "Title": "_PaginacionEmpresa.cshtml",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionEmpresa.cshtml",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionEmpresa.cshtml",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionEmpresa.cshtml",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionEmpresa.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-07T18:18:08.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "_PaginacionProducto.cshtml",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionProducto.cshtml",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionProducto.cshtml",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionProducto.cshtml",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Shared\\_PaginacionProducto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T09:49:00.935Z",
+              "WhenOpened": "2024-09-07T18:13:26.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T09:48:46.358Z",
+              "Title": "ListadoProductoModel.cs",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ListadoProductoModel.cs",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\ViewModels\\ListadoProductoModel.cs",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ListadoProductoModel.cs",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\ViewModels\\ListadoProductoModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T17:58:54.026Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ListadoInventarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ListadoInventarioModel.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\ViewModels\\ListadoInventarioModel.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ListadoInventarioModel.cs",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\ViewModels\\ListadoInventarioModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:46:53.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Program.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Program.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Program.cs",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:45:16.663Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventariosController.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\InventariosController.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Controllers\\InventariosController.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\InventariosController.cs",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Controllers\\InventariosController.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAAAGcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:41:50.455Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Crear.cshtml",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Crear.cshtml",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Crear.cshtml",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Crear.cshtml",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Crear.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-07T09:32:43.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "InventarioService.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\InventarioService.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\ServiciosDominios\\InventarioService.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\InventarioService.cs",
-              "RelativeToolTip": "MantenimientoWeb.Dominio\\ServiciosDominios\\InventarioService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:18:59.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Interfaces\\IProductoService.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\Interfaces\\IProductoService.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Interfaces\\IProductoService.cs",
-              "RelativeToolTip": "MantenimientoWeb.Dominio\\Interfaces\\IProductoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:18:35.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "InventarioModel.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Entidades\\InventarioModel.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\Entidades\\InventarioModel.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\Entidades\\InventarioModel.cs",
-              "RelativeToolTip": "MantenimientoWeb.Dominio\\Entidades\\InventarioModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:13:22.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "ProductoRepository.cs",
               "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Infraestructura\\Data\\ProductoRepository.cs",
               "RelativeDocumentMoniker": "MantenimientoWeb.Infraestructura\\Data\\ProductoRepository.cs",
               "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Infraestructura\\Data\\ProductoRepository.cs",
               "RelativeToolTip": "MantenimientoWeb.Infraestructura\\Data\\ProductoRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBoAAADtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:10:50.232Z",
+              "WhenOpened": "2024-09-07T17:34:10.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "InventarioRepository.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Infraestructura\\Data\\InventarioRepository.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Infraestructura\\Data\\InventarioRepository.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Infraestructura\\Data\\InventarioRepository.cs",
-              "RelativeToolTip": "MantenimientoWeb.Infraestructura\\Data\\InventarioRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
+              "RelativeToolTip": "MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAqwCsAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T02:18:46.786Z",
+              "WhenOpened": "2024-09-07T17:30:42.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwDEAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-07T17:26:38.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\RegistroEmpresa\\Index.cshtml",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\RegistroEmpresa\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\RegistroEmpresa\\Index.cshtml",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\RegistroEmpresa\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-07T17:11:06.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Inventarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-07T17:11:02.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Views\\Productos\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAYwC4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-07T17:07:46.459Z",
               "EditorCaption": ""
             }
           ]
@@ -240,56 +181,30 @@
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "FloatingWindowState": {
-        "Id": "716542cc-b4c7-421b-949d-dfb2a11821d8",
+        "Id": "3ae9680b-eb37-4ff7-a0ac-2136d7017cc2",
         "Display": 0,
-        "X": 28,
-        "Y": 90,
-        "Width": 839,
-        "Height": 706,
+        "X": 13,
+        "Y": 66,
+        "Width": 800,
+        "Height": 709,
         "WindowState": 0
       },
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductoService.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
-              "RelativeToolTip": "MantenimientoWeb.Dominio\\ServiciosDominios\\ProductoService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAqwBYAAAADAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "ProductoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ProductoViewModel.cs",
+              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\ViewModels\\ProductoViewModel.cs",
+              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\ProductoViewModel.cs",
+              "RelativeToolTip": "MantenimientoWeb.Proyecto\\ViewModels\\ProductoViewModel.cs",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:18:53.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:34:32.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InventarioViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\InventarioViewModel.cs",
-              "RelativeDocumentMoniker": "MantenimientoWeb.Proyecto\\ViewModels\\InventarioViewModel.cs",
-              "ToolTip": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\ViewModels\\InventarioViewModel.cs",
-              "RelativeToolTip": "MantenimientoWeb.Proyecto\\ViewModels\\InventarioViewModel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwDgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-07T09:35:10.448Z",
+              "WhenOpened": "2024-09-07T17:07:28.362Z",
               "EditorCaption": ""
             }
           ]

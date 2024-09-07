@@ -24,7 +24,7 @@ namespace MantenimientoWeb.Infraestructura.Data
 
         public async Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync()
         {
-            return await _context.Productos.Include(c => c.Categoria).Include(m => m.Moneda).Include(cl => cl.Clasificacion).Include(t => t.Transporte).Include(e => e.Empaquetamiento).ToListAsync();
+            return await _context.Productos.Include(c => c.Categoria).Include(m => m.Moneda).Include(cl => cl.Clasificacion).Include(t => t.Transporte).Include(e => e.Empaquetamiento).Include(p => p.Proveedor).Include(t => t.TipoProducto).ToListAsync();
         }
 
         public async Task CreateAsync(ProductoModel producto)

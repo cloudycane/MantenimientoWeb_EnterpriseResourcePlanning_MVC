@@ -32,13 +32,22 @@ namespace MantenimientoWeb.Proyecto.Controllers
 
 
         // GET: ProductosController
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 4)
         {
             var producto = await _productoService.ObtenerProductosAsync();
 
+            var paginatedList = producto.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+          
+            if (producto == null)
+            {
+                producto = new List<ProductoModel>();
+            }
+
             var viewModel = new ListadoProductoModel
             {
-                Productos = producto
+                Productos = paginatedList,
+                PaginaActual = pageNumber,
+                PaginasTotal = (int)Math.Ceiling(producto.Count() / (double)pageSize)
             };
 
             return View(viewModel);

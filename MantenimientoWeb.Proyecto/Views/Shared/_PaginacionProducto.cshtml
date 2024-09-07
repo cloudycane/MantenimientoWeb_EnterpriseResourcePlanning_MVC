@@ -1,0 +1,24 @@
+﻿<nav aria-label="Page navigation" style="float: right; margin-top: 1%; margin-left: 2%;">
+    <ul class="pagination">
+        @if (Model.PaginaActual > 1) // If 2, then route to page number 2
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PaginaActual - 1)">Anterior</a>
+            </li>
+        }
+
+        @for (var i = 1; i <= Model.PaginasTotal; i++)
+        {
+            <li class="page-item @(i == Model.PaginaActual ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@i">@i</a>
+            </li>
+        }
+
+        @if (Model.PaginaActual < Model.PaginasTotal)
+        {
+            <li class="page-item">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PaginaActual + 1)">Siguiente</a>
+            </li>
+        }
+    </ul>
+</nav>

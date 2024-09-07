@@ -12,6 +12,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // USECASES
+builder.Services.AddScoped<GetTipoProductosQuery>();
 builder.Services.AddScoped<GetEmpaquetamientoQuery>();
 builder.Services.AddScoped<GetTransportesQuery>();
 builder.Services.AddScoped<GetClasificacionesQuery>();
@@ -19,11 +20,14 @@ builder.Services.AddScoped<GetPaisesQuery>();
 builder.Services.AddScoped<GetCategoriasQuery>();
 builder.Services.AddScoped<GetTipoEmpresaQuery>();
 builder.Services.AddScoped<GetMonedasQuery>();
+builder.Services.AddScoped<GetEstadoProductosQuery>();
+
 // SERVICIOS 
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
 
 // REPOSITORIOS
+
 builder.Services.AddScoped<IEmpaquetamientoRepository, EmpaquetamientoRepository>();
 builder.Services.AddScoped<ITransporteRepository, TransporteRepository>();
 builder.Services.AddScoped<IClasificacionRepository, ClasificacionRepository>();
@@ -33,6 +37,9 @@ builder.Services.AddScoped<ITipoEmpresaRepository, TipoEmpresaRepository>();
 builder.Services.AddScoped<ICategoriaRepository, CategoriaRepository>();
 builder.Services.AddScoped<IMonedaRepository, MonedaRepository>();
 builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
+builder.Services.AddScoped<ITipoProductoRepository, TipoProductoRepository>();
+builder.Services.AddScoped<IEstadoProductoRepository, EstadoProductoRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

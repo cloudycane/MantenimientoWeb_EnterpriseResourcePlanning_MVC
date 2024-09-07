@@ -22,7 +22,9 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         private readonly IEmpaquetamientoRepository _empaquetamientoRepository;
         // Producto Repository 
         private readonly IProductoRepository _productoRepository;
-        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository, IClasificacionRepository clasificacionRepository, ITransporteRepository transporteRepository, IEmpaquetamientoRepository empaquetamientoRepository, IProductoRepository productoRepository)
+        // Tipo Producto Repository 
+        private readonly ITipoProductoRepository _tipoProductoRepository;
+        public ProductoService(IMonedaRepository monedaRepository, ICategoriaRepository categoriaRepository, IClasificacionRepository clasificacionRepository, ITransporteRepository transporteRepository, IEmpaquetamientoRepository empaquetamientoRepository, IProductoRepository productoRepository, ITipoProductoRepository tipoProductoRepository)
         {
             _monedaRepository = monedaRepository;
             _categoriaRepository = categoriaRepository;
@@ -30,16 +32,21 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             _transporteRepository = transporteRepository;
             _empaquetamientoRepository = empaquetamientoRepository;
             _productoRepository = productoRepository;
+            _tipoProductoRepository = tipoProductoRepository;
         }
         public async Task CreateProductoAsync(ProductoModel producto)
         {
             await _productoRepository.CreateAsync(producto);
         }
 
-
         public async Task<IEnumerable<ProductoModel>> ObtenerProductosAsync()
         {
             return await _productoRepository.ObtenerListadoProductosAsync();
+        }
+
+        public async Task<IEnumerable<TipoProductoModel>> GetTipoProductosAsync()
+        {
+            return await _tipoProductoRepository.ObtenerListadoTipoProductoAsync();
         }
 
         public async Task<IEnumerable<MonedaProductoModel>> GetMonedasAsync()

@@ -15,6 +15,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
         Task<IEnumerable<EmpaquetamientoModel>> GetEmpaquetamientosAsync();
         Task<IEnumerable<MonedaProductoModel>> GetMonedasAsync();
         Task<IEnumerable<EmpresaModel>> GetProveedoresAsync();
+        Task<IEnumerable<TipoProductoModel>> GetTipoProductosAsync();
         Task<IEnumerable<TransporteModel>> GetTransporteAsync();
         Task<IEnumerable<ProductoModel>> ObtenerProductosAsync();
     }

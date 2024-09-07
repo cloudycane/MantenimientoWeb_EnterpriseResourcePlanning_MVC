@@ -16,9 +16,10 @@ namespace MantenimientoWeb.Proyecto.Controllers
         private readonly GetCategoriasQuery _getCategoriasQuery;
         private readonly GetTransportesQuery _getTransportesQuery;
         private readonly GetTipoEmpresaQuery _getTipoEmpresaQuery;
+        private readonly GetTipoProductosQuery _getTipoProductosQuery;
         private readonly IProductoService _productoService;
 
-        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService, GetClasificacionesQuery getClasificacionesQuery, GetTransportesQuery getTransportesQuery, GetEmpaquetamientoQuery getEmpaquetamientoQuery, GetTipoEmpresaQuery getTipoEmpresaQuery)
+        public ProductosController(GetMonedasQuery getMonedasQuery, GetCategoriasQuery getCategoriasQuery, IProductoService productoService, GetClasificacionesQuery getClasificacionesQuery, GetTransportesQuery getTransportesQuery, GetEmpaquetamientoQuery getEmpaquetamientoQuery, GetTipoEmpresaQuery getTipoEmpresaQuery, GetTipoProductosQuery getTipoProductosQuery)
         {
             _getCategoriasQuery = getCategoriasQuery;
             _getMonedasQuery = getMonedasQuery;
@@ -27,6 +28,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             _getTransportesQuery = getTransportesQuery;
             _getEmpaquetamientoQuery = getEmpaquetamientoQuery;
             _getTipoEmpresaQuery = getTipoEmpresaQuery;
+            _getTipoProductosQuery = getTipoProductosQuery;
         }
 
 
@@ -57,9 +59,14 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var clasificaciones = await _getClasificacionesQuery.ExecuteAsync();
             var transportes = await _getTransportesQuery.ExecuteAsync();
             var empaquetamientos = await _getEmpaquetamientoQuery.ExecuteAsync();
+            var tipoProducto = await _getTipoProductosQuery.ExecuteAsync();
             var proveedor = await _productoService.GetProveedoresAsync();
+
+
             var viewModel = new ProductoViewModel
             {
+                //SELECT LIST ITEM DE TIPO PRODUCTOS
+                TipoProductoSelectList = new SelectList(tipoProducto, "Id", "Nombre"),
                 //SELECT LIST ITEM DE PROVEEDORES 
                 ProveedorSelectList = new SelectList(proveedor, "Id", "RazonSocial"),
                 //SELECT LIST ITEM DE MONEDA
@@ -115,6 +122,8 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     EmpaquetamientoId = viewModel.EmpaquetamientoId,
                     NotasAdicionales = viewModel.NotasAdicionales,
                     ProveedorId = viewModel.ProveedorId,
+                    TipoProductoId = viewModel.TipoProductoId
+                    
                 };
                 await _productoService.CreateProductoAsync(producto);
                 TempData["success"] = "El producto ha sido creado con éxito";
@@ -126,6 +135,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var transporte = await _productoService.GetTransporteAsync();
             var empaquetamiento = await _productoService.GetEmpaquetamientosAsync();
             var proveedor = await _productoService.GetProveedoresAsync();
+            var tipoProducto = _productoService.GetTipoProductosAsync();
 
             await CargarSelectListsAsync(viewModel);
             return View(viewModel);
@@ -140,6 +150,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             var transportes = await _productoService.GetTransporteAsync();
             var empaquetamientos = await _productoService.GetEmpaquetamientosAsync();
             var proveedor = await _productoService.GetProveedoresAsync();
+            var tipoProducto = await _productoService.GetTipoProductosAsync();
 
             viewModel.MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda");
             viewModel.CategoriaSelectList = new SelectList(categorias, "Id", "Nombre");
@@ -147,6 +158,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
             viewModel.TransporteSelectList = new SelectList(transportes, "Id", "Vehiculo");
             viewModel.EmpaquetamientoSelectList = new SelectList(empaquetamientos, "Id", "Nombre");
             viewModel.ProveedorSelectList = new SelectList(proveedor, "Id", "RazonSocial");
+            viewModel.TipoProductoSelectList = new SelectList(tipoProducto, "Id", "Nombre");
         }
 
 

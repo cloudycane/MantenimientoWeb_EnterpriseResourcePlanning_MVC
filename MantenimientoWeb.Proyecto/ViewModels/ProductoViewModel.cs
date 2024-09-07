@@ -107,6 +107,9 @@ namespace MantenimientoWeb.Proyecto.ViewModels
 
         public int ProveedorId { get; set; }
         public SelectList ProveedorSelectList { get; set; }
+        
+        public int TipoProductoId { get; set; }
+        public SelectList TipoProductoSelectList { get; set; }
 
 
         // ESPECIFICACIONES DEL PRODUCTO 

@@ -108,6 +108,11 @@
                 <label asp-for="ProveedorId">Proveedor Nombre</label>
                 <select asp-for="ProveedorId" asp-items="Model.ProveedorSelectList" class="form-control"><option>--Seleccionar--</option></select>
             </div>
+
+            <div class="col-lg-2">
+                <label asp-for="TipoProductoId">Tipo de Producto</label>
+                <select asp-for="TipoProductoId" asp-items="Model.TipoProductoSelectList" class="form-control"><option>--Seleccionar--</option></select>
+            </div>
             
             <div class="col-lg-12">
                 <h2><u style="border-width: thin;">Especificaciones</u></h2>

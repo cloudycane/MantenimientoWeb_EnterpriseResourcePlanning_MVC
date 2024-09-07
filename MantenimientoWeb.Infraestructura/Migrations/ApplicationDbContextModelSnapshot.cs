@@ -40,7 +40,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorias");
+                    b.ToTable("Categorias", (string)null);
 
                     b.HasData(
                         new
@@ -77,7 +77,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Clasificaciones");
+                    b.ToTable("Clasificaciones", (string)null);
 
                     b.HasData(
                         new
@@ -126,7 +126,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Empaquetamientos");
+                    b.ToTable("Empaquetamientos", (string)null);
 
                     b.HasData(
                         new
@@ -202,7 +202,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasIndex("TipoEmpresaId");
 
-                    b.ToTable("Empresas");
+                    b.ToTable("Empresas", (string)null);
 
                     b.HasData(
                         new
@@ -214,6 +214,79 @@ namespace MantenimientoWeb.Infraestructura.Migrations
                             PaisId = 1,
                             RazonSocial = "Empresa Ejemplo",
                             TipoEmpresaId = 2
+                        });
+                });
+
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.EstadoMateriaPrimaModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstadoMateriaPrimas", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Estado = "En Producción"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Estado = "En Transporte"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Estado = "Entregado"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Estado = "Expirado"
+                        });
+                });
+
+            modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.EstadoProductoModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstadoProductos", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nombre = "Activo"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nombre = "Inactivo"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nombre = "Desconocido"
                         });
                 });
 
@@ -231,7 +304,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Monedas");
+                    b.ToTable("Monedas", (string)null);
 
                     b.HasData(
                         new
@@ -350,7 +423,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Paises");
+                    b.ToTable("Paises", (string)null);
 
                     b.HasData(
                         new
@@ -1114,7 +1187,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasIndex("TransporteId");
 
-                    b.ToTable("Productos");
+                    b.ToTable("Productos", (string)null);
                 });
 
             modelBuilder.Entity("MantenimientoWeb.Dominio.Entidades.TipoEmpresaModel", b =>
@@ -1131,7 +1204,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoEmpresas");
+                    b.ToTable("TipoEmpresas", (string)null);
 
                     b.HasData(
                         new
@@ -1160,7 +1233,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoMateriaPrimas");
+                    b.ToTable("TipoMateriaPrimas", (string)null);
 
                     b.HasData(
                         new
@@ -1214,7 +1287,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("TipoProductos");
+                    b.ToTable("TipoProductos", (string)null);
 
                     b.HasData(
                         new
@@ -1243,7 +1316,7 @@ namespace MantenimientoWeb.Infraestructura.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Transportes");
+                    b.ToTable("Transportes", (string)null);
 
                     b.HasData(
                         new

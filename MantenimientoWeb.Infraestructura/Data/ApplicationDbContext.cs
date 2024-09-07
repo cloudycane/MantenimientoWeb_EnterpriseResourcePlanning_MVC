@@ -15,7 +15,6 @@ namespace MantenimientoWeb.Infraestructura.Data
         {
 
         }
-
         public DbSet<PaisModel> Paises { get; set; }
         public DbSet<EmpresaModel> Empresas { get; set; }
         public DbSet<TipoEmpresaModel> TipoEmpresas { get; set; }
@@ -27,7 +26,10 @@ namespace MantenimientoWeb.Infraestructura.Data
         public DbSet<ProductoModel> Productos { get; set; }
         public DbSet<TipoMateriaPrimaModel> TipoMateriaPrimas { get; set; }
         public DbSet<TipoProductoModel> TipoProductos { get; set; }
-        
+        public DbSet<EstadoMateriaPrimaModel> EstadoMateriaPrimas { get; set; }
+        public DbSet<EstadoProductoModel> EstadoProductos { get; set; }
+        public DbSet<InventarioModel> Inventario { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -38,12 +40,23 @@ namespace MantenimientoWeb.Infraestructura.Data
                 .HasForeignKey(p => p.ProveedorId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<EstadoProductoModel>().HasData(
+                new EstadoProductoModel { Id = 1, Nombre = "Activo" },
+                new EstadoProductoModel { Id = 2, Nombre = "Inactivo" },
+                new EstadoProductoModel { Id = 3, Nombre = "Desconocido" }
+                );
+
+            modelBuilder.Entity<EstadoMateriaPrimaModel>().HasData(
+                new EstadoMateriaPrimaModel { Id = 1, Estado = "En Producción"}, 
+                new EstadoMateriaPrimaModel { Id = 2, Estado = "En Transporte"},
+                new EstadoMateriaPrimaModel { Id = 3, Estado = "Entregado"}, 
+                new EstadoMateriaPrimaModel { Id = 4, Estado = "Expirado"}
+                );
+
             modelBuilder.Entity<TipoProductoModel>().HasData(
                 new TipoProductoModel { Id = 1, Nombre = "Insumo o Materia Prima"}, 
                 new TipoProductoModel { Id = 2, Nombre = "Consumo o Producto Comercial"}
-                
                 );
-
 
             modelBuilder.Entity<TipoMateriaPrimaModel>().HasData(
                 new TipoMateriaPrimaModel { Id = 1, Nombre = "Origen Vegetal"}, 
@@ -53,8 +66,6 @@ namespace MantenimientoWeb.Infraestructura.Data
                 new TipoMateriaPrimaModel { Id = 5, Nombre = "Químicas"}, 
                 new TipoMateriaPrimaModel { Id = 6, Nombre = "Energéticas"},
                 new TipoMateriaPrimaModel { Id = 7, Nombre = "Industriales"}
-                
-                
                 );
 
             modelBuilder.Entity<EmpaquetamientoModel>().HasData(
@@ -91,7 +102,6 @@ namespace MantenimientoWeb.Infraestructura.Data
                 new ClasificacionProductoModel { Id = 4, Nombre = "Producto Duradero"}, 
                 new ClasificacionProductoModel { Id = 5, Nombre = "Producto No Duraderos"}, 
                 new ClasificacionProductoModel { Id = 6, Nombre = "Producto de Lujo"}
-                
                 ); 
 
             modelBuilder.Entity<MonedaProductoModel>().HasData(

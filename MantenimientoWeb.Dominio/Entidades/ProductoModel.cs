@@ -47,6 +47,8 @@ namespace MantenimientoWeb.Dominio.Entidades
         public int EmpaquetamientoId { get; set; }  
         public EmpaquetamientoModel Empaquetamiento { get; set; }
         public string NotasAdicionales {  get; set; }
+        public int TipoProductoId { get; set; }
+        public TipoProductoModel TipoProducto { get; set; }
 
     }
 }

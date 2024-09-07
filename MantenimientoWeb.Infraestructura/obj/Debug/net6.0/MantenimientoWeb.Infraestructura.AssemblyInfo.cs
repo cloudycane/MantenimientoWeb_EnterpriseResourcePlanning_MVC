@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MantenimientoWeb.Infraestructura")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e016f1c58356e07ea606d8e95cb0d53db9bdf018")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+922a2f40021815f88f65a31fbf2788a7abf0fbdc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MantenimientoWeb.Infraestructura")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MantenimientoWeb.Infraestructura")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

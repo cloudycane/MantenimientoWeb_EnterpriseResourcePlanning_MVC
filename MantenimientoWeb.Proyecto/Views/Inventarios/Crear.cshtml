@@ -1,0 +1,38 @@
+﻿@model InventarioViewModel
+
+@{
+    ViewData["Title"] = "Crear Inventario";
+}
+
+
+<h1 class="text-center"><u>Creación de Inventario</u></h1>
+
+<div class="container" style="margin-top: 6%;">
+    <form asp-action="Crear" method="post">
+        <div class="col-lg-6 mb-4">
+            <label asp-for="ProductoId">Elige un producto: </label>
+            <select asp-for="ProductoId" asp-items="Model.ProductoSelectList" class="form-select"><option>--Seleccionar Producto--</option></select>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <label asp-for="EstadoProductoId">Estado del Producto: </label>
+            <select asp-for="EstadoProductoId" asp-items="Model.EstadoProductoSelectList" class="form-select"><option>--Seleccionar Producto--</option></select>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <label asp-for="UnidadesDeCompraEnAño">Unidades de Compra Por Año</label>
+            <input type="number" class="form-control" asp-for="UnidadesDeCompraEnAño" />
+            <span asp-validation-for="UnidadesDeCompraEnAño"></span>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <label asp-for="Cantidad">Cantidades en Stock: </label>
+            <input type="number" class="form-control" asp-for="Cantidad" />
+            <span asp-validation-for="Cantidad"></span>
+        </div>
+        <div class="col-lg-4 mb-4">
+            <label asp-for="PrecioCompra">Precio de Compra: </label>
+            <input type="number" class="form-control" asp-for="PrecioCompra" />
+            <span asp-validation-for="PrecioCompra"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="float: right">Registrar Inventario</button>
+    </form>
+</div>

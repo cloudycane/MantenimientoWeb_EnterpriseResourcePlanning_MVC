@@ -1,0 +1,17 @@
+﻿@model CompraViewModel
+
+@{
+    ViewData["Title"] = "Crear Compra";
+}
+
+<h1 class="text-center"><u>Compra</u></h1>
+
+<div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%;">
+    @using (Html.BeginForm("Crear", "Inventarios", FormMethod.Post, new { @style = "margin-top: 4%; margin-bottom: 4%;" }))
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    }
+    
+
+
+</div>

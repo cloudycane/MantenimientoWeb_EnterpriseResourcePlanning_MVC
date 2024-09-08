@@ -22,13 +22,17 @@ namespace MantenimientoWeb.Proyecto.Controllers
             _inventarioService = inventarioService;
         }
         // GET: InventariosController
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 4)
         {
             var inventario = await _inventarioService.ObtenerInventariosAsync();
 
+            var paginatedList = inventario.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+
             var viewModel = new ListadoInventarioModel
             {
-                Inventarios = inventario
+                Inventarios = paginatedList, 
+                PaginaActual = pageNumber, 
+                PaginasTotal = (int)Math.Ceiling(inventario.Count() / (double)pageSize)
             };
             return View(viewModel);
         }

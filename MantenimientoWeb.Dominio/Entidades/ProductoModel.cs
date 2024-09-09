@@ -49,6 +49,7 @@ namespace MantenimientoWeb.Dominio.Entidades
         public string NotasAdicionales {  get; set; }
         public int TipoProductoId { get; set; }
         public TipoProductoModel TipoProducto { get; set; }
+        public ICollection<InventarioModel> Inventarios { get; set; }
 
     }
 }

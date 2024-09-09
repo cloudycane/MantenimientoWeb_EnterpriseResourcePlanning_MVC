@@ -1,1 +1,122 @@
-﻿
+﻿@model MantenimientoWeb.Proyecto.ViewModels.ProductoViewModel
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<h1 class="text-center">Detalle</h1>
+<div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 4%;">
+    
+    <div class="col-lg-6">
+        <h4><b>Nombre del producto:</b><u> @Model.Nombre</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Descripción del producto:</b><u>@Model.Descripcion</u></h4>
+    </div>
+    
+    <div class="col-lg-6">
+        <h4><b>Fecha de Creación:</b><u>@Model.FechaCreacion.ToString("d")</u></h4>
+    </div>
+    
+    <div class="col-lg-6">
+        <h4><b>Categoría del Producto:</b> <u>@ViewData["CategoriaNombre"]</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Clasificación del Producto:</b> <u>@ViewData["ClasificacionNombre"]</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Lugar de Fabricación:</b> <u>@Model.LugarFabricacion</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Precio Mantenimiento:</b> <u>@Model.CostoMantenimiento</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Demanda Anual:</b> <u>@Model.DemandaAnual</u></h4>
+    </div>
+    
+    <div class="col-lg-6">
+        <h4><b>Stock Actual:</b> <u>@Model.StockActual</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Consumo Promedio Diario o P CPD:</b> <u>@Model.ConsumoDiarioPromedio</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Precio Original:</b> <u>@ViewData["MonedaSimbolo"] @Model.PrecioOriginal</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        
+            @if(Model.StockMinimo >= Model.StockActual)
+            {
+            <h4 class="text-danger"><b>Stock Mínimo: </b>Necesita un Restock - @Model.StockMinimo</h4>
+            }        
+            else
+            {
+            <h4 class="text-success"><b>Stock Mínimo: </b>@Model.StockMinimo</h4>
+            }
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Proveedor Nombre:</b> <u>@ViewData["RazonSocial"]</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Tipo de Producto:</b> @ViewData["TipoProductoNombre"]</h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Especificaciones: </b></h4>
+        <ul>
+            @if (Model.EsPerecedero == true)
+            {
+                <li>Producto Perecedero</li>
+            }
+            @if (Model.RequiereRefrigacion == true)
+            {
+                <li>Requiere Refrigeración</li>
+            }
+            @if (Model.EsFragil == true)
+            {
+                <li>Producto con Fragilidad</li>
+            }
+            @if (Model.ProductoPeligrosa == true)
+            {
+                <li>Producto Peligroso</li>
+            }
+        </ul>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Vida Útil:</b> <u>@Model.VidaUtil</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Temperatura:</b> <u>@Model.TemperaturaAlmacenimiento º C</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Instrucciones de Manejo: </b><u>@Model.InstruccionesDeManejo</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Tipo de Transporte:</b> <u>@ViewData["TransporteNombre"]</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Tipo de Empaquetamiento:</b> <u>@ViewData["EmpaquetamientoNombre"]</u></h4>
+    </div>
+
+    <div class="col-lg-6">
+        <h4><b>Notas Adicionales:</b> <u>@Model.NotasAdicionales</u></h4>
+    </div>
+</div>
+
+<a style="float: left; margin: 4%;" asp-action="UILandingProduccion" asp-controller="LandingPages" class="btn btn-info">Volver al Inicio</a>
+

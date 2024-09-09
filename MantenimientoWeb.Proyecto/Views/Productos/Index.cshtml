@@ -4,7 +4,6 @@
     ViewData["Title"] = "Listado de Productos";
 }
 
-
 <link rel="stylesheet" href="~/css/indexProducto.css" />
 
 <div class="container" id="productoIndex">
@@ -40,24 +39,40 @@
                         <td>@producto.LugarFabricacion</td>
                         <td>@producto.Empaquetamiento.Nombre - @producto.Transporte.Vehiculo</td>
                         <td>@producto.Categoria.Nombre - @producto.Clasificacion.Nombre</td>
-                        <td>@producto.PrecioOriginal</td>
-                        <td>@producto.CostoMantenimiento</td>
+                        <td>@producto.Moneda.SimboloMoneda @producto.PrecioOriginal</td>
+                        <td>@producto.Moneda.SimboloMoneda @producto.CostoMantenimiento</td>
                         <td>@producto.StockActual</td>
                         <td>@producto.TipoProducto.Nombre</td>
                         <td>
-                            @producto.EsPerecedero
-                            @producto.EsFragil
-                            @producto.RequiereRefrigacion
-                            @producto.ProductoPeligrosa
+                            <ul>
+                                @if (producto.EsPerecedero == true)
+                                {
+                                    <li>Producto Perecedero</li>
+                                }
 
+                                @if (producto.EsFragil == true)
+                                {
+                                    <li>Producto Fragil</li>
+                                }
+
+                                @if (producto.RequiereRefrigacion == true)
+                                {
+                                    <li>Requiere Refrigación</li>
+                                }
+
+                                @if (producto.ProductoPeligrosa)
+                                {
+                                    <li>Producto Peligroso</li>
+                                }
+                            </ul>
                         </td>
+
                         <td>@producto.NotasAdicionales</td>
                         <td>
                             <a class="btn btn-warning" asp-action="Editar" asp-route-id="@producto.Id">Editar</a>
-                            <a class="btn btn-info">Detalles</a>
+                            <a class="btn btn-info" asp-action="Detalle" asp-route-id="@producto.Id">Detalles</a>
                             <a class="btn btn-danger" asp-action="Eliminar" asp-route-id="@producto.Id">Eliminar</a>
                         </td>
-
                     </tr>    
                 }
                 

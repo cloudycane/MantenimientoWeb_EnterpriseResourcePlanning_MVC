@@ -31,7 +31,7 @@ namespace MantenimientoWeb.Proyecto.ViewModels
         [StringLength(500, ErrorMessage = "El campo {0} tiene una longitud de caracteres de {1}")]
         public string LugarFabricacion { get; set; }
 
-        public int CategoriaId { get; set; } // FK 
+        public int CategoriaId { get; set; } // FK
         public SelectList CategoriaSelectList { get; set; } // MVC rendering
         public int ClasificacionId { get; set; } // FK 
         public SelectList ClasificacionSelectList { get; set; } // MVC rendering

@@ -93,5 +93,13 @@ namespace MantenimientoWeb.Infraestructura.Data
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task EliminarInventarioPorProductoIdAsync(int productoId)
+        {
+            var inventarios = await _context.Inventario.Where(i => i.ProductoId == productoId).ToListAsync();
+            _context.Inventario.RemoveRange(inventarios);
+            await _context.SaveChangesAsync();
+        }
+
     }
 }

@@ -12,6 +12,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
         Task ActualizarAsync(ProductoModel producto);
         Task CreateAsync(ProductoModel producto);
         Task EliminarAsync(int id);
+        Task EliminarInventarioPorProductoIdAsync(int productoId);
         Task<ProductoModel> ObtenerIdAsync(int id);
         Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync();
         Task<IEnumerable<EmpresaModel>> ObtenerProveedoresAsync();

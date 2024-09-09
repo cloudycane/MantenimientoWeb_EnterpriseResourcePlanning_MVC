@@ -53,13 +53,89 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return View(viewModel);
         }
 
-        // GET: ProductosController/Details/5
-        public ActionResult Detalle(int id)
+        // GET: ProductosController/Detalle
+        public async Task<IActionResult> Detalle(int id)
         {
-            return View();
+            var producto = await _productoService.ObtenerProductoPorIdAsync(id);
+            
+            var monedas = await _productoService.GetMonedasAsync() ?? new List<MonedaProductoModel>();
+            var categorias = await _productoService.GetCategoriasAsync() ?? new List<CategoriaProductoModel>();
+            var clasificaciones = await _productoService.GetClasificacionAsync() ?? new List<ClasificacionProductoModel>();
+            var transportes = await _productoService.GetTransporteAsync() ?? new List<TransporteModel>();
+            var empaquetamientos = await _productoService.GetEmpaquetamientosAsync() ?? new List<EmpaquetamientoModel>();
+            var proveedores = await _productoService.GetProveedoresAsync() ?? new List<EmpresaModel>();
+            var tipoProductos = await _productoService.GetTipoProductosAsync() ?? new List<TipoProductoModel>();
+
+            //
+            var categoriaNombre = categorias.FirstOrDefault(c => c.Id == producto.CategoriaId)?.Nombre;
+            var monedaSimbolo = monedas.FirstOrDefault(m => m.Id == producto.MonedaId)?.SimboloMoneda;
+            var clasificacionNombre = clasificaciones.FirstOrDefault(cl => cl.Id == producto.ClasificacionId)?.Nombre;
+            var proveedorNombre = proveedores.FirstOrDefault(p => p.Id == producto.ProveedorId)?.RazonSocial;
+            var tipoProductoNombre = tipoProductos.FirstOrDefault(tp => tp.Id == producto.TipoProductoId)?.Nombre;
+            var tipoTransporteNombre = transportes.FirstOrDefault(tr => tr.Id == producto.TransporteId)?.Vehiculo;
+            var tipoEmpaquetamientoNombre = empaquetamientos.FirstOrDefault(te => te.Id == producto.EmpaquetamientoId)?.Nombre;
+
+            var viewModel = new ProductoViewModel
+            {
+                Id = producto.Id,
+                Nombre = producto.Nombre,
+                Descripcion = producto.Description,
+                FechaCreacion = producto.FechaCreacion,
+                FechaExpiracion = producto.FechaExpiracion,
+                MonedaId = producto.MonedaId,
+                PrecioOriginal = producto.PrecioOriginal,
+                LugarFabricacion = producto.LugarFabricacion,
+                CategoriaId = producto.CategoriaId,
+                ClasificacionId = producto.ClasificacionId,
+                CostoMantenimiento = producto.CostoMantenimiento,
+                NivelActual = producto.NivelActual,
+                PlazoEntrega = producto.PlazoEntrega,
+                DemandaAnual = producto.DemandaAnual,
+                StockActual = producto.StockActual,
+                ConsumoDiarioPromedio = producto.ConsunmoDiarioPromedio,
+                LeadTime = producto.LeadTime,
+                StockSeguridad = producto.StockSeguridad,
+                //StockMinimo = producto.StockMinimo es READ-ONLY
+                EsPerecedero = producto.EsPerecedero,
+                EsFragil = producto.EsFragil,
+                RequiereRefrigacion = producto.RequiereRefrigacion,
+                ProductoPeligrosa = producto.ProductoPeligrosa,
+                VidaUtil = producto.VidaUtil,
+                TemperaturaAlmacenimiento = producto.TemperaturaAlmacenimiento,
+                InstruccionesDeManejo = producto.InstruccionesDeManejo,
+                TransporteId = producto.TransporteId,
+                EmpaquetamientoId = producto.EmpaquetamientoId,
+                NotasAdicionales = producto.NotasAdicionales,
+                ProveedorId = producto.ProveedorId,
+                TipoProductoId = producto.TipoProductoId,
+                
+
+
+                TipoProductoSelectList = new SelectList(tipoProductos, "Id", "Nombre"),
+                ProveedorSelectList = new SelectList(proveedores, "Id", "RazonSocial"),
+                MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda"),
+                CategoriaSelectList = new SelectList(categorias, "Id", "Nombre"),
+                ClasificacionSelectList = new SelectList(clasificaciones, "Id", "Nombre"),
+                TransporteSelectList = new SelectList(transportes, "Id", "Vehiculo"),
+                EmpaquetamientoSelectList = new SelectList(empaquetamientos, "Id", "Nombre")
+            
+            
+            };
+
+            // 
+
+            ViewData["CategoriaNombre"] = categoriaNombre;
+            ViewData["MonedaSimbolo"] = monedaSimbolo;
+            ViewData["ClasificacionNombre"] = clasificacionNombre;
+            ViewData["RazonSocial"] = proveedorNombre;
+            ViewData["TipoProductoNombre"] = tipoProductoNombre;
+            ViewData["TransporteNombre"] = tipoTransporteNombre;
+            ViewData["EmpaquetamientoNombre"] = tipoEmpaquetamientoNombre;
+
+            return View(viewModel);
         }
 
-        // GET: ProductosController/Create
+        // GET: ProductosController/Crear
         public async Task<IActionResult> Crear()
         {
             var monedas = await _getMonedasQuery.ExecuteAsync();
@@ -174,12 +250,6 @@ namespace MantenimientoWeb.Proyecto.Controllers
         {
             var producto = await _productoService.ObtenerProductoPorIdAsync(id);
 
-            if (producto == null)
-            {
-                return NotFound($"No se encontró el producto con ID {id}.");
-            }
-
-            // Load the select lists
             var monedas = await _productoService.GetMonedasAsync() ?? new List<MonedaProductoModel>();
             var categorias = await _productoService.GetCategoriasAsync() ?? new List<CategoriaProductoModel>();
             var clasificaciones = await _productoService.GetClasificacionAsync() ?? new List<ClasificacionProductoModel>();
@@ -261,7 +331,6 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     ConsunmoDiarioPromedio = viewModel.ConsumoDiarioPromedio,
                     LeadTime = viewModel.LeadTime,
                     StockSeguridad = viewModel.StockSeguridad,
-                    // Ensure that the readonly property is handled if needed
                     EsPerecedero = viewModel.EsPerecedero,
                     EsFragil = viewModel.EsFragil,
                     RequiereRefrigacion = viewModel.RequiereRefrigacion,
@@ -276,24 +345,77 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     TipoProductoId = viewModel.TipoProductoId
                 };
 
-                // Call service to update
+                // Actualizar
                 await _productoService.EditarProductoAsync(producto);
                 TempData["success"] = "El producto ha sido actualizado con éxito";
                 return RedirectToAction("Index");
             }
 
-            // Reload the select lists if the model state is not valid
+            // Una función para RESETEAR select lists.
             await CargarSelectListsAsync(viewModel);
             return View(viewModel);
         }
 
 
-        // GET: ProductosController/Delete/5
+        // GET: ProductosController
         // Hay que mapear ViewModel a ProductoModel o Vice Versa!!!!
         public async Task<IActionResult> Eliminar(int id)
         {
             var producto = await _productoService.ObtenerProductoPorIdAsync(id);
-            return View(producto);
+
+
+            var monedas = await _productoService.GetMonedasAsync() ?? new List<MonedaProductoModel>();
+            var categorias = await _productoService.GetCategoriasAsync() ?? new List<CategoriaProductoModel>();
+            var clasificaciones = await _productoService.GetClasificacionAsync() ?? new List<ClasificacionProductoModel>();
+            var transportes = await _productoService.GetTransporteAsync() ?? new List<TransporteModel>();
+            var empaquetamientos = await _productoService.GetEmpaquetamientosAsync() ?? new List<EmpaquetamientoModel>();
+            var proveedores = await _productoService.GetProveedoresAsync() ?? new List<EmpresaModel>();
+            var tipoProductos = await _productoService.GetTipoProductosAsync() ?? new List<TipoProductoModel>();
+
+            var viewModel = new ProductoViewModel
+            {
+                Id = producto.Id,
+                Nombre = producto.Nombre,
+                Descripcion = producto.Description,
+                FechaCreacion = producto.FechaCreacion,
+                FechaExpiracion = producto.FechaExpiracion,
+                MonedaId = producto.MonedaId,
+                PrecioOriginal = producto.PrecioOriginal,
+                LugarFabricacion = producto.LugarFabricacion,
+                CategoriaId = producto.CategoriaId,
+                ClasificacionId = producto.ClasificacionId,
+                CostoMantenimiento = producto.CostoMantenimiento,
+                NivelActual = producto.NivelActual,
+                PlazoEntrega = producto.PlazoEntrega,
+                DemandaAnual = producto.DemandaAnual,
+                StockActual = producto.StockActual,
+                ConsumoDiarioPromedio = producto.ConsunmoDiarioPromedio,
+                LeadTime = producto.LeadTime,
+                StockSeguridad = producto.StockSeguridad,
+                //StockMinimo = producto.StockMinimo es READ-ONLY
+                EsPerecedero = producto.EsPerecedero,
+                EsFragil = producto.EsFragil,
+                RequiereRefrigacion = producto.RequiereRefrigacion,
+                ProductoPeligrosa = producto.ProductoPeligrosa,
+                VidaUtil = producto.VidaUtil,
+                TemperaturaAlmacenimiento = producto.TemperaturaAlmacenimiento,
+                InstruccionesDeManejo = producto.InstruccionesDeManejo,
+                TransporteId = producto.TransporteId,
+                EmpaquetamientoId = producto.EmpaquetamientoId,
+                NotasAdicionales = producto.NotasAdicionales,
+                ProveedorId = producto.ProveedorId,
+                TipoProductoId = producto.TipoProductoId,
+                TipoProductoSelectList = new SelectList(tipoProductos, "Id", "Nombre"),
+                ProveedorSelectList = new SelectList(proveedores, "Id", "RazonSocial"),
+                MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda"),
+                CategoriaSelectList = new SelectList(categorias, "Id", "Nombre"),
+                ClasificacionSelectList = new SelectList(clasificaciones, "Id", "Nombre"),
+                TransporteSelectList = new SelectList(transportes, "Id", "Vehiculo"),
+                EmpaquetamientoSelectList = new SelectList(empaquetamientos, "Id", "Nombre")
+            };
+
+            return View(viewModel);
+           
         }
 
         // POST: ProductosController/Delete/5
@@ -301,10 +423,11 @@ namespace MantenimientoWeb.Proyecto.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EliminarConfirmacion(int id)
         {
+
             await _productoService.EliminarProductoAsync(id);
             TempData["success"] = "El producto ha sido eliminado con éxito";
             return RedirectToAction("Index");
-
         }
+
     }
 }

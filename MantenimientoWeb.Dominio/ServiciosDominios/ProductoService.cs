@@ -93,10 +93,16 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             await _productoRepository.ActualizarAsync(producto);
         }
 
-
         public async Task EliminarProductoAsync(int id)
         {
             await _productoRepository.EliminarAsync(id);
         }
+
+        public async Task EliminarInventarioProductoIdAsync(int id)
+        {
+            await _productoRepository.EliminarInventarioPorProductoIdAsync(id);
+        }
+
+
     }
 }

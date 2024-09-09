@@ -34,13 +34,19 @@ namespace MantenimientoWeb.Infraestructura.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Si quisieramos trabajar con EFCodeFirst asignando Llaves Fóraneas, Seeding, etc.
-            
+            modelBuilder.Entity<InventarioModel>()
+            .HasOne(i => i.Producto)
+            .WithMany(p => p.Inventarios) // A product can have many inventory records
+            .HasForeignKey(i => i.ProductoId)
+            .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<ProductoModel>()
                 .HasOne(p => p.Proveedor)
                 .WithMany()
                 .HasForeignKey(p => p.ProveedorId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+
 
             modelBuilder.Entity<EstadoProductoModel>().HasData(
                 new EstadoProductoModel { Id = 1, Nombre = "Activo" },

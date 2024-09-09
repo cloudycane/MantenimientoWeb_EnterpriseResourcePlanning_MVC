@@ -30,6 +30,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcQ3JlYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Inventarios/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRGV0YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Inventarios/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Inventarios/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Inventarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,8 +66,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXENyZWFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Productos/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXERldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Productos/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Productos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEVsaW1pbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Productos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/RegistroEmpresa/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9FbXByZXNhXERldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/RegistroEmpresa/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9FbXByZXNhXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/RegistroEmpresa/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9FbXByZXNhXEVsaW1pbmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/RegistroEmpresa/Index.cshtml]

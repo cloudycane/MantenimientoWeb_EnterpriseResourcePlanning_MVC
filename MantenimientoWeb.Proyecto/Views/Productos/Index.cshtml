@@ -36,7 +36,7 @@
                 {
                     <tr>
                         <td>@producto.Nombre</td>
-                        <td> Creado el @producto.FechaCreacion por @producto.Proveedor.RazonSocial</td>
+                            <td> Creado el @producto.FechaCreacion.ToString("d") por la empresa <strong>@producto.Proveedor.RazonSocial</strong></td>
                         <td>@producto.LugarFabricacion</td>
                         <td>@producto.Empaquetamiento.Nombre - @producto.Transporte.Vehiculo</td>
                         <td>@producto.Categoria.Nombre - @producto.Clasificacion.Nombre</td>
@@ -53,9 +53,9 @@
                         </td>
                         <td>@producto.NotasAdicionales</td>
                         <td>
-                            <a class="btn btn-warning">Editar</a>
+                            <a class="btn btn-warning" asp-action="Editar" asp-route-id="@producto.Id">Editar</a>
                             <a class="btn btn-info">Detalles</a>
-                            <a class="btn btn-danger">Eliminar</a>
+                            <a class="btn btn-danger" asp-action="Eliminar" asp-route-id="@producto.Id">Eliminar</a>
                         </td>
 
                     </tr>    

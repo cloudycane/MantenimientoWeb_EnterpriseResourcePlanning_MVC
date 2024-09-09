@@ -38,7 +38,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         }
 
         // GET: InventariosController/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Detalle(int id)
         {
             return View();
         }
@@ -98,7 +98,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
 
         }
         // GET: InventariosController/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Editar(int id)
         {
             return View();
         }
@@ -106,7 +106,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         // POST: InventariosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Editar(int id, IFormCollection collection)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         }
 
         // GET: InventariosController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Eliminar(int id)
         {
             return View();
         }
@@ -127,7 +127,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         // POST: InventariosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Eliminar(int id, IFormCollection collection)
         {
             try
             {

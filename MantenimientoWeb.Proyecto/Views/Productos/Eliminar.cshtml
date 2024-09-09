@@ -1,0 +1,180 @@
+﻿@model MantenimientoWeb.Proyecto.ViewModels.ProductoViewModel
+
+@{
+    ViewData["Title"] = "Eliminar Producto";
+}
+
+<head>
+
+    <link rel="stylesheet" href="~/css/crearProducto.css" asp-append-version="true" />
+
+</head>
+
+<body>
+    <h1 class="text-center"><u>Eliminar Producto</u></h1>
+    <h3 class="text-center">¿Estás seguro de eliminar este producto?</h3>
+
+
+    <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px;">
+
+        <form asp-action="Editar" method="post">
+            <div class="col-lg-4">
+                <label asp-for="Nombre"><i class="bi bi-arrow-right-short"></i>Nombre del Producto</label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4">
+                <label asp-for="Descripcion"><i class="bi bi-arrow-right-short"></i>Descripción</label>
+                <input asp-for="Descripcion" class="form-control" />
+                <span asp-validation-for="Descripcion" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4">
+                <label asp-for="FechaCreacion"><i class="bi bi-arrow-right-short"></i>Fecha de Creación</label>
+                <input asp-for="FechaCreacion" type="date" class="form-control" />
+                <span asp-validation-for="FechaCreacion" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="FechaExpiracion"><i class="bi bi-arrow-right-short"></i>Fecha de Expiración (opcional)</label>
+                <input asp-for="FechaExpiracion" type="date" class="form-control" />
+                <span asp-validation-for="FechaExpiracion" class="text-danger"></span>
+            </div>
+            <div class="col-lg-1">
+                <label asp-for="MonedaId">Moneda</label>
+                <select asp-for="MonedaId" class="form-control" asp-items="Model.MonedaSelectList"><option>-?-</option></select>
+                <span asp-validation-for="MonedaId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="PrecioOriginal"><i class="bi bi-arrow-right-short"></i>Precio Original</label>
+                <input asp-for="PrecioOriginal" class="form-control" />
+                <span asp-validation-for="PrecioOriginal" class="text-danger"></span>
+            </div>
+            <div class="col-lg-4">
+                <label asp-for="LugarFabricacion"><i class="bi bi-arrow-right-short"></i>Lugar de Fabricación</label>
+                <input asp-for="LugarFabricacion" class="form-control" />
+                <span asp-validation-for="LugarFabricacion" class="text-danger"></span>
+            </div>
+
+            <div class="col-lg-2">
+                <label asp-for="CategoriaId"><i class="bi bi-arrow-right-short"></i>Categoría</label>
+                <select asp-for="CategoriaId" class="form-control" asp-items="Model.CategoriaSelectList"><option>--Select--</option></select>
+
+            </div>
+
+            <div class="col-lg-2">
+                <label asp-for="ClasificacionId"><i class="bi bi-arrow-right-short"></i>Clasificación</label>
+                <select asp-for="ClasificacionId" class="form-control" asp-items="Model.ClasificacionSelectList"><option>--Select--</option></select>
+                <span asp-validation-for="ClasificacionId" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="CostoMantenimiento"><i class="bi bi-arrow-right-short"></i>Precio Mantenimiento</label>
+                <input asp-for="CostoMantenimiento" class="form-control" />
+                <span asp-validation-for="CostoMantenimiento" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="NivelActual"><i class="bi bi-arrow-right-short"></i>Nivel Actual</label>
+                <input asp-for="NivelActual" class="form-control" />
+                <span asp-validation-for="NivelActual" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="PlazoEntrega"><i class="bi bi-arrow-right-short"></i>Plazo de Entrega</label>
+                <input asp-for="PlazoEntrega" class="form-control" />
+                <span asp-validation-for="PlazoEntrega" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="DemandaAnual"><i class="bi bi-arrow-right-short"></i>Demanda Anual</label>
+                <input asp-for="DemandaAnual" class="form-control" />
+                <span asp-validation-for="DemandaAnual" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="StockActual"><i class="bi bi-arrow-right-short"></i>Stock Actual</label>
+                <input asp-for="StockActual" class="form-control" />
+                <span asp-validation-for="StockActual" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="ConsumoDiarioPromedio"><i class="bi bi-arrow-right-short"></i>CPD</label>
+                <input asp-for="ConsumoDiarioPromedio" class="form-control" />
+                <span asp-validation-for="ConsumoDiarioPromedio" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="LeadTime"><i class="bi bi-arrow-right-short"></i>Lead Time</label>
+                <input asp-for="LeadTime" class="form-control" />
+                <span asp-validation-for="LeadTime" class="text-danger"></span>
+            </div>
+            <div class="col-lg-2">
+                <label asp-for="StockSeguridad"><i class="bi bi-arrow-right-short"></i>Stock de Seguridad</label>
+                <input asp-for="StockSeguridad" class="form-control" />
+                <span asp-validation-for="StockSeguridad" class="text-danger"></span>
+            </div>
+
+            <div class="col-lg-2">
+                <label asp-for="ProveedorId">Proveedor Nombre</label>
+                <select asp-for="ProveedorId" asp-items="Model.ProveedorSelectList" class="form-control"><option>--Seleccionar--</option></select>
+            </div>
+
+            <div class="col-lg-2">
+                <label asp-for="TipoProductoId">Tipo de Producto</label>
+                <select asp-for="TipoProductoId" asp-items="Model.TipoProductoSelectList" class="form-control"><option>--Seleccionar--</option></select>
+            </div>
+
+            <div class="col-lg-12">
+                <h2><u style="border-width: thin;">Especificaciones</u></h2>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="EsPerecedero"><i class="bi bi-arrow-right-short"></i>Producto Perecedero</label>
+                <input asp-for="EsPerecedero" />
+                <span asp-validation-for="StockSeguridad" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="RequiereRefrigacion"><i class="bi bi-arrow-right-short"></i>Producto Refrigerado</label>
+                <input asp-for="RequiereRefrigacion" />
+                <span asp-validation-for="RequiereRefrigacion" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="EsFragil"><i class="bi bi-arrow-right-short"></i>Producto con Fragilidad</label>
+                <input asp-for="EsFragil" />
+                <span asp-validation-for="EsFragil" class="text-danger"></span>
+            </div>
+            <div class="col-lg-3">
+                <label asp-for="ProductoPeligrosa"><i class="bi bi-arrow-right-short"></i>Producto Peligrosa</label>
+                <input asp-for="ProductoPeligrosa" />
+                <span asp-validation-for="ProductoPeligrosa" class="text-danger"></span>
+            </div>
+
+            <div>
+                <div class="col-lg-2">
+                    <label asp-for="VidaUtil"><i class="bi bi-arrow-right-short"></i>Vida Útil</label>
+                    <input asp-for="VidaUtil" class="form-control" />
+                    <span asp-validation-for="VidaUtil" class="text-danger"></span>
+                </div>
+                <div class="col-lg-2">
+                    <label asp-for="TemperaturaAlmacenimiento"><i class="bi bi-arrow-right-short"></i>Temperatura ºC</label>
+                    <input asp-for="TemperaturaAlmacenimiento" class="form-control" />
+                    <span asp-validation-for="TemperaturaAlmacenimiento" class="text-danger"></span>
+                </div>
+                <div class="col-lg-8">
+                    <label asp-for="InstruccionesDeManejo"><i class="bi bi-arrow-right-short"></i>Instrucciones de Manejo</label>
+                    <input asp-for="InstruccionesDeManejo" class="form-control" />
+                    <span asp-validation-for="InstruccionesDeManejo" class="text-danger"></span>
+                </div>
+                <div class="col-lg-4">
+                    <label asp-for="TransporteId"><i class="bi bi-arrow-right-short"></i>Tipo de Transporte</label>
+                    <select asp-for="TransporteId" class="form-control" asp-items="Model.TransporteSelectList"><option>--Seleccionar un vehículo</option></select>
+                </div>
+                <div class="col-lg-4">
+                    <label asp-for="EmpaquetamientoId"><i class="bi bi-arrow-right-short"></i>Tipo de Empaquetamiento</label>
+                    <select asp-for="EmpaquetamientoId" class="form-control" asp-items="Model.EmpaquetamientoSelectList"><option>--Seleccionar una clase</option></select>
+                </div>
+                <div class="col-lg-4">
+                    <label asp-for="NotasAdicionales"><i class="bi bi-arrow-right-short"></i>Notas Adicionales</label>
+                    <input class="form-control" asp-for="NotasAdicionales" />
+                    <span asp-validation-for="NotasAdicionales" class="text-danger"></span>
+                </div>
+            </div>
+
+            <a style="float: left; margin-top: 2%; margin-bottom: 2%;" asp-action="UILandingProduccion" asp-controller="LandingPages" class="btn btn-info">Volver al Inicio</a>
+            <button style="float: right; margin-top: 2%; margin-bottom: 2%;" type="submit" class="btn btn-primary col-lg-3 float-lg-end">Guardar</button>
+        </form>
+    </div>
+
+
+</body>

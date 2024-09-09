@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ly3S4sXECxlKwt4P6xMYzXbgo3j4hdfQsqLw3KsCKIE=",
+  "Hash": "4zC8/wswkn/SHmOwLrMi17TPx9Ur1gMt/h6+oqBiEcE=",
   "Source": "MantenimientoWeb.Proyecto",
   "BasePath": "_content/MantenimientoWeb.Proyecto",
   "Mode": "Default",
@@ -72,6 +72,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\crearProducto.css"
+    },
+    {
+      "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\documentacionStyle.css",
+      "SourceId": "MantenimientoWeb.Proyecto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\",
+      "BasePath": "_content/MantenimientoWeb.Proyecto",
+      "RelativePath": "css/documentacionStyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\documentacionStyle.css"
     },
     {
       "Identity": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\indexProducto.css",

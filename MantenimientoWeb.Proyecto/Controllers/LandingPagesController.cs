@@ -11,11 +11,6 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return View();
         }
 
-        public ActionResult UILandingCompra()
-        {
-            return View();
-        }
-
         public ActionResult UILandingBuscar()
         {
             return View();

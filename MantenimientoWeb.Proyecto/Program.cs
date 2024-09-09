@@ -23,7 +23,7 @@ builder.Services.AddScoped<GetMonedasQuery>();
 builder.Services.AddScoped<GetEstadoProductosQuery>();
 
 // SERVICIOS 
-builder.Services.AddScoped<ICompraService, CompraService>();
+
 builder.Services.AddScoped<IProductoService, ProductoService>();
 builder.Services.AddScoped<IEmpresaService, EmpresaService>();
 builder.Services.AddScoped<IInventarioService, InventarioService>();
@@ -42,7 +42,7 @@ builder.Services.AddScoped<IProductoRepository, ProductoRepository>();
 builder.Services.AddScoped<ITipoProductoRepository, TipoProductoRepository>();
 builder.Services.AddScoped<IEstadoProductoRepository, EstadoProductoRepository>();
 builder.Services.AddScoped<IInventarioRepository, InventarioRepository>();
-builder.Services.AddScoped<ICompraRepository, CompraRepository>();
+
 
 var app = builder.Build();
 

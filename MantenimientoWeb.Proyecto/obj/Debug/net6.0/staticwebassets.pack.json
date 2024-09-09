@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\crearProducto.css"
     },
     {
+      "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\documentacionStyle.css",
+      "PackagePath": "staticwebassets\\css\\documentacionStyle.css"
+    },
+    {
       "Id": "C:\\Users\\gesel\\source\\repos\\MantenimientoWeb.Proyecto\\MantenimientoWeb_EnterpriseResourcePlanning_MVC\\MantenimientoWeb.Proyecto\\wwwroot\\css\\indexProducto.css",
       "PackagePath": "staticwebassets\\css\\indexProducto.css"
     },

@@ -1,4 +1,5 @@
 ﻿
+<link rel="stylesheet" href="~/css/documentacionStyle.css" asp-append-version="true" />
 <div class="container" style="margin-top: 3%;">
 
     <a asp-action="Index" asp-controller="Home" class="btn btn-primary"><i class="bi bi-arrow-90deg-left"></i> Volver al anterior</a>
@@ -7,15 +8,15 @@
     </div>
 
     <div style="margin-top: 4%">
-        <h3>Listado de mis recursos de aprendizajes para la creación del proyecto: </h3>
+        <h3 class="text-center">Listado de mis recursos de aprendizajes para la creación del proyecto: </h3>
 
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th class="col-lg-3"><i class="bi bi-check-circle-fill"></i> Udemy Curso: Aprende ASP.NET Core MVC 6 de Felipe Gavilán </th>
-                    <th class="col-lg-3"><i class="bi bi-check-circle-fill"></i> Udemy Curso: .NET Core MVC - Guia Completo 2024 de Bhrugen Patel</th>
-                    <th class="col-lg-3"><i class="bi bi-check-circle-fill"></i> Udemy Curso: ASP.Net Core - The Ultimate Guide de Harsha Vardhan</th>
-                    <th class="col-lg-3"><i class="bi bi-check-circle-fill"></i> Libro: La Gestión Logística</th>
+                    <th class="col-lg-3"><i id="check" class="bi bi-check-circle-fill"></i> Udemy Curso: Aprende ASP.NET Core MVC 6 de Felipe Gavilán </th>
+                    <th class="col-lg-3"><i id="check"class="bi bi-check-circle-fill"></i> Udemy Curso: .NET Core MVC - Guia Completo 2024 de Bhrugen Patel</th>
+                    <th class="col-lg-3"><i id="check" class="bi bi-check-circle-fill"></i> Udemy Curso: ASP.Net Core - The Ultimate Guide de Harsha Vardhan</th>
+                    <th class="col-lg-3"><i id="check" class="bi bi-check-circle-fill"></i> Libro: La Gestión Logística</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +29,18 @@
             </tbody>
         </table>
 
+        <h4>El proyecto se trata de una aplicación ERP (Entreprise Resourcement Plan) para un manejo de sistema de inventario (Inventory Management System en íngles) usando 
+            tecnologías web de ASP.NET MVC. En el aspecto del desarrollo, he utilizado una metodología "Agile" por los siguientes motivos: 
+        </h4>
+        <div class="container">
+            <ul>
+                <li><h4>El desarrollo del proyecto requiere unos requisitos o módulos que cambian a medida que el cliente o usuario, administrativo o un cierto área del equipo descruben nuevas necesidades.</h4></li>
+                <li><h4>Colaboración constante de los equipos tanto internos como externos que trabajan de manera cercana y hay revisiones continuas del progreso.</h4></li>
+                <li><h4>El desarrollo se hace en ciclos cortos llamados "sprints" o "iteraciones" donde al final de cada ciclo se entrega una parte funcional del sistema.</h4></li>
+            </ul>
+
+            <h4>Junto con la metodología de desarrollo Agile cabe destacar la arquitectura por capas o cebolla (Onion or Clean Architecture) del proyecto que permite la separación de responsibilidades, desacoplamiento, y facilita el desarrollo agile.</h4>
+        </div>
     </div>
 
 </div>

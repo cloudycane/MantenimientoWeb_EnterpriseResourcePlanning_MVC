@@ -18,14 +18,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\gesel\source\repos\MantenimientoWeb.Proyecto\MantenimientoWeb_EnterpriseResourcePlanning_MVC\MantenimientoWeb.Proyecto
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Compras/Crear.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDcmVhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Compras/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/Home/Documentacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N1bWVudGFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -48,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingBuscar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ0J1c2Nhci5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingCompra.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuZGluZ1BhZ2VzXFVJTGFuZGluZ0NvbXByYS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gesel/source/repos/MantenimientoWeb.Proyecto/MantenimientoWeb_EnterpriseResourcePlanning_MVC/MantenimientoWeb.Proyecto/Views/LandingPages/UILandingEmpresa.cshtml]

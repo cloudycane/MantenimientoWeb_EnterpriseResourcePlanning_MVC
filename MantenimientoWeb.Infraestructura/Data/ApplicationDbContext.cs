@@ -29,7 +29,6 @@ namespace MantenimientoWeb.Infraestructura.Data
         public DbSet<EstadoMateriaPrimaModel> EstadoMateriaPrimas { get; set; }
         public DbSet<EstadoProductoModel> EstadoProductos { get; set; }
         public DbSet<InventarioModel> Inventario { get; set; }
-        public DbSet<CompraModel> Compras { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

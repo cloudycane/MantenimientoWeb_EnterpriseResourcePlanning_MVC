@@ -14,14 +14,15 @@ namespace MantenimientoWeb.Proyecto.Controllers
         private readonly GetEstadoProductosQuery _getEstadoProductosQuery; 
         private readonly IInventarioRepository _inventarioRepository;
         private readonly IInventarioService _inventarioService;
-
-        public InventariosController(GetEstadoProductosQuery getEstadoProductosQuery, IInventarioRepository inventarioRepository, IInventarioService inventarioService) 
+        private readonly IProductoService _productoService;
+        public InventariosController(GetEstadoProductosQuery getEstadoProductosQuery, IInventarioRepository inventarioRepository, IInventarioService inventarioService, IProductoService productoService) 
         { 
             _getEstadoProductosQuery = getEstadoProductosQuery;
             _inventarioRepository = inventarioRepository;
             _inventarioService = inventarioService;
+            _productoService = productoService;
         }
-        // GET: InventariosController
+        // GET
         public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 4)
         {
             var inventario = await _inventarioService.ObtenerInventariosAsync();
@@ -37,10 +38,37 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return View(viewModel);
         }
 
-        // GET: InventariosController/Details/5
-        public ActionResult Detalle(int id)
+        // GET
+        public async Task<IActionResult> Detalle(int id)
         {
-            return View();
+            var inventario = await _inventarioService.ObtenerInventarioPorIdAsync(id);
+
+            // SELECT LIST 
+            var productos = await _inventarioService.GetProductosAsync();
+            var estadoProductos = await _inventarioService.GetEstadoProductosAsync();
+
+            //
+            var productoNombre = productos.FirstOrDefault(pr => pr.Id == inventario.ProductoId)?.Nombre;
+            var estadoNombre = estadoProductos.FirstOrDefault(es => es.Id == inventario.EstadoProductoId)?.Nombre;
+
+            var viewModel = new InventarioViewModel
+            {
+                
+                Id = inventario.Id,
+                ProductoId = inventario.ProductoId, 
+                UnidadesDeCompraEnAño = inventario.UnidadesDeCompraEnAño, 
+                Cantidad = inventario.Cantidad,
+                PrecioCompra = inventario.PrecioCompra,
+                //CostoPercentual = inventario.CostoPercentual, READONLY
+                //CostoTotalMantenimiento = inventario.CostoTotalMantenimiento, READONLY
+                //CostoPedido = inventario.CostoPedido, READONLY
+                EstadoProductoId = inventario.EstadoProductoId,
+
+            };
+
+            ViewData["ProductoNombre"] = productoNombre;
+            ViewData["EstadoNombre"] = estadoNombre;
+            return View(viewModel);
         }
 
         // GET: InventariosController/Create
@@ -76,7 +104,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
                     CostoPedido = viewModel.CostoPedido,
                     EstadoProductoId = viewModel.EstadoProductoId
                 };
-                await _inventarioRepository.CreateAsync(inventario);
+                await _inventarioService.CreateInventarioAsync(inventario);
                 TempData["success"] = "El inventario ha sido creado con éxito.";
                 return RedirectToAction("Index");
 
@@ -97,46 +125,118 @@ namespace MantenimientoWeb.Proyecto.Controllers
             viewModel.EstadoProductoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(estadoProductos, "Id", "Nombre");
 
         }
-        // GET: InventariosController/Edit/5
-        public ActionResult Editar(int id)
+
+        // GET
+        public async Task<IActionResult> Editar(int id)
         {
-            return View();
+            var inventario = await _inventarioService.ObtenerInventarioPorIdAsync(id);
+
+            var productos = await _inventarioService.GetProductosAsync() ?? new List<ProductoModel>();
+            var estadoProductos = await _inventarioService.GetEstadoProductosAsync() ?? new List<EstadoProductoModel>();
+
+            // Mapeo de InventarioModel a InventarioViewModel
+            var viewModel = new InventarioViewModel
+            {
+                Id = inventario.Id,
+                ProductoId = inventario.ProductoId,
+                UnidadesDeCompraEnAño = inventario.UnidadesDeCompraEnAño,
+                Cantidad = inventario.Cantidad,
+                PrecioCompra = inventario.PrecioCompra,
+                EstadoProductoId = inventario.EstadoProductoId,
+
+                // SELECT LIST
+                EstadoProductoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(estadoProductos, "Id", "Nombre"),
+                ProductoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(productos, "Id", "Nombre")
+            };
+
+            
+            return View(viewModel);
         }
 
-        // POST: InventariosController/Edit/5
+
+        // POST
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(int id, IFormCollection collection)
+
+        public async Task<IActionResult> Editar(InventarioViewModel viewModel)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                // Mapear el ViewModel al Model
+                var inventario = new InventarioModel
+                {
+                    Id = viewModel.Id,  
+                    ProductoId = viewModel.ProductoId,
+                    UnidadesDeCompraEnAño = viewModel.UnidadesDeCompraEnAño,
+                    Cantidad = viewModel.Cantidad,
+                    PrecioCompra = viewModel.PrecioCompra,
+                    CostoPercentual = viewModel.CostoPercentual,
+                    CostoTotalMantenimiento = viewModel.CostoTotalMantenimiento,
+                    CostoPedido = viewModel.CostoPedido,
+                    EstadoProductoId = viewModel.EstadoProductoId
+                };
+
+                
+                await _inventarioService.EditarInventarioAsync(inventario);
+
+                TempData["success"] = "El inventario ha sido actualizado con éxito.";
+                return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+
+            
+            var productos = await _inventarioService.GetProductosAsync() ?? new List<ProductoModel>();
+            var estadoProductos = await _inventarioService.GetEstadoProductosAsync() ?? new List<EstadoProductoModel>();
+
+            viewModel.ProductoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(productos, "Id", "Nombre");
+            viewModel.EstadoProductoSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(estadoProductos, "Id", "Nombre");
+
+            return View(viewModel);
         }
 
-        // GET: InventariosController/Delete/5
-        public ActionResult Eliminar(int id)
+
+
+
+        // GET
+        public async Task<IActionResult> Eliminar(int id)
         {
-            return View();
+            var inventario = await _inventarioService.ObtenerInventarioPorIdAsync(id);
+            var producto = await _inventarioService.GetProductosAsync();
+            var estadoProducto = await _inventarioService.GetEstadoProductosAsync();
+
+            //
+
+            var productoNombre = producto.FirstOrDefault(pr => pr.Id == inventario.ProductoId)?.Nombre;
+            var estadoNombre = estadoProducto.FirstOrDefault(es => es.Id == inventario.EstadoProductoId)?.Nombre;
+
+            var viewModel = new InventarioViewModel
+            {
+                Id = inventario.Id,
+                ProductoId = inventario.ProductoId,
+                
+                UnidadesDeCompraEnAño = inventario.UnidadesDeCompraEnAño,
+                Cantidad = inventario.Cantidad,
+                PrecioCompra = inventario.PrecioCompra,
+                EstadoProductoId = inventario.EstadoProductoId,
+                
+            };
+
+            //
+
+            ViewData["ProductoNombre"] = productoNombre;
+            ViewData["EstadoNombre"] = estadoNombre;
+            return View(viewModel);
         }
 
-        // POST: InventariosController/Delete/5
-        [HttpPost]
+
+        // POST
+        [HttpPost, ActionName("Eliminar")]
         [ValidateAntiForgeryToken]
-        public ActionResult Eliminar(int id, IFormCollection collection)
+        public async Task<IActionResult> EliminarConfirmacion(int id)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+           await _inventarioService.EliminarInventarioAsync(id);
+           TempData["success"] = "El inventario ha sido eliminado con éxito.";
+           return RedirectToAction("Index");
         }
     }
 }

@@ -43,5 +43,24 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             return await _productoRepository.ObtenerListadoProductosAsync();
         }
 
+        public async Task<InventarioModel> ObtenerInventarioPorIdAsync(int id)
+        {
+            return await _inventarioRepository.ObtenerIdAsync(id);
+        }
+
+        public async Task<IEnumerable<InventarioModel>> ObtenerTodosInventariosAsync()
+        {
+            return await _inventarioRepository.ObtenerTodoAsync();
+        }
+
+        public async Task EditarInventarioAsync (InventarioModel inventario)
+        {
+            await _inventarioRepository.ActualizarAsync(inventario);
+        }
+
+        public async Task EliminarInventarioAsync(int id)
+        {
+            await _inventarioRepository.EliminarAsync(id);
+        }
     }   
 }

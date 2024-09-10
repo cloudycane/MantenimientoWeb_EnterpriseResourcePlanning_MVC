@@ -40,9 +40,9 @@
                     <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.CostoTotalMantenimiento</td>
                     <td>@inventario.Producto.Moneda.SimboloMoneda @inventario.CostoPedido</td>
                     <td>
-                        <a asp-action="" asp-controller="" class="btn btn-warning" style="margin: 2%">Editar</a>
-                        <a asp-action="" asp-controller="" class="btn btn-info" style="margin: 2%">Detalles</a>
-                        <a asp-action="" asp-controller="" class="btn btn-danger" style="margin: 2%">Eliminar</a>
+                        <a asp-action="Editar" asp-route-id="@inventario.Id" class="btn btn-warning" style="margin: 2%">Editar</a>
+                        <a asp-action="Detalle" asp-route-id="@inventario.Id" class="btn btn-info" style="margin: 2%">Detalles</a>
+                        <a asp-action="Eliminar" asp-route-id="@inventario.Id" class="btn btn-danger" style="margin: 2%">Eliminar</a>
                     </td>
                 </tr>
                 

@@ -1,1 +1,47 @@
-﻿
+﻿@model InventarioViewModel
+
+@{
+    ViewData["Title"] = "Eliminar Inventario";
+}
+
+<h1 class="text-center"><u>Eliminar Inventario</u></h1>
+
+<div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%;">
+    @using (Html.BeginForm("Eliminar", "Inventarios", FormMethod.Post, new { @style = "margin-top: 4%; margin-bottom: 4%;" }))
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="col-lg-6 mb-4">
+            @Html.Label("Producto", "Producto: ")
+            <!-- Mostrar el nombre del producto en lugar del dropdown -->
+            @ViewData["ProductoNombre"]
+        </div>
+
+        <div class="col-lg-6 mb-4">
+            @Html.Label("EstadoProducto", "Estado del Producto: ")
+            <!-- Mostrar el nombre del estado en lugar del dropdown -->
+            @ViewData["EstadoNombre"]
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            @Html.LabelFor(model => model.UnidadesDeCompraEnAño, "Unidades de Compra Por Año")
+            @Html.TextBoxFor(model => model.UnidadesDeCompraEnAño, new { @class = "form-control", @type = "number", @disabled = "disabled" })
+            @Html.ValidationMessageFor(model => model.UnidadesDeCompraEnAño, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            @Html.LabelFor(model => model.Cantidad, "Cantidades en Stock: ")
+            @Html.TextBoxFor(model => model.Cantidad, new { @class = "form-control", @type = "number", @disabled = "disabled" })
+            @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="col-lg-4 mb-4">
+            @Html.LabelFor(model => model.PrecioCompra, "Precio de Compra: ")
+            @Html.TextBoxFor(model => model.PrecioCompra, new { @class = "form-control", @type = "number", @disabled = "disabled" })
+            @Html.ValidationMessageFor(model => model.PrecioCompra, "", new { @class = "text-danger" })
+        </div>
+
+        <a href="@Url.Action("Index", "Inventarios")" class="btn btn-info" style="float: left;">Cancelar</a>
+        <button type="submit" class="btn btn-danger" style="float: right; margin-bottom: 4%;">Eliminar Inventario</button>
+    }
+</div>

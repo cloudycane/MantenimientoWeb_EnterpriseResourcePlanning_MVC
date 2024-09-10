@@ -1,1 +1,56 @@
-﻿
+﻿@model MantenimientoWeb.Proyecto.ViewModels.InventarioViewModel
+
+
+@{
+    ViewData["Title"] = "Editar Inventario";
+}
+
+<h1 class="text-center"><u>Editar Inventario</u></h1>
+
+<div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%;">
+    @using (Html.BeginForm("Editar", "Inventarios", FormMethod.Post, new { @style = "margin-top: 4%; margin-bottom: 4%;" }))
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                @Html.LabelFor(model => model.ProductoId, "Elige un producto: ")
+                @Html.DropDownListFor(model => model.ProductoId, Model.ProductoSelectList, "--Seleccionar Producto--", new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.ProductoId, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                @Html.LabelFor(model => model.EstadoProductoId, "Estado del Producto: ")
+                @Html.DropDownListFor(model => model.EstadoProductoId, Model.EstadoProductoSelectList, "--Seleccionar Estado--", new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.EstadoProductoId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 mb-4">
+                @Html.LabelFor(model => model.UnidadesDeCompraEnAño, "Unidades de Compra Por Año")
+                @Html.TextBoxFor(model => model.UnidadesDeCompraEnAño, new { @class = "form-control", @type = "number" })
+                @Html.ValidationMessageFor(model => model.UnidadesDeCompraEnAño, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                @Html.LabelFor(model => model.Cantidad, "Cantidades en Stock: ")
+                @Html.TextBoxFor(model => model.Cantidad, new { @class = "form-control", @type = "number" })
+                @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                @Html.LabelFor(model => model.PrecioCompra, "Precio de Compra: ")
+                @Html.TextBoxFor(model => model.PrecioCompra, new { @class = "form-control", @type = "number" })
+                @Html.ValidationMessageFor(model => model.PrecioCompra, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="@Url.Action("Index", "Inventarios")" class="btn btn-info" style="float: left;">Volver al inicio</a>
+                <button type="submit" class="btn btn-primary" style="float: right; margin-bottom: 4%;">Editar Inventario</button>
+            </div>
+        </div>
+    }
+</div>

@@ -10,8 +10,12 @@ namespace MantenimientoWeb.Dominio.Interfaces
     public interface IEmpresaService
     {
         void CreateEmpresa(EmpresaModel empresa);
+        Task EditarEmpresasAsync(EmpresaModel empresa);
+        Task EliminarEmpresaAsync(int id);
         Task<IEnumerable<PaisModel>> GetPaisesAsync();
         Task<IEnumerable<TipoEmpresaModel>> GetTipoEmpresasAsync();
+        Task<EmpresaModel> ObtenerEmpresaPorIdAsync(int id);
         Task<IEnumerable<EmpresaModel>> ObtenerEmpresasAsync();
+        Task<IEnumerable<EmpresaModel>> ObtenerTodasEmpresasAsync();
     }
 }

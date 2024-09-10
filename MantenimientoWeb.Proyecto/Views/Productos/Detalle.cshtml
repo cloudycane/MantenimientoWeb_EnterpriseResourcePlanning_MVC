@@ -4,7 +4,7 @@
     ViewData["Title"] = "Detalles";
 }
 
-<h1 class="text-center">Detalle</h1>
+<h1 class="text-center">Detalle del producto</h1>
 <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 4%;">
     
     <div class="col-lg-6">
@@ -55,11 +55,11 @@
         
             @if(Model.StockMinimo >= Model.StockActual)
             {
-            <h4 class="text-danger"><b>Stock Mínimo: </b>Necesita un Restock - @Model.StockMinimo</h4>
+            <h4 class="text-danger"><b>Stock Mínimo: </b>Necesita un Restock - <u> @Model.StockMinimo </u></h4>
             }        
             else
             {
-            <h4 class="text-success"><b>Stock Mínimo: </b>@Model.StockMinimo</h4>
+            <h4 class="text-success"><b>Stock Mínimo: </b> <u>@Model.StockMinimo</u></h4> <p><i>*Todavía no necesitará un restock*</i></p>
             }
     </div>
 
@@ -68,7 +68,7 @@
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Tipo de Producto:</b> @ViewData["TipoProductoNombre"]</h4>
+        <h4><b>Tipo de Producto:</b> <u>@ViewData["TipoProductoNombre"]</u></h4>
     </div>
 
     <div class="col-lg-6">

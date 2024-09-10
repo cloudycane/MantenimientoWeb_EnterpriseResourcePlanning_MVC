@@ -291,6 +291,8 @@ namespace MantenimientoWeb.Proyecto.Controllers
                 NotasAdicionales = producto.NotasAdicionales,
                 ProveedorId = producto.ProveedorId,
                 TipoProductoId = producto.TipoProductoId,
+
+
                 TipoProductoSelectList = new SelectList(tipoProductos, "Id", "Nombre"),
                 ProveedorSelectList = new SelectList(proveedores, "Id", "RazonSocial"),
                 MonedaSelectList = new SelectList(monedas, "Id", "SimboloMoneda"),
@@ -310,7 +312,7 @@ namespace MantenimientoWeb.Proyecto.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Map the ViewModel to the Model
+                // Hacer un mapeo de ViewModel al Modelo
                 var producto = new ProductoModel
                 {
                     Id = viewModel.Id,

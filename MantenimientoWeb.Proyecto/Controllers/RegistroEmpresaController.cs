@@ -40,7 +40,45 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return View(viewModel);
         }
 
-        // GET: /Registrar
+        public async Task<IActionResult> Detalle(int id)
+        {
+            var empresa = await _empresaService.ObtenerEmpresaPorIdAsync(id);
+
+            // SELECT LIST 
+
+            var paises = await _empresaService.GetPaisesAsync();
+            var tipoEmpresa = await _empresaService.GetTipoEmpresasAsync();
+
+            // OBTENER NOMBRES
+
+            var paisNombre = paises.FirstOrDefault(p => p.Id == empresa.PaisId)?.Nombre;
+            var tipoEmpresaNombre = tipoEmpresa.FirstOrDefault(t => t.Id == empresa.TipoEmpresaId)?.Nombre;
+
+            var viewModel = new EmpresaViewModel
+            {
+                Id = empresa.Id,
+                CIF = empresa.CIF,
+                RazonSocial = empresa.RazonSocial,
+                CorreoElectronico = empresa.CorreoElectronico,
+                PaisId = empresa.PaisId,
+                Direccion = empresa.Direccion,
+                TipoEmpresaId = (int)empresa.TipoEmpresaId, 
+
+                PaisesSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(paises, "Id", "Nombre"),
+                TipoEmpresaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(tipoEmpresa, "Id", "Nombre")
+    
+            };
+
+            // VIEWDATAS PARA LOS NOMBRES QUE QUERAMOS OBTENER
+
+            ViewData["PaisNombre"] = paisNombre;
+            ViewData["TipoEmpresaNombre"] = tipoEmpresaNombre;
+
+            return View(viewModel);
+            
+        }
+
+        // GET: Registrar
         public async Task<IActionResult> Registrar()
         {
             var paises = await _getPaisesQuery.ExecuteAsync();
@@ -89,5 +127,111 @@ namespace MantenimientoWeb.Proyecto.Controllers
             viewModel.TipoEmpresaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(tipoEmpresas, "Id", "Nombre");
             return View(viewModel);
         }
+
+        // EDITAR 
+
+        // GET 
+
+        public async Task<IActionResult> Editar(int id)
+        {
+            var empresa = await _empresaService.ObtenerEmpresaPorIdAsync(id);
+            
+            var paises = await _empresaService.GetPaisesAsync() ?? new List<PaisModel>();
+            var tipoEmpresa = await _empresaService.GetTipoEmpresasAsync() ?? new List<TipoEmpresaModel>();
+
+            var viewModel = new EmpresaViewModel
+            {
+                Id = empresa.Id,
+                CIF = empresa.CIF,
+                RazonSocial = empresa.RazonSocial,
+                CorreoElectronico = empresa.CorreoElectronico,
+                PaisId = empresa.PaisId,
+                Direccion = empresa.Direccion,
+                TipoEmpresaId = (int)empresa.TipoEmpresaId,
+
+                PaisesSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(paises, "Id", "Nombre"),
+                TipoEmpresaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(tipoEmpresa, "Id", "Nombre")
+
+            };
+
+            return View(viewModel);
+
+        }
+
+
+        // POST
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> Editar(EmpresaViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+
+                // Hacer un mapeo de ViewModel a Model
+
+                var empresa = new EmpresaModel
+                {
+
+                    Id = viewModel.Id,
+                    CIF = viewModel.CIF,
+                    RazonSocial = viewModel.RazonSocial,
+                    CorreoElectronico = viewModel.CorreoElectronico,
+                    PaisId = viewModel.PaisId,
+                    Direccion = viewModel.Direccion,
+                    TipoEmpresaId = viewModel.TipoEmpresaId,
+                };
+
+                await _empresaService.EditarEmpresasAsync(empresa);
+                TempData["success"] = "La empresa ha sido actualizada con éxito";
+
+                return RedirectToAction("Index");
+            }
+
+            
+            return View(viewModel);
+        }
+
+        // ELIMINAR 
+
+        // GET 
+
+        public async Task<IActionResult> Eliminar(int id)
+        {
+            var empresa = await _empresaService.ObtenerEmpresaPorIdAsync(id);
+            var paises = await _empresaService.GetPaisesAsync() ?? new List<PaisModel>();
+            var tipoEmpresa = await _empresaService.GetTipoEmpresasAsync() ?? new List<TipoEmpresaModel>();
+
+            var viewModel = new EmpresaViewModel
+            {
+                Id = empresa.Id,
+                CIF = empresa.CIF,
+                RazonSocial = empresa.RazonSocial,
+                CorreoElectronico = empresa.CorreoElectronico,
+                PaisId = empresa.PaisId,
+                Direccion = empresa.Direccion,
+                TipoEmpresaId = (int)empresa.TipoEmpresaId,
+
+                PaisesSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(paises, "Id", "Nombre"),
+                TipoEmpresaSelectList = new Microsoft.AspNetCore.Mvc.Rendering.SelectList(tipoEmpresa, "Id", "Nombre")
+
+            };
+
+            return View(viewModel);
+        }
+
+        // POST 
+
+        [HttpPost, ActionName("Eliminar")]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> EliminarConfirmacion(int id)
+        {
+            await _empresaService.EliminarEmpresaAsync(id);
+            TempData["success"] = "La empresa ha sido eliminada con éxito";
+            return RedirectToAction("Index");
+        }
+
     }
 }

@@ -8,7 +8,7 @@
     
     <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="btn btn-primary">Volver al anterior</a>
     <partial name="_PaginacionEmpresa" />
-    <a asp-action="" class="btn btn-primary" style="margin-bottom: 20px; margin-right: 10px; float: right;">Registrar Nueva Empresa</a>
+    <a asp-action="Registrar" class="btn btn-primary" style="margin-bottom: 20px; margin-right: 10px; float: right;">Registrar Nueva Empresa</a>
 
     <table class="table table-bordered">
         
@@ -44,9 +44,9 @@
                             }
                         </td>
                         <td class="col-sm-2">
-                            <a class="btn btn-warning">Editar</a>
-                            <a class="btn btn-info">Detalles</a>
-                            <a class="btn btn-danger">Eliminar</a>
+                            <a asp-action="Editar" asp-route-id="@empresa.Id" class="btn btn-warning">Editar</a>
+                            <a asp-action="Detalle" asp-route-id="@empresa.Id" class="btn btn-info">Detalles</a>
+                            <a asp-action="Eliminar" asp-route-id="@empresa.Id" class="btn btn-danger">Eliminar</a>
                         </td>
                     </tr>
                 }

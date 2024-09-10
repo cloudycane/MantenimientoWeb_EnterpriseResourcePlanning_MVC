@@ -9,7 +9,11 @@ namespace MantenimientoWeb.Dominio.Interfaces
 {
     public interface IEmpresaRepository
     {
+        Task ActualizarAsync(EmpresaModel empresa);
         void Create(EmpresaModel empresa);
+        Task EliminarAsync(int id);
+        Task<EmpresaModel> ObtenerIdAsync(int id);
         Task<IEnumerable<EmpresaModel>> ObtenerListadoEmpresasAsync();
+        Task<IEnumerable<EmpresaModel>> ObtenerTodoAsync();
     }
 }

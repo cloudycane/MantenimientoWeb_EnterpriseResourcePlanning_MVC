@@ -48,7 +48,7 @@ namespace MantenimientoWeb.Infraestructura.Data
             var productoAnterior = await _context.Productos.FindAsync(producto.Id);
             if (productoAnterior != null)
             {
-                // Update properties
+               
                 productoAnterior.Nombre = producto.Nombre;
                 productoAnterior.Description = producto.Description;
                 productoAnterior.FechaCreacion = producto.FechaCreacion;

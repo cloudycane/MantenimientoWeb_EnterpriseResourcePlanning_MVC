@@ -1,1 +1,76 @@
-﻿
+﻿@model EmpresaViewModel
+
+@{
+
+    ViewBag.Title = "Eliminación Empresarial";
+}
+
+<head>
+
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/registroEmpresa.css" />
+
+</head>
+<body>
+    <h1 class="text-center">Eliminar Empresa</h1>
+    <h3 class="text-center">¿Está seguro de eliminar esta empresa?</h3>
+
+    <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%; ">
+        <form asp-action="Eliminar" method="post" style="margin-top: 2%;">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <label asp-for="CIF"></label>
+                    <input asp-for="CIF" class="form-control" disabled/>
+                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.CIF)</div>
+                </div>
+                <div class="col-lg-6">
+                    <label asp-for="RazonSocial"></label>
+                    <input asp-for="RazonSocial" class="form-control" disabled/>
+                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.RazonSocial)</div>
+                </div>
+
+                <div class="col-lg-6">
+                    <label asp-for="CorreoElectronico"></label>
+                    <input asp-for="CorreoElectronico" class="form-control" disabled/>
+                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.CorreoElectronico)</div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <label asp-for="PaisId">País</label>
+                    <select asp-for="PaisId" class="form-control" asp-items="Model.PaisesSelectList" disabled> <option>--Seleccionar un país--</option> </select>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <label asp-for="TipoEmpresaId">Tipo Empresa</label>
+                    <select asp-for="TipoEmpresaId" class="form-control" asp-items="Model.TipoEmpresaSelectList" disabled> <option>--Seleccionar el tipo de empresa--</option> </select>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <label asp-for="Direccion"></label>
+                    <input asp-for="Direccion" class="form-control" disabled/>
+                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.Direccion)</div>
+                </div>
+
+
+                <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="col-lg-3 m-4 btn btn-info"> Volver al Inicio</a>
+                <div class="col-lg-4"></div>
+                <button type="submit" class="col-lg-3 m-4 btn btn-danger" id="registrarBoton">Eliminar</button>
+
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+
+
+}

@@ -39,9 +39,30 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             return await _tipoEmpresaRepository.ObtenerListadoTipoEmpresaAsync();
         }
 
+        public async Task<EmpresaModel> ObtenerEmpresaPorIdAsync(int id)
+        {
+            return await _empresaRepository.ObtenerIdAsync(id);
+        }
+
+
         public async Task<IEnumerable<EmpresaModel>> ObtenerEmpresasAsync()
         {
             return await _empresaRepository.ObtenerListadoEmpresasAsync();
+        }
+
+        public async Task<IEnumerable<EmpresaModel>> ObtenerTodasEmpresasAsync()
+        {
+            return await _empresaRepository.ObtenerTodoAsync();
+        }
+
+        public async Task EditarEmpresasAsync(EmpresaModel empresa)
+        {
+            await _empresaRepository.ActualizarAsync(empresa);
+        }
+
+        public async Task EliminarEmpresaAsync(int id)
+        {
+            await _empresaRepository.EliminarAsync(id);
         }
     }
 }

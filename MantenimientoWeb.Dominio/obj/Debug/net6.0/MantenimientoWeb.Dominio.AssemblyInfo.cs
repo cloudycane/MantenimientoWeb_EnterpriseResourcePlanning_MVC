@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MantenimientoWeb.Dominio")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+db776e8cb52369fed693ab04aecb5e076b7e7e70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+568848d5bf5d2a32d6bd1bdab627bed0d81153a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("MantenimientoWeb.Dominio")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MantenimientoWeb.Dominio")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

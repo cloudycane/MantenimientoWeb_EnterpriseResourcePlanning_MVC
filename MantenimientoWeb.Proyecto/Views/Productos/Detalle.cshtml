@@ -4,73 +4,73 @@
     ViewData["Title"] = "Detalles";
 }
 
-<!-- En este detalle, he utilizado un diferente "approach" o método (no formal) para mostrar los datos de producto-->
+<!-- Método informal de hacer un detalle de producto -->
 
 <h1 class="text-center">Detalle del producto</h1>
 <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 4%;">
     
     <div class="col-lg-6">
-        <h4><b>Nombre del producto:</b><u> @Model.Nombre</u></h4>
+        <h4><b>Nombre del producto:</b> @Model.Nombre</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Descripción del producto:</b><u>@Model.Descripcion</u></h4>
+        <h4><b>Descripción del producto:</b> @Model.Descripcion</h4>
     </div>
     
     <div class="col-lg-6">
-        <h4><b>Fecha de Creación:</b><u>@Model.FechaCreacion.ToString("d")</u></h4>
+        <h4><b>Fecha de Creación:</b> @Model.FechaCreacion.ToString("d")</h4>
     </div>
     
     <div class="col-lg-6">
-        <h4><b>Categoría del Producto:</b> <u>@ViewData["CategoriaNombre"]</u></h4>
+        <h4><b>Categoría del Producto:</b> @ViewData["CategoriaNombre"]</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Clasificación del Producto:</b> <u>@ViewData["ClasificacionNombre"]</u></h4>
+        <h4><b>Clasificación del Producto:</b> @ViewData["ClasificacionNombre"]</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Lugar de Fabricación:</b> <u>@Model.LugarFabricacion</u></h4>
+        <h4><b>Lugar de Fabricación:</b> @Model.LugarFabricacion</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Precio Mantenimiento:</b> <u>@Model.CostoMantenimiento</u></h4>
+        <h4><b>Precio Mantenimiento:</b> @Model.CostoMantenimiento</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Demanda Anual:</b> <u>@Model.DemandaAnual</u></h4>
+        <h4><b>Demanda Anual:</b> @Model.DemandaAnual</h4>
     </div>
     
     <div class="col-lg-6">
-        <h4><b>Stock Actual:</b> <u>@Model.StockActual</u></h4>
+        <h4><b>Stock Actual:</b> @Model.StockActual</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Consumo Promedio Diario o P CPD:</b> <u>@Model.ConsumoDiarioPromedio</u></h4>
+        <h4><b>Consumo Promedio Diario o P CPD:</b> @Model.ConsumoDiarioPromedio</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Precio Original:</b> <u>@ViewData["MonedaSimbolo"] @Model.PrecioOriginal</u></h4>
+        <h4><b>Precio Original:</b> @ViewData["MonedaSimbolo"] @Model.PrecioOriginal</h4>
     </div>
 
     <div class="col-lg-6">
         
             @if(Model.StockMinimo >= Model.StockActual)
             {
-            <h4 class="text-danger"><b>Stock Mínimo: </b>Necesita un Restock - <u> @Model.StockMinimo </u></h4>
+            <h4 class="text-danger"><b>Stock Mínimo: </b>Necesita un Restock - @Model.StockMinimo </h4>
             }        
             else
             {
-            <h4 class="text-success"><b>Stock Mínimo: </b> <u>@Model.StockMinimo</u></h4> <p><i>*Todavía no necesitará un restock*</i></p>
+            <h4 class="text-success"><b>Stock Mínimo: </b> @Model.StockMinimo</h4> <p><i>*Todavía no necesitará un restock*</i></p>
             }
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Proveedor Nombre:</b> <u>@ViewData["RazonSocial"]</u></h4>
+        <h4><b>Proveedor Nombre:</b> @ViewData["RazonSocial"]</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Tipo de Producto:</b> <u>@ViewData["TipoProductoNombre"]</u></h4>
+        <h4><b>Tipo de Producto:</b> @ViewData["TipoProductoNombre"]</h4>
     </div>
 
     <div class="col-lg-6">
@@ -96,27 +96,27 @@
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Vida Útil:</b> <u>@Model.VidaUtil</u></h4>
+        <h4><b>Vida Útil:</b> @Model.VidaUtil</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Temperatura:</b> <u>@Model.TemperaturaAlmacenimiento º C</u></h4>
+        <h4><b>Temperatura:</b> @Model.TemperaturaAlmacenimiento º C</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Instrucciones de Manejo: </b><u>@Model.InstruccionesDeManejo</u></h4>
+        <h4><b>Instrucciones de Manejo: </b>@Model.InstruccionesDeManejo</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Tipo de Transporte:</b> <u>@ViewData["TransporteNombre"]</u></h4>
+        <h4><b>Tipo de Transporte:</b> @ViewData["TransporteNombre"]</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Tipo de Empaquetamiento:</b> <u>@ViewData["EmpaquetamientoNombre"]</u></h4>
+        <h4><b>Tipo de Empaquetamiento:</b> @ViewData["EmpaquetamientoNombre"]</h4>
     </div>
 
     <div class="col-lg-6">
-        <h4><b>Notas Adicionales:</b> <u>@Model.NotasAdicionales</u></h4>
+        <h4><b>Notas Adicionales:</b> @Model.NotasAdicionales</h4>
     </div>
 </div>
 

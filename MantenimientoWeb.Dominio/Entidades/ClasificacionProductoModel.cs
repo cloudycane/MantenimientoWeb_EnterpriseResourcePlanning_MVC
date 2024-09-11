@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class ClasificacionProductoModel
     {
+        // Entidad Clasificación de Producto 
         public int Id { get; set; }
         public string Nombre { get; set; }
     }

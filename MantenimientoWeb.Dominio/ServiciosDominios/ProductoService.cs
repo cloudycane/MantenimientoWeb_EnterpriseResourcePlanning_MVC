@@ -103,6 +103,12 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
             await _productoRepository.EliminarInventarioPorProductoIdAsync(id);
         }
 
+        // BUSQUEDA FUNCTION 
+
+        public async Task<IEnumerable<ProductoModel>> BusquedaProductosAsync(string busqueda)
+        {
+            return await _productoRepository.BuscarProductoAsync(busqueda);
+        }
 
     }
 }

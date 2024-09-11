@@ -1,0 +1,135 @@
+﻿@model IEnumerable<ProductoModel>
+
+<div class="container" style="margin-top: 6%">
+    <h2 class="text-center">Resultado/s de Busqueda en Producto</h2>
+
+    <partial name="_BusquedaPartial" />
+
+    @if (Model != null && Model.Any())
+    {
+        foreach (var producto in Model)
+        {
+            <div class="container m-b bg-light">
+                <div class="col-sm-12">
+                </div>
+                <div class="card-header">
+                    <h3 class="text-decoration-underline"><strong>@producto.Nombre</strong></h3>
+                </div>
+                <div class="card-body">
+
+                    <div class="col-sm-6">
+                        <p><strong>Descripción</strong> @producto.Description</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Tipo de Producto: </strong> @producto.TipoProducto.Nombre</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Fecha de Creación: </strong> @producto.FechaCreacion.ToString("d")</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Lugar de Fabricación: </strong> @producto.LugarFabricacion</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Precio Original: </strong> @producto.Moneda.SimboloMoneda @producto.PrecioOriginal</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Categoría: </strong> @producto.Categoria.Nombre</p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p>
+                            <strong>Costos, Stocks, y Tiempo: </strong>
+                            <ul>
+                                <li>Costo Mantenimiento: @producto.CostoMantenimiento</li>
+                                <li>Nivel Actual: @producto.NivelActual</li>
+                                <li>Demanda Actual: @producto.DemandaAnual</li>
+                                <li>Stock Actual: @producto.StockActual</li>
+                                <li>Stock Seguridad: @producto.StockSeguridad</li>
+                                <li>Stock Mínimo: @producto.StockMinimo</li>
+                                <li>Plazo Entrega: @producto.PlazoEntrega</li>
+                            </ul>
+                        </p>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <p><strong>Especificaciones: </strong></p>
+                        <ul>
+                            <li>
+                                @if (producto.EsPerecedero == true)
+                                {
+                                    <p>Producto Perecedero <i class="bi bi-check-square"></i></p>
+                                }
+                                else
+                                {
+                                    <p>Producto Perecedero <i class="bi bi-ban"></i></p>
+                                }
+                            </li>
+
+                            <li>
+                                @if (producto.EsFragil == true)
+                                {
+                                    <p>Producto con Fragilidad <i class="bi bi-check-square"></i></p>
+                                }
+                                else
+                                {
+                                    <p>Producto con Fragilidad <i class="bi bi-ban"></i></p>
+                                }
+
+                            </li>
+
+                            <li>
+                                @if (producto.RequiereRefrigacion == true)
+                                {
+                                    <p>Refrigerado <i class="bi bi-check-square"></i></p>
+                                }
+                                else
+                                {
+                                    <p>Refrigerado<i class="bi bi-ban"></i></p>
+                                }
+
+                            </li>
+
+                            <li>
+                                @if (producto.ProductoPeligrosa == true)
+                                {
+                                    <p>Producto Peligroso <i class="bi bi-check-square"></i></p>
+                                }
+                                else
+                                {
+                                    <p>Producto Peligroso <i class="bi bi-ban"></i></p>
+                                }
+
+                            </li>
+                            <li><p><strong>Temperatura Almacenimiento:</strong> @producto.TemperaturaAlmacenimiento</p></li>
+                            <li><p><strong>Vida Útil:</strong> @producto.VidaUtil</p></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><strong>Instrucciones, Empaquetamientos y Translación:</strong></p>
+                        <ul>
+                            <li><p><strong>Transporte: </strong>@producto.Transporte.Vehiculo</p></li>
+                            <li><p><strong>Empaquetamiento: </strong>@producto.Empaquetamiento.Nombre</p></li>
+                            <li><p><strong>Instrucciones: </strong>@producto.InstruccionesDeManejo</p></li>
+                            <li><p><strong>Notas Adicionales: </strong>@producto.NotasAdicionales</p></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <p><strong>Proveedor: </strong>@producto.Proveedor.RazonSocial</p>
+                    </div>
+                </div>
+            </div>
+
+
+        }
+    }
+    else
+    {
+        <h3 class="text-center">No hay resultados de busqueda</h3>
+    }
+</div>

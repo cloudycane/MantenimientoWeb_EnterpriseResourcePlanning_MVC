@@ -1,0 +1,51 @@
+﻿
+input:hover, select:hover {
+    border-width: 2px;
+    border-color: deepskyblue;
+}
+input, select{
+    margin: 2%;
+}
+hr{
+    border-color: black;
+}
+#crearBoton{
+    float: right;
+    margin: 2%;
+}
+#formCrear {
+    margin-top: 2%;
+    background-color: #c5e9ec;
+    border-radius: 10px;
+}
+#indexBoton {
+    margin-bottom: 4%;
+}
+#especificaciones{
+    margin-top: 2%;
+}
+#hiddenDivCategoria, #hiddenDivStockActual, #hiddenDivDPD, #hiddenDivRestock, #hiddenDivColchon {
+
+    display: none;
+    background-color: palegoldenrod;
+    margin: auto;
+}
+#clearInfos{
+    display: none;
+    margin-left: 2%;
+    margin-top: 2%;
+    cursor: pointer;
+}
+i{
+    color: white;
+}
+#btnHiddenDivCategoria, #btnHiddenDivStockActual, #btnHiddenDPD, #btnHiddenRestock, #btnHiddenColchon{
+    font-size: x-small;
+}
+form {
+    margin-top: 2%;
+
+}
+button{
+    margin-bottom: 2%;
+}

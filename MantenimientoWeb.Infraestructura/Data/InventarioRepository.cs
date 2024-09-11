@@ -69,6 +69,20 @@ namespace MantenimientoWeb.Infraestructura.Data
             }
         }
 
+        // BUSQUEDA
+
+        public async Task<IEnumerable<InventarioModel>> BuscarInventarioAsync(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda)) return new List<InventarioModel>();
+
+            return await _context.Inventario
+                .Include(i => i.Producto)
+                .Include(i => i.EstadoProducto)
+                .Where(i => i.Producto.Nombre.Contains(busqueda.ToLower()) || i.EstadoProducto.Nombre.Contains(busqueda.ToLower()))
+                .ToListAsync();
+        }
+
+
         
 
     }

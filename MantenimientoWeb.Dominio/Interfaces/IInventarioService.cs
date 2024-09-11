@@ -9,6 +9,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
 {
     public interface IInventarioService
     {
+        Task<IEnumerable<InventarioModel>> BusquedaInventariosAsync(string busqueda);
         Task CreateInventarioAsync(InventarioModel inventario);
         Task EditarInventarioAsync(InventarioModel inventario);
         Task EliminarInventarioAsync(int id);

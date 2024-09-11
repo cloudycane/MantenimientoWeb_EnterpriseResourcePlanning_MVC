@@ -431,5 +431,13 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return RedirectToAction("Index");
         }
 
+        // BUSQUEDA FUNCTION 
+
+        public async Task<IActionResult> Buscar(string busqueda)
+        {
+            var productos = await _productoService.BusquedaProductosAsync(busqueda);
+            return View(productos);
+        }
+
     }
 }

@@ -4,6 +4,7 @@ namespace MantenimientoWeb.Proyecto.ViewModels
 {
     public class ListadoProductoModel
     {
+        // LISTADO DE PRODUCTOS Y PAGINACIÓN
         public IEnumerable<ProductoModel> Productos { get; set; }
 
         // Paginacion 

@@ -17,11 +17,13 @@ namespace MantenimientoWeb.Infraestructura.Data
             _context = context;
         }
 
+        // Este es un método para obtener las empresas proveedores de la tabla o la entidad Empresa
         public async Task<IEnumerable<EmpresaModel>> ObtenerProveedoresAsync()
         {
             return await _context.Empresas.Where(e => e.TipoEmpresa.Nombre == "Proveedor").ToListAsync();
         }
 
+        
         public async Task<IEnumerable<ProductoModel>> ObtenerListadoProductosAsync()
         {
             return await _context.Productos.Include(c => c.Categoria).Include(m => m.Moneda).Include(cl => cl.Clasificacion).Include(t => t.Transporte).Include(e => e.Empaquetamiento).Include(p => p.Proveedor).Include(t => t.TipoProducto).ToListAsync();
@@ -100,6 +102,27 @@ namespace MantenimientoWeb.Infraestructura.Data
             _context.Inventario.RemoveRange(inventarios);
             await _context.SaveChangesAsync();
         }
+
+        // Método para la busqueda
+
+        public async Task<IEnumerable<ProductoModel>> BuscarProductoAsync(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda))
+                return new List<ProductoModel>();
+
+            return await _context.Productos
+                .Include(p => p.Proveedor)
+                .Include(p => p.Categoria)
+                .Include(p => p.Clasificacion)
+                .Include(p => p.TipoProducto)
+                .Include(p => p.Transporte)
+                .Include(p => p.Empaquetamiento)
+                .Include(p => p.Moneda)
+                .Where(p => p.Nombre.Contains(busqueda.ToLower()) || p.Description.Contains(busqueda.ToLower()) || p.LugarFabricacion.Contains(busqueda.ToLower()) || p.InstruccionesDeManejo.Contains(busqueda.ToLower()) || p.NotasAdicionales.Contains(busqueda.ToLower()))
+                .ToListAsync();
+        }
+
+
 
     }
 }

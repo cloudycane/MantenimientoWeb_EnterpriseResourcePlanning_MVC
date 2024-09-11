@@ -9,6 +9,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
 {
     public interface IEmpresaService
     {
+        Task<IEnumerable<EmpresaModel>> BusquedaEmpresasAsync(string busqueda);
         void CreateEmpresa(EmpresaModel empresa);
         Task EditarEmpresasAsync(EmpresaModel empresa);
         Task EliminarEmpresaAsync(int id);

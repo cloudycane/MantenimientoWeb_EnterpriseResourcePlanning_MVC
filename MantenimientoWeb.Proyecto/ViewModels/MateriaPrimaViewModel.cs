@@ -4,6 +4,7 @@ namespace MantenimientoWeb.Proyecto.ViewModels
 {
     public class MateriaPrimaViewModel
     {
+        // MATERIA PRIMA PARA MANEJAR EL BUSINESS MODEL VALIDATION
         public int Id { get; set; }
         public string Nombre { get; set; }
         public double Precio { get; set; }

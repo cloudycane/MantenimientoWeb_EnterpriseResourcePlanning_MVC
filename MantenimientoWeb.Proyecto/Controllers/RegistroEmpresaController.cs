@@ -233,5 +233,13 @@ namespace MantenimientoWeb.Proyecto.Controllers
             return RedirectToAction("Index");
         }
 
+        // BUSQUEDA
+
+        public async Task<IActionResult> Buscar(string busqueda)
+        {
+            var empresas = await _empresaService.BusquedaEmpresasAsync(busqueda);
+            return View(empresas);
+        }
+
     }
 }

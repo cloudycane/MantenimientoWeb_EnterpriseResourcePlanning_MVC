@@ -16,6 +16,7 @@ namespace MantenimientoWeb.Aplicacion.Servicios.UseCases
         {
             _categoriaRepository = categoriaRepository;
         }
+ 
 
         public async Task<IEnumerable<CategoriaProductoModel>> ExecuteAsync()
         {

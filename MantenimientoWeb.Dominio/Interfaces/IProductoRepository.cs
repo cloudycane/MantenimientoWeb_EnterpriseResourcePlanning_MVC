@@ -10,6 +10,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
     public interface IProductoRepository
     {
         Task ActualizarAsync(ProductoModel producto);
+        Task<IEnumerable<ProductoModel>> BuscarProductoAsync(string busqueda);
         Task CreateAsync(ProductoModel producto);
         Task EliminarAsync(int id);
         Task EliminarInventarioPorProductoIdAsync(int productoId);

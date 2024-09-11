@@ -1,0 +1,65 @@
+﻿@model IEnumerable<EmpresaModel>
+
+<div class="container" style="margin-top: 6%">
+    <h2 class="text-center">Resultado/s de Busqueda en Empresas</h2>
+
+    @await Html.PartialAsync("_BusquedaPartial")
+
+    @if (Model != null && Model.Any())
+    {
+        foreach (var empresa in Model)
+        {
+                    <div class="container m-b bg-light">
+
+                        <div class="card-header">
+                            <h3 class="text-decoration-underline">
+                                <strong>@Html.DisplayFor(modelItem => empresa.RazonSocial)</strong>
+                            </h3>
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>Identificación:</strong> 
+                            @Html.DisplayFor(modelItem => empresa.CIF)
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>Correo Electrónico: </strong> 
+                            @Html.DisplayFor(modelItem => empresa.CorreoElectronico)
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>País Residencia: </strong> 
+                            @Html.DisplayFor(modelItem => empresa.Pais.Nombre)
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>Dirección: </strong> 
+                            @Html.DisplayFor(modelItem => empresa.Direccion)
+                                </p>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <p>
+                                    <strong>Tipo de Empresa: </strong> 
+                            @Html.DisplayFor(modelItem => empresa.TipoEmpresa.Nombre)
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+        }
+    }
+    else
+    {
+            <h3 class="text-center">No hay resultados de búsqueda</h3>
+    }
+</div>

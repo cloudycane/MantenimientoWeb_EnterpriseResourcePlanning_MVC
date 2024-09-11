@@ -9,6 +9,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class PaisModel
     {
+        // Entidad de Pais
         public int Id { get; set; }
         [Required]
         public string? Nombre { get; set; }

@@ -9,7 +9,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
 {
     public interface IProductoService
     {
-
+        Task<IEnumerable<ProductoModel>> BusquedaProductosAsync(string busqueda);
         Task CreateProductoAsync(ProductoModel producto);
         Task EditarProductoAsync(ProductoModel producto);
         Task EliminarInventarioProductoIdAsync(int id);

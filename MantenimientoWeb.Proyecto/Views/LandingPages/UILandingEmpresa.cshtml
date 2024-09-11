@@ -4,27 +4,33 @@
 @{
     ViewData["Title"] = "Área de Empresa";
 }
-<div class="container" style="margin-top: 3%;">
-    <h1>Bienvenidos al Área de Empresa</h1>
-    <h3>Aquí puedes consultar las empresas registradas en la base de datos incluso usar funciones de crear, editar, y eliminarlas. </h3>
+
+<div class="container" style="margin-top: 8%;">
+    <fieldset class="card-header">
+        <h1>Bienvenidos al Área de Empresa</h1>
+        <h5>Aquí puedes consultar las empresas registradas en la base de datos incluso usar funciones de crear, editar, y eliminarlas. </h5>
+    </fieldset>
+    
     
     <div class="container" style="margin-top: 4%;">
-        <div class="container-lg">
-            <center>
-                <div class="col-lg-6">
-                    <a style="margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Index" asp-controller="RegistroEmpresa" class="btn"><h3> Ver Listado de Empresas</h3></a>
-                    <h1 style="font-size: 100px;"><i class="bi bi-list-stars"></i></h1>
-                </div>
-                <div class="col-lg-6">
-                    <a style="margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Registrar" asp-controller="RegistroEmpresa" class="btn"><h3>Registrar Nueva Empresa</h3></a>
-                    <h1 style="font-size: 100px;"><i class="bi bi-pencil-square"></i></h1>
-                </div>
                 
-                
-            </center>
             
-        </div>
-        
-    </div>
+                <div class="col-lg-6">
+                    <center>
+                        <a style="margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Index" asp-controller="RegistroEmpresa" class="btn"><h3> Ver Empresas</h3></a>
+                        <h1 style="font-size: 100px; text-align: center"><i class="bi bi-list-stars"></i></h1>
 
+                    </center>
+                </div>
+
+                <div class="col-lg-6">
+                    <center>
+                        <a style="margin-top: 10%; background-color: cornflowerblue; color: white;" asp-action="Registrar" asp-controller="RegistroEmpresa" class="btn"><h3>Registrar Empresa</h3></a>
+                        <h1 style="font-size: 100px;text-align: center"><i class="bi bi-pencil-square"></i></h1>
+
+                    </center>
+                </div>
+            
+    </div>
 </div>
+

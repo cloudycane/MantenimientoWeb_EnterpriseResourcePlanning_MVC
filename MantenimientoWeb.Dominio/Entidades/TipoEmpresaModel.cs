@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class TipoEmpresaModel
     {
+        // Entidad de Tipo de Empresa
         public int Id { get; set; }
         public string Nombre { get; set; }
     }

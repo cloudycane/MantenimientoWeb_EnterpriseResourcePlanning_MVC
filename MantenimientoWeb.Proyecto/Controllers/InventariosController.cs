@@ -238,5 +238,13 @@ namespace MantenimientoWeb.Proyecto.Controllers
            TempData["success"] = "El inventario ha sido eliminado con éxito.";
            return RedirectToAction("Index");
         }
+
+        // BUSQUEDA 
+
+        public async Task<IActionResult> Buscar(string busqueda)
+        {
+            var inventarios = await _inventarioService.BusquedaInventariosAsync(busqueda);
+            return View(inventarios);
+        }
     }
 }

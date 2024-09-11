@@ -2,6 +2,7 @@
 
 namespace MantenimientoWeb.Proyecto.ViewModels
 {
+    // PARA EL SELECT LIST DE EMPRESA Y LA PAGINACIÓN
     public class ListadoEmpresasViewModel
     {
         public IEnumerable<EmpresaModel> Empresas { get; set; }

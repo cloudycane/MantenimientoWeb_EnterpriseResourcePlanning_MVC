@@ -10,6 +10,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
     public interface IInventarioRepository
     {
         Task ActualizarAsync(InventarioModel inventario);
+        Task<IEnumerable<InventarioModel>> BuscarInventarioAsync(string busqueda);
         Task CreateAsync(InventarioModel inventario);
         Task EliminarAsync(int id);
         Task<InventarioModel> ObtenerIdAsync(int id);

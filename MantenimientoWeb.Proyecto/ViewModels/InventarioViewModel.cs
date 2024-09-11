@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MantenimientoWeb.Proyecto.ViewModels
 {
+    // PARA MANEJAR EL BUSINESS MODEL VALIDATIONS DE INVENTARIO
     public class InventarioViewModel
     {
         public int Id { get; set; }

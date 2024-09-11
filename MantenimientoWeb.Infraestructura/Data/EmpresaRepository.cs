@@ -56,7 +56,6 @@ namespace MantenimientoWeb.Infraestructura.Data
                 await _context.SaveChangesAsync();
             }
         }
-
         public async Task EliminarAsync(int id)
         {
             var empresa = await ObtenerIdAsync(id);
@@ -66,6 +65,17 @@ namespace MantenimientoWeb.Infraestructura.Data
                 _context.Set<EmpresaModel>().Remove(empresa);
                 await _context.SaveChangesAsync();
             }
+        }
+
+        public async Task<IEnumerable<EmpresaModel>> BuscarEmpresaAsync(string busqueda)
+        {
+            if (string.IsNullOrEmpty(busqueda)) return new List<EmpresaModel>();
+
+            return await _context.Empresas
+                .Include(e => e.TipoEmpresa)
+                .Include(e => e.Pais)
+                .Where(e => e.RazonSocial.Contains(busqueda.ToLower()) || e.Direccion.Contains(busqueda.ToLower()))
+                .ToListAsync();
         }
 
         

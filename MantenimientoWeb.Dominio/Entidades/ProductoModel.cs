@@ -9,6 +9,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class ProductoModel
     {
+        // Entidad de Producto
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Description { get; set; }

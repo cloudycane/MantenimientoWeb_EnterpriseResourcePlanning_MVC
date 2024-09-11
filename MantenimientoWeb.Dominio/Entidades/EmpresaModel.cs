@@ -5,6 +5,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class EmpresaModel
     {
+        // Entidad de Empresa
         public int Id { get; set; }
         public string CIF { get; set; }
         public string RazonSocial { get; set; }

@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class MonedaProductoModel
     {
+        // Entidad de Moneda
         public int Id { get; set; }
         public string SimboloMoneda { get; set; }
     }

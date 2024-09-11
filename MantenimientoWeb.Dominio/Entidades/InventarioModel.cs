@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class InventarioModel
     {
+        // Entidad de Inventario
         public int Id { get; set; }
         public int ProductoId { get; set; }
         public ProductoModel Producto { get; set; }

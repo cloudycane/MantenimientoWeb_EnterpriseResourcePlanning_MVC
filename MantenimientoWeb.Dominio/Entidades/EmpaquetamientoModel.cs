@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class EmpaquetamientoModel
     {
+        // Entidad de Empaquetamiento del Producto
         public int Id { get; set; }
         public string Nombre { get; set; }
     }

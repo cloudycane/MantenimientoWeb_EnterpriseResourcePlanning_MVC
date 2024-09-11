@@ -5,6 +5,8 @@ namespace MantenimientoWeb.Proyecto.ViewModels
 {
     public class ProductoViewModel
     {
+        // PARA MANEJAR EL BUSINESS MODEL VALIDATIONS DE PRODUCTO 
+
         public int Id { get; set; }
         [Required(ErrorMessage = "El campo {0} es requerido.")]
         [Display(Name = "Nombre del producto")]

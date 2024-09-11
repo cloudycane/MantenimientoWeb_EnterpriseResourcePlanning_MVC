@@ -62,5 +62,12 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         {
             await _inventarioRepository.EliminarAsync(id);
         }
+
+        // BUSQUEDA
+
+        public async Task<IEnumerable<InventarioModel>> BusquedaInventariosAsync(string busqueda)
+        {
+            return await _inventarioRepository.BuscarInventarioAsync(busqueda);
+        }
     }   
 }

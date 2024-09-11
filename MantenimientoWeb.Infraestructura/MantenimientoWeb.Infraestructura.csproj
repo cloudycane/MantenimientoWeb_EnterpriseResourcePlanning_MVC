@@ -7,8 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DataAccess\" />
-    <Folder Include="StoredProcedures\" />
     <Folder Include="ServiciosExternos\" />
   </ItemGroup>
 

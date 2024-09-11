@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class TransporteModel
     {
+        // Entidad de Transporte
         public int Id { get; set; }
         public string Vehiculo { get; set; }
     }

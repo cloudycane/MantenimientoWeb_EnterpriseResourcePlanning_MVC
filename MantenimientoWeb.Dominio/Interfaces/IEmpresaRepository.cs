@@ -10,6 +10,7 @@ namespace MantenimientoWeb.Dominio.Interfaces
     public interface IEmpresaRepository
     {
         Task ActualizarAsync(EmpresaModel empresa);
+        Task<IEnumerable<EmpresaModel>> BuscarEmpresaAsync(string busqueda);
         void Create(EmpresaModel empresa);
         Task EliminarAsync(int id);
         Task<EmpresaModel> ObtenerIdAsync(int id);

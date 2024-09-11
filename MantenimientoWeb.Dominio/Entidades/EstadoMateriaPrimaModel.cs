@@ -8,6 +8,7 @@ namespace MantenimientoWeb.Dominio.Entidades
 {
     public class EstadoMateriaPrimaModel
     {
+        // Entidad de Estado de Materia Prima
         public int Id { get; set; }
         public string Estado { get; set; }
     }

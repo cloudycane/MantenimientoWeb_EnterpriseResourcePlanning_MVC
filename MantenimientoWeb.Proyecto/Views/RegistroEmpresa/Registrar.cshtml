@@ -14,50 +14,80 @@
 <body>
     <h1 class="text-center">Registrar Empresa</h1>
 
-    <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 6%; ">
+    <div class="container" style="border: groove; border-width: thin; border-color: darkgrey; border-radius: 20px; margin-top: 10%; ">
         <form asp-action="Registrar" method="post" style="margin-top: 2%;">
             <div asp-validation-summary="ModelOnly"></div>
             <div class="row">
-                <div class="col-lg-6">
-                    <label asp-for="CIF"></label>
-                    <input asp-for="CIF" class="form-control"/>
-                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.CIF)</div>
-                </div>
-                <div class="col-lg-6">
-                    <label asp-for="RazonSocial"></label>
-                    <input asp-for="RazonSocial" class="form-control" />
-                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.RazonSocial)</div>
-                </div>
 
                 <div class="col-lg-6">
-                    <label asp-for="CorreoElectronico"></label>
-                    <input asp-for="CorreoElectronico" class="form-control" />
-                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.CorreoElectronico)</div>
 
+                    @Html.LabelFor(identificacion => identificacion.CIF)
+                    @Html.TextBoxFor(identificacion => identificacion.CIF, new { @class = "form-control", @type = "text" })
+                    <div class="text-danger float-end">
+                        @Html.ValidationMessageFor(model => model.CIF)
+                    </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <label asp-for="PaisId">País</label>
-                    <select asp-for="PaisId" class="form-control" asp-items="Model.PaisesSelectList"> <option>--Seleccionar un país--</option> </select>
+
+                    @Html.LabelFor(razonSocial => razonSocial.RazonSocial)
+                    @Html.TextBoxFor(razonSocial => razonSocial.RazonSocial, new { @class = "form-control", @type = "text"})
+                    <div class="text-danger float-end">
+                        @Html.ValidationMessageFor(model => model.RazonSocial)
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    @Html.LabelFor(email => email.CorreoElectronico)
+                    @Html.TextBoxFor(email => email.CorreoElectronico, new { @class = "form-control", @type = "text" })
+                    <div class="text-danger float-end">
+                        @Html.ValidationMessageFor(model => model.CorreoElectronico)
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-3 mb-3">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(pais => pais.PaisId)
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.DropDownListFor(pais => pais.PaisId, Model.PaisesSelectList, "--Seleccionar País--")
+                    </div>
+                    
                     
                 </div>
 
-                <div class="col-lg-6">
-                    <label asp-for="TipoEmpresaId">Tipo Empresa</label>
-                    <select asp-for="TipoEmpresaId" class="form-control" asp-items="Model.TipoEmpresaSelectList"> <option>--Seleccionar el tipo de empresa--</option> </select>
+                <div class="col-lg-6 mt-3 mb-3">
+                    <div class="col-sm-3">
+                        @Html.LabelFor(tipoEmpresa => tipoEmpresa.TipoEmpresaId)
+                    </div>
+                    <div class="col-sm-3">
+                        @Html.DropDownListFor(tipoEmpresa => tipoEmpresa.TipoEmpresaId, Model.TipoEmpresaSelectList, "--Seleccionar Tipo Empresa--")
+                    </div>
+                    
+                   
 
                 </div>
 
                 <div class="col-lg-6">
-                    <label asp-for="Direccion"></label>
-                    <input asp-for="Direccion" class="form-control" />
-                    <div class="text-danger float-end">@Html.ValidationMessageFor(model => model.Direccion)</div>
+                    @Html.LabelFor(direccion => direccion.Direccion)
+                    @Html.TextBoxFor(direccion => direccion.Direccion, new { @class = "form-control", @type = "text" })
+                    <div class="text-danger float-end">
+                        @Html.ValidationMessageFor(model => model.Direccion)
+                    </div>
                 </div>
                 
                 
-                <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="col-lg-3 m-4 btn btn-info"> Volver al Inicio</a>
-                <div class="col-lg-4"></div>
-                <button type="submit" class="col-lg-3 m-4 btn btn-primary" id="registrarBoton">Registrar</button>
+                <div class="col-sm-6">
+                    <a asp-action="UILandingEmpresa" asp-controller="LandingPages" class="btn btn-info m-2"> Volver al Inicio</a>
+                </div>
+                    
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary float-end m-2" id="registrarBoton">Registrar</button>
+                </div>
+
+                    
+                
+
 
             </div>
 

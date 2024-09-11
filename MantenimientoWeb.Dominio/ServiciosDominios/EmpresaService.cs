@@ -25,7 +25,6 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
 
         public void CreateEmpresa(EmpresaModel empresa)
         {
-            //Business Logic 
             _empresaRepository.Create(empresa);
         }
 
@@ -63,6 +62,13 @@ namespace MantenimientoWeb.Dominio.ServiciosDominios
         public async Task EliminarEmpresaAsync(int id)
         {
             await _empresaRepository.EliminarAsync(id);
+        }
+
+        // BUSQUEDA FUNCTION 
+
+        public async Task<IEnumerable<EmpresaModel>> BusquedaEmpresasAsync(string busqueda)
+        {
+            return await _empresaRepository.BuscarEmpresaAsync(busqueda);
         }
     }
 }

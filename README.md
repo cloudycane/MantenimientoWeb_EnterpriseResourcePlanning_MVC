@@ -11,6 +11,4 @@
      <li>Capa de Infraestructura</li>
      <li>Capa de Presentación</li>
 
- <li> <h4>Funciones</h4> </li>
-
 

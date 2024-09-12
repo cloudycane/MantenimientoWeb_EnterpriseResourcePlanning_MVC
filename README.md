@@ -7,7 +7,7 @@
  <li>Sobre el proyecto</li>
  <li>Características del proyecto</li>
  <li>Funciones</li>
- <li><h4>Estructura</h4></li>
+<h4>Estructura</h4>
      <li>Capa de Dominio o Core</li>
      <li>Capa de Aplicación</li>
      <li>Capa de Infraestructura</li>

@@ -22,13 +22,13 @@
 <br>
 <b>-Descripción: Se trata de una simple aplicación de planificación de recursos empresariales (Entreprise Resource Planning) para un sistema de manejo de inventarios (Inventory Management System).</b>
 <hr>
-<h2>Características del proyecto</h2>
+<h1>Características del proyecto</h1>
 <b>-Dashboard: </b> Organiza y facilita la navegación en las distintas entidades y funcionalidades del proyecto. <br>
 <b>-CRUD Operations: </b> Permite el usuario para crear, ver detalles, actualizar, y eliminar datos en el proyecto. <br>
 <b>-Busqueda: </b> Permite el usuario hacer una busqueda de lo que desea buscar.
 
 <hr>
-<h2>Funciones</h2>
+<h1>Funciones</h1>
 <b>-Entidades: </b> Empresa, Producto, Inventario <br>
 <b>-ViewModels: </b> Sirve para validar los inputs del usuario (filtración de datos) antes de pasar a los business models (entidades) <br>
 <b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers (necesitara Dependecy Injection para usar repositorios y servicios).

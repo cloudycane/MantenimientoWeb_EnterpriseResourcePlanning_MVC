@@ -26,6 +26,7 @@
 <b>-Dashboard: </b> Organiza y facilita la navegación en las distintas entidades y funcionalidades del proyecto. <br>
 <b>-CRUD Operations: </b> Permite el usuario para crear, ver detalles, actualizar, y eliminar datos en el proyecto. <br>
 <b>-Busqueda: </b> Permite el usuario hacer una busqueda de lo que desea buscar.
+<br>
 <b>-Arquítectura: </b> Onion o Clean Architecture/ Arquitectura Por Capas. <br>
 <b>-Metodología del desarrollo: </b> Agile Development
 <hr>

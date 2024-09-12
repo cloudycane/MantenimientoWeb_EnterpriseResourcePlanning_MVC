@@ -22,5 +22,12 @@
 <br>
 <b>Descripción: Se trata de una simple aplicación de planificación de recursos empresariales (Entreprise Resource Planning) para un sistema de manejo de inventarios (Inventory Management System).</b>
 <hr>
-<h2></h2>
+<h2>Características del proyecto</h2>
+<b>-Dashboard: </b> Organiza y facilita la navegación en las distintas entidades y funcionalidades del proyecto. <br>
+<b>-CRUD Operations: </b> Permite el usuario para crear, ver detalles, actualizar, y eliminar datos en el proyecto. <br>
+<b>-Busqueda: </b> Permite el usuario hacer una busqueda de lo que desea buscar.
+
+<hr>
+<h2>Funciones</h2>
+<b>Entidades: </b> Empresa, Producto, Inventario
 

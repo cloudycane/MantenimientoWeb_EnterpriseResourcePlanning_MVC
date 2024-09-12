@@ -13,4 +13,6 @@
      <li>Capa de Infraestructura</li>
      <li>Capa de Presentación</li>
 
+<h2>Sobre el proyecto</h2>
+Fecha de creación del proyecto: 23 de Agosto 2024 - 12 de Septiembre 2024
 

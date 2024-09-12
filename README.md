@@ -18,6 +18,6 @@
 <br>
 <b>Lenguajes de Programación: </b> C#, HTML, CSS, JavaScript, JQuery, bootstrap, SQL Server
 <br>
-<b>Entorno de Trabajo: Visual Studios 2022, ASPNET MVC 6, .NET 6, SQL Management Server Studio</b>
+<b>Entorno de Trabajo:</b> Visual Studios 2022, ASPNET MVC 6, .NET 6, SQL Management Server Studio
 <b></b>
 

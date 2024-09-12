@@ -36,6 +36,10 @@
 
 <hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
-<p>La capa más interno del proyecto.</p>
+<p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>
+<br>
+<b>-Referencia:</b> N/A
+
+<hr>
 
 

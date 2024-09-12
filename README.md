@@ -42,8 +42,21 @@
 
 <hr>
 <h1>Estructura/Arquitectura: Capa de Aplicación</h1>
-<p>Aquí almacenemos los DTOs, Servicios de Aplicación, UseCases, etc.</p>
+<p>Aquí almacenemos los DTOs, Servicios de Aplicación, Use Cases, etc.</p>
 <br>
 <b>-Referencia: </b> Capa de Dominio o Core
+
+<hr>
+<h1>Estructura/Arquitectura: </h1> Capa de Infraestructura
+<p>Aquí almacenemos los repositorios, sus interfaces, datos para la base de datos, ApplicationDbContext, etc.</p>
+<br>
+<b>-Referencia: </b> Capa de Aplicación y Capa de Dominio o Core
+
+<hr>
+<h1>Estructura/Arquitectura: </h1> Capa de Presentación
+<p>La capa más externa del proyecto. Aquí almacenemos los Controllers, ViewModels y Models, Views, Partial Views, Contents (css,js, jqueries, bootstraps), etc.</p>
+<br>
+<b>-Referencia: </b> Capa de Aplicación, Capa de Infraestructura, Capa de Dominio.
+
 
 

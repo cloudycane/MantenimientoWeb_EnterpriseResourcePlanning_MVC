@@ -5,12 +5,12 @@
 <h2>Enlace para la página: http://mantenimientoweb.somee.com/</h2>
 <h2>Table of contents</h2>
  <li><h4>Sobre el proyecto</h4></li>
- <li><h4>Estructura</h4>
+ <li><h4>Estructura</h4></li>
      <li>Capa de Dominio o Core</li>
      <li>Capa de Aplicación</li>
      <li>Capa de Infraestructura</li>
      <li>Capa de Presentación</li>
- </li>
+
  <li> <h4>Funciones</h4> </li>
 
 

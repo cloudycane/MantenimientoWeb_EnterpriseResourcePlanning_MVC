@@ -41,5 +41,9 @@
 <b>-Referencia:</b> N/A
 
 <hr>
+<h1>Estructura/Arquitectura: Capa de Aplicación</h1>
+<p>Aquí almacenemos los DTOs, Servicios de Aplicación, UseCases, etc.</p>
+<br>
+<b>-Referencia: </b> Capa de Dominio o Core
 
 

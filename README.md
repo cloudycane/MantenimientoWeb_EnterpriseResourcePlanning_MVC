@@ -15,6 +15,9 @@
 
 <h2>Sobre el proyecto</h2>
 <b>Fecha de creación del proyecto: </b> 23 de Agosto 2024 - 12 de Septiembre 2024
-<b>Lenguajes de Programación y Entorno de Trabajo: </b> C#, HTML, CSS, JavaScript, JQuery, bootstrap, SQL Server
+<br>
+<b>Lenguajes de Programación: </b> C#, HTML, CSS, JavaScript, JQuery, bootstrap, SQL Server
+<br>
+<b>Entorno de Trabajo: Visual Studios 2022, ASPNET MVC 6, .NET 6, SQL Management Server Studio</b>
 <b></b>
 

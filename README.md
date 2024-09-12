@@ -14,5 +14,7 @@
      <li>Capa de Presentación</li>
 
 <h2>Sobre el proyecto</h2>
-Fecha de creación del proyecto: 23 de Agosto 2024 - 12 de Septiembre 2024
+<b>Fecha de creación del proyecto: </b> 23 de Agosto 2024 - 12 de Septiembre 2024
+<b>Lenguajes de Programación y Entorno de Trabajo: </b> C#, HTML, CSS, JavaScript, JQuery, bootstrap, SQL Server
+<b></b>
 

@@ -13,7 +13,7 @@
      <li>Capa de Infraestructura</li>
      <li>Capa de Presentación</li>
 
-<h2>Sobre el proyecto</h2>
+<h1>Sobre el proyecto</h1>
 <b>-Fecha de creación del proyecto: </b> 23 de Agosto 2024 - 12 de Septiembre 2024
 <br>
 <b>-Lenguajes de Programación: </b> C#, HTML, CSS, JavaScript, JQuery, bootstrap, SQL Server
@@ -31,5 +31,9 @@
 <h2>Funciones</h2>
 <b>-Entidades: </b> Empresa, Producto, Inventario <br>
 <b>-ViewModels: </b> Sirve para validar los inputs del usuario (filtración de datos) antes de pasar a los business models (entidades) <br>
-<b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers. 
+<b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers (necesitara Dependecy Injection para usar repositorios y servicios).
+
+<hr>
+
+
 

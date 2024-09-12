@@ -26,7 +26,8 @@
 <b>-Dashboard: </b> Organiza y facilita la navegación en las distintas entidades y funcionalidades del proyecto. <br>
 <b>-CRUD Operations: </b> Permite el usuario para crear, ver detalles, actualizar, y eliminar datos en el proyecto. <br>
 <b>-Busqueda: </b> Permite el usuario hacer una busqueda de lo que desea buscar.
-
+<b>-Arquítectura: </b> Onion o Clean Architecture/ Arquitectura Por Capas. <br>
+<b>-Metodología del desarrollo: </b> Agile Development
 <hr>
 <h1>Funciones</h1>
 <b>-Entidades: </b> Empresa, Producto, Inventario <br>
@@ -34,6 +35,7 @@
 <b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers (necesitara Dependecy Injection para usar repositorios y servicios).
 
 <hr>
-
+<h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
+<p>La capa más interno del proyecto.</p>
 
 

@@ -12,7 +12,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
      <li>Capa de Aplicación</li>
      <li>Capa de Infraestructura</li>
      <li>Capa de Presentación</li>
-
+     <li>Capa de Pruebas - <i>no hay contenidos, pero sirve para futuro uso**</i></li>
 <h1>Sobre el proyecto</h1>
 <b>-Fecha de creación del proyecto: </b> 23 de Agosto 2024 - 12 de Septiembre 2024
 <br>

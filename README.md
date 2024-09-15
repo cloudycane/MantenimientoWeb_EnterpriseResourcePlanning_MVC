@@ -36,14 +36,14 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <b>-ViewModels: </b> Sirve para validar los inputs del usuario (filtración de datos) antes de pasar a los business models (entidades) <br>
 <b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers (necesitara Dependecy Injection para usar repositorios y servicios).
 <br>
-
-<h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
 <hr>
+<h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
+
 <h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
 <b>Objetivos Identificados de Iteración:</b>
 <li><u>Creación de la entidad de productos y la relación con categorías, proveedores(empresa), e inventario:</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. </li>
 <br>
-
+<hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
 <p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>
 <br>

@@ -7,7 +7,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
  <li>Sobre el proyecto</li>
  <li>Características del proyecto</li>
  <li>Funciones</li>
- <li>Fases de la Arquitectura del Diseño</li>
+ <li>Proceso del diseño de la Arquitectura del Diseño</li>
 <h4>Estructura</h4>
      <li>Capa de Dominio o Core</li>
      <li>Capa de Aplicación</li>
@@ -39,6 +39,9 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 
 <h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
 <hr>
+<h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
+<b>Objetivos Identificados de Iteración:</b>
+<li><u>Creación de la entidad de productos y la relación con categorías, proveedores(empresa), e inventario:</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. </li>
 <br>
 
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 

@@ -7,7 +7,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
  <li>Sobre el proyecto</li>
  <li>Características del proyecto</li>
  <li>Funciones</li>
- <li>Proceso del diseño de la Arquitectura del Diseño</li>
+ <li>Proceso del diseño de la arquitectura de la aplicación</li>
 <h4>Estructura</h4>
      <li>Capa de Dominio o Core</li>
      <li>Capa de Aplicación</li>

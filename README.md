@@ -35,8 +35,12 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <b>-Entidades: </b> Empresa, Producto, Inventario <br>
 <b>-ViewModels: </b> Sirve para validar los inputs del usuario (filtración de datos) antes de pasar a los business models (entidades) <br>
 <b>-Repositorios y Servicios: </b> Sirve para guardar los métodos para la obtención de datos y las operaciones CRUD antes de pasar a los Controllers (necesitara Dependecy Injection para usar repositorios y servicios).
+<br>
 
+<h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
 <hr>
+<br>
+
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
 <p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>
 <br>

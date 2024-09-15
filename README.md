@@ -41,10 +41,10 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <p><i>Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0</i></p>
 <h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
 <b>Objetivos Identificados de Iteración:</b>
-<li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. </li>
-Justificación: Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.
+<li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.</li>
 <li><u>Diseñar la interfaz para el registro de productos:</u>Creación de interfaz para que los usuarios pueden registrar productos, asignarles categorías y asociarlos con proveedores.</li>
-<li><u>Implementar la lógica de negocio para validación de datos:</u> En mi caso, antes de pasar las entidades y registrar datos en la base de datos, he creado ViewModels para hacer los "business logics" y "business validations" y luego aplicarlos en las entidades a partir de un mapeo de ViewModels a Entidades o viceversa. </li>
+<li><u>Implementar la lógica de negocio para validación de datos:</u> En mi caso, antes de pasar las entidades y registrar datos en la base de datos, he creado ViewModels para hacer los "business logics" y "business validations" y luego aplicarlos en las entidades a partir de un mapeo de ViewModels a Entidades o viceversa (también se puede hacer con un AutoMapper). </li>
+<li><u>Establecer la infraestructura de la base de datos:</u> configuration de connection strings para conectar con SQL Server y crear las primeras tablas necesarias como Empresas, Productos, etc. ya que el sistema necesita una base de datos para poder almacenar y gestionar la información desde las primeras iteraciones. Si el Entity Framework se trata de Table-First, las tablas se pueden crear dentro de SQL Management Studio y se trara de Code-First se hacen migraciones dentro del ApplicationDbContext/Consola de Nuget Package Manager</li>
 <hr>
 
 

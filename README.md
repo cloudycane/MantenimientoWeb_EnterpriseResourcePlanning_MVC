@@ -43,6 +43,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <b>Objetivos Identificados de Iteración:</b>
 <li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. </li>
 <li>Justificación: Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.</li>
+<li><u>Diseñar la interfaz para el registro de productos:</u>Creación de interfaz para que los usuarios pueden registrar productos, asignarles categorías y asociarlos con proveedorees. </li>
 <br>
 <hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 

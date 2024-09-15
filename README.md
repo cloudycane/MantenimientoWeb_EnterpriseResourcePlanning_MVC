@@ -44,9 +44,13 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.</li>
 <li><u>Diseñar la interfaz para el registro de productos:</u>Creación de interfaz para que los usuarios pueden registrar productos, asignarles categorías y asociarlos con proveedores.</li>
 <li><u>Implementar la lógica de negocio para validación de datos:</u> En mi caso, antes de pasar las entidades y registrar datos en la base de datos, he creado ViewModels para hacer los "business logics" y "business validations" y luego aplicarlos en las entidades a partir de un mapeo de ViewModels a Entidades o viceversa (también se puede hacer con un AutoMapper). </li>
-<li><u>Establecer la infraestructura de la base de datos:</u> configuration de connection strings para conectar con SQL Server y crear las primeras tablas necesarias como Empresas, Productos, etc. ya que el sistema necesita una base de datos para poder almacenar y gestionar la información desde las primeras iteraciones. Si el Entity Framework se trata de Table-First, las tablas se pueden crear dentro de SQL Management Studio y se trara de Code-First se hacen migraciones dentro del ApplicationDbContext/Consola de Nuget Package Manager</li>
+<li><u>Establecer la infraestructura de la base de datos:</u> configuration de connection strings para conectar con SQL Server y crear las primeras tablas necesarias como Empresas, Productos, etc. ya que el sistema necesita una base de datos para poder almacenar y gestionar la información desde las primeras iteraciones. Si el Entity Framework se trata de Table-First, las tablas se pueden crear dentro de SQL Management Studio y se trata de Code-First se hacen migraciones dentro del ApplicationDbContext/Consola de Nuget Package Manager</li>
+<h2>2ª Fase: Seleccionar los casos de uso (Use Cases) arquitecturalmente importantes</h2>
+<h2>3ª Fase: Realizar un esquema del sistema</h2>
+<h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>
+<h2>5ª Fase: Creación de arquitecturas candidatas</h2>
+<h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>
-
 
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
 <p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>

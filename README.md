@@ -38,14 +38,16 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <br>
 <hr>
 <h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
-
+<p><i>Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0</i></p>
 <h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
 <b>Objetivos Identificados de Iteración:</b>
 <li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. </li>
-<li>Justificación: Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.</li>
-<li><u>Diseñar la interfaz para el registro de productos:</u>Creación de interfaz para que los usuarios pueden registrar productos, asignarles categorías y asociarlos con proveedorees. </li>
-<br>
+Justificación: Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.
+<li><u>Diseñar la interfaz para el registro de productos:</u>Creación de interfaz para que los usuarios pueden registrar productos, asignarles categorías y asociarlos con proveedores.</li>
+<li><u>Implementar la lógica de negocio para validación de datos:</u> En mi caso, antes de pasar las entidades y registrar datos en la base de datos, he creado ViewModels para hacer los "business logics" y "business validations" y luego aplicarlos en las entidades a partir de un mapeo de ViewModels a Entidades o viceversa. </li>
 <hr>
+
+
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
 <p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>
 <br>

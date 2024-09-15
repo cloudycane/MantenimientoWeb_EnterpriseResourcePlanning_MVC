@@ -38,7 +38,8 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <br>
 <hr>
 <h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
-<p><i>Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0</i></p>
+<span style="color: green;"><p><i>Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0</i></p></span>
+
 <h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
 <b>Objetivos Identificados de Iteración:</b>
 <li><u>Creación de la entidad de productos y la relación con categorías y proveedores(empresa):</u> Informara el sistema si se puede empezar almacenar información básica sobre los productos. Sin un SOLID principle para gestionar los productos, no se puede avanzar en otras funcionalidades como la creación de la entidad de Inventario.</li>

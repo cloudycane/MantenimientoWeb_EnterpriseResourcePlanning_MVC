@@ -38,7 +38,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <br>
 <hr>
 <h1>Fases o Proceso del diseño de la arquitectura de la aplicación</h1>
-<span style="color: green;">Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0</span>
+📚Aprendizaje: Guía de Arquitectura N-Capas Orientada al Dominio con .NET 4.0
 
 <h2>1ª Fase: Identificación de los Objetivos de Iteración --Iteración 1--</h2>
 <b>Objetivos Identificados de Iteración:</b>

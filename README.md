@@ -62,7 +62,26 @@ Enlace para la página: http://mantenimientoweb.somee.com/
   <td>Comunicaciones</td>
   <td>N/A</td>
  </tr>
- 
+ <tr>
+  <td>Despliegue</td>
+  <td>Cliente-Servidor, N-Tier</td>
+ </tr>
+ <tr>
+  <td>Dominio</td>
+  <td>Entidades</td>
+ </tr>
+ <tr>
+  <td>Infraestructura</td>
+  <td>Repositorios</td>
+ </tr>
+ <tr>
+  <td>Interacción</td>
+  <td>Presentación Separada</td>
+ </tr>
+ <tr>
+  <td>Estructura</td>
+  <td>Componentes, Orientada a objetos, Arquitectura en Capas</td>
+ </tr>
 </table>
 
 <h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>

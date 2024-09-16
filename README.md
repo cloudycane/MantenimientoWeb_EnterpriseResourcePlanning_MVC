@@ -134,6 +134,14 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 </table>
 <li>En esta face he hecho un plan de requisito o una serie de decisiones sobre los puntos clave. Por ejemplo en el cacheo de datos, he tomado decisiones qué tecnologías iba a utilizar.</li>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>
+<li>
+Una vez realizados los pasos anteriores, tendremos una arquitectura candidata que podemos evaluar. Si tenemos varias arquitecturas candidatas realizaremos la evaluación de cada de ellas e implementaremos la arquitectura mejor valorada. Cualquier arquitectura candidata debería responder a las siguientes preguntas: 
+1-	¿Qué funcionalidad implementa? 
+2-	¿Qué riesgos mitiga? 
+3-	¿Cumple las restricciones impuestas por el cliente? 
+4-	¿Qué cuestiones deja en el aire? 
+ 
+</li>
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>
 

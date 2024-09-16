@@ -145,7 +145,7 @@ Una vez realizados los pasos anteriores, tendremos una arquitectura candidata qu
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>
 
-<h1>Plan de Cuestionario Profesional para el Diseño de la Arquitectura de una Aplicación Web</h1>
+<h1>Ejemplo de un Plan de Cuestionario para el Diseño de la Arquitectura de una Aplicación Web</h1>
 <h3>1ª Fase: Identificación de los Objetivos de la Iteración</h3>
 <li><b>¿Cuáles son los objetivos estratégicos y tácticos de la iteración?</b></li>
 -Definir claramente los objetivos a nivel de negocio y técnicos.

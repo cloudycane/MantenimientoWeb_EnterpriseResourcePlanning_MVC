@@ -53,6 +53,17 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <li>En esta fase he decidido qué tipo de aplicación iba a desarrollar. Y esto dependerá de las restricciones de despliegue, de conectividad, de lo compleja que sea la interfaz del usuario y de las restricciones de despliegue, de conectividad, flexibilidad y tecnologías. </li> 
 <li>Por lo tanto, he decidido usar "aplicación web" porque llega a todo tipo de usuarios, tiene una interfaz de usuario estándar y multiplataforma. Además es fácil de desplegar y de actualizar.</li> 
 <li>Topología de despliegue del proyecto: "monolítico", sencillo y rápido de desplegar ya que se trata de una aplicación pequeña o simple.</li>
+<table>
+ <tr>
+  <td>Aspecto</td>
+  <td>Estilos Arquitecturales</td>
+ </tr>
+ <tr>
+  <td>Comunicaciones</td>
+  <td>N/A</td>
+ </tr>
+ 
+</table>
 
 <h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>

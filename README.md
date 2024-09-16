@@ -147,51 +147,51 @@ Una vez realizados los pasos anteriores, tendremos una arquitectura candidata qu
 
 <h1>Plan de Cuestionario Profesional para el Diseño de la Arquitectura de una Aplicación Web</h1>
 <h3>1ª Fase: Identificación de los Objetivos de la Iteración</h3>
-<li>¿Cuáles son los objetivos estratégicos y tácticos de la iteración?</li>
+<li><b>¿Cuáles son los objetivos estratégicos y tácticos de la iteración?</b></li>
 -Definir claramente los objetivos a nivel de negocio y técnicos.
-<li>¿Cómo se alinea esta iteración con la visión y misión del proyecto?</li>
+<li><b>¿Cómo se alinea esta iteración con la visión y misión del proyecto?</b></li>
 -Asegurarse de que los objetivos están en consonancia con la visión general del proyecto.
-<li>¿Qué métricas se utilizarán para evaluar el éxito de esta iteración?</li>
+<li><b>¿Qué métricas se utilizarán para evaluar el éxito de esta iteración?</b></li>
 -Establecer KPIs claros y medibles.
-<li>¿Qué stakeholders están involucrados y cuál es su papel en la definición de objetivos?</li>
+<li><b>¿Qué stakeholders están involucrados y cuál es su papel en la definición de objetivos?</b></li>
 -Identificar todas las partes interesadas y su influencia en los objetivos.
 <br>
 <h3>2ª Fase: Selección de los Casos de Uso Arquitecturalmente Importantes</h3>
-<li>¿Qué casos de uso son críticos para el éxito de la arquitectura?</li>
+<li><b>¿Qué casos de uso son críticos para el éxito de la arquitectura?</b></li>
 -Determinar los casos de uso que tienen un impacto significativo en la arquitectura.
-<li>¿Cómo afectan estos casos de uso a los requisitos no funcionales como rendimiento, seguridad y escalabilidad?</li>
+<li><b>¿Cómo afectan estos casos de uso a los requisitos no funcionales como rendimiento, seguridad y escalabilidad?</b></li>
 -Evaluar el impacto en aspectos no funcionales.
-<li>¿Qué prioridades se deben establecer para estos casos de uso en función de su impacto y complejidad?</li>
+<li><b>¿Qué prioridades se deben establecer para estos casos de uso en función de su impacto y complejidad?</b></li>
 -Clasificar los casos de uso según su importancia y dificultad.
 <br>
 <h3>3ª Fase: Realización de un Esquema del Sistema</h3>
-¿Qué componentes clave deben estar presentes en el esquema del sistema?
-Definir los módulos y capas esenciales.
-¿Cómo se deben diseñar las interacciones entre los componentes para maximizar la eficiencia y la cohesión?
-Especificar las interfaces y protocolos de comunicación.
-¿Qué tecnologías y herramientas se utilizarán y por qué?
-Evaluar y justificar la selección de tecnologías.
-4ª Fase: Identificación de los Principales Riesgos y Definición de Solución
-¿Qué riesgos técnicos, operacionales y de negocio están asociados con la arquitectura?
-Identificar riesgos potenciales en todas las áreas.
-¿Cuáles son las estrategias de mitigación para cada riesgo identificado?
-Definir medidas preventivas y correctivas.
-¿Qué plan de contingencia se implementará en caso de que los riesgos se materialicen?
-Establecer planes de acción y asignar responsabilidades.
-5ª Fase: Creación de Arquitecturas Candidatas
-¿Cuántas arquitecturas candidatas se han desarrollado y cuáles son sus características principales?
-Documentar y comparar múltiples opciones.
-¿Qué criterios se han utilizado para evaluar y seleccionar la arquitectura óptima?
-Definir criterios como costo, rendimiento, escalabilidad y mantenibilidad.
-¿Cuál es la arquitectura seleccionada y qué justificaciones respaldan esta elección?
-Detallar la arquitectura elegida y la razón detrás de la selección.
-6ª Fase: Aspectos de Domain Driven Design
-¿Cómo se han identificado y modelado los dominios y subdominios?
-Aplicar principios de Domain Driven Design para definir dominios y subdominios.
-¿Qué entidades y agregados se han definido y cómo se gestionan sus relaciones?
-Especificar entidades clave, agregados y sus interacciones.
-¿Cómo se han definido y aplicado los límites de contexto y las interfaces entre ellos?
-Detallar los límites de contexto y las estrategias para la integración entre ellos.
+<li><b>¿Qué componentes clave deben estar presentes en el esquema del sistema?</b></li>
+-Definir los módulos y capas esenciales.
+<li><b>¿Cómo se deben diseñar las interacciones entre los componentes para maximizar la eficiencia y la cohesión?</b></li>
+-Especificar las interfaces y protocolos de comunicación.
+<li><b>¿Qué tecnologías y herramientas se utilizarán y por qué?</b></li>
+-Evaluar y justificar la selección de tecnologías.
+<h3>4ª Fase: Identificación de los Principales Riesgos y Definición de Solución</h3>
+<li><b>¿Qué riesgos técnicos, operacionales y de negocio están asociados con la arquitectura?</b></li>
+-Identificar riesgos potenciales en todas las áreas.
+<li><b>¿Cuáles son las estrategias de mitigación para cada riesgo identificado?</b></li>
+-Definir medidas preventivas y correctivas.
+<li><b>¿Qué plan de contingencia se implementará en caso de que los riesgos se materialicen?</b></li>
+-Establecer planes de acción y asignar responsabilidades.
+<h3>5ª Fase: Creación de Arquitecturas Candidatas</h3>
+<li><b>¿Cuántas arquitecturas candidatas se han desarrollado y cuáles son sus características principales?</b></li>
+-Documentar y comparar múltiples opciones.
+<li><b>¿Qué criterios se han utilizado para evaluar y seleccionar la arquitectura óptima?</b></li>
+-Definir criterios como costo, rendimiento, escalabilidad y mantenibilidad.
+<li><b>¿Cuál es la arquitectura seleccionada y qué justificaciones respaldan esta elección?</b></li>
+-Detallar la arquitectura elegida y la razón detrás de la selección.
+<h3>6ª Fase: Aspectos de Domain Driven Design</h3>
+<li><b>¿Cómo se han identificado y modelado los dominios y subdominios?</b></li>
+-Aplicar principios de Domain Driven Design para definir dominios y subdominios.
+<li><b>¿Qué entidades y agregados se han definido y cómo se gestionan sus relaciones?</b></li>
+-Especificar entidades clave, agregados y sus interacciones.
+<li><b>¿Cómo se han definido y aplicado los límites de contexto y las interfaces entre ellos?</b></li>
+-Detallar los límites de contexto y las estrategias para la integración entre ellos.
 
 <hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 

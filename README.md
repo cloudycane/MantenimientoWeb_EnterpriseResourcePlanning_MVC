@@ -132,6 +132,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
   <td>✅</td>
  </tr>
 </table>
+<li>En esta face he hecho un plan de requisito o una serie de decisiones sobre los puntos clave. Por ejemplo en el cacheo de datos, he tomado decisiones qué tecnologías iba a utilizar.</li>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>

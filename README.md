@@ -85,6 +85,53 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 </table>
 
 <h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>
+<table>
+ <li>Requisitos no funcionales o de calidad importantes para mitigar los riesgos y definir la solución: </li>
+ <tr>
+  <td>La Autenticación y La Autorización</td>
+  <td>🚧In Progress/Future Work</td>
+ </tr>
+ <tr>
+  <td>Cacheo de datos y Mantenimiento del estado</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Gestión de la configuración</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Acoplamiento y la cohesión</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Acceso a datos</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Gestión de excepciones</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Registro de eventos</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Instrumentalización de sistema</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Experiencia de Usuario</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Validación de información</td>
+  <td>✅</td>
+ </tr>
+ <tr>
+  <td>Flujo de los procesos de negocio del sistema</td>
+  <td>✅</td>
+ </tr>
+</table>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>

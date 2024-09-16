@@ -145,50 +145,53 @@ Una vez realizados los pasos anteriores, tendremos una arquitectura candidata qu
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>
 
-Plan de Cuestionario para el Diseño de la Arquitectura de una Aplicación Web
-1ª Fase: Identificación de los Objetivos de la Iteración
-¿Cuáles son los objetivos principales de esta iteración?
-Definir objetivos funcionales y no funcionales.
-¿Cómo se alinean estos objetivos con los requisitos del negocio?
-¿Qué problemas específicos se buscan resolver en esta iteración?
-Identificar y documentar problemas actuales o áreas de mejora.
-¿Qué resultados se esperan al finalizar esta fase?
-Establecer métricas de éxito y criterios de aceptación.
-2ª Fase: Seleccionar los Casos de Uso Arquitecturalmente Importantes
-¿Cuáles son los casos de uso clave para esta aplicación?
-Definir los casos de uso que afectan directamente a la arquitectura.
-¿Qué aspectos de estos casos de uso impactan más en la arquitectura del sistema?
-Evaluar los requisitos técnicos y funcionales.
-¿Cómo se priorizan estos casos de uso en función de su importancia para el negocio?
-Determinar la prioridad en función del impacto y la complejidad.
-3ª Fase: Realizar un Esquema del Sistema
-¿Qué componentes principales deben incluirse en el esquema del sistema?
-Identificar módulos, capas y servicios necesarios.
-¿Cómo se interconectan estos componentes?
-Definir las interfaces y protocolos de comunicación.
-¿Qué tecnologías y herramientas se utilizarán en cada componente?
-Evaluar las opciones tecnológicas y sus ventajas/desventajas.
+<h1>Plan de Cuestionario Profesional para el Diseño de la Arquitectura de una Aplicación Web</h1>
+<h3>1ª Fase: Identificación de los Objetivos de la Iteración</h3>
+<li>¿Cuáles son los objetivos estratégicos y tácticos de la iteración?</li>
+-Definir claramente los objetivos a nivel de negocio y técnicos.
+<li>¿Cómo se alinea esta iteración con la visión y misión del proyecto?</li>
+-Asegurarse de que los objetivos están en consonancia con la visión general del proyecto.
+<li>¿Qué métricas se utilizarán para evaluar el éxito de esta iteración?</li>
+-Establecer KPIs claros y medibles.
+<li>¿Qué stakeholders están involucrados y cuál es su papel en la definición de objetivos?</li>
+-Identificar todas las partes interesadas y su influencia en los objetivos.
+<br>
+<h3>2ª Fase: Selección de los Casos de Uso Arquitecturalmente Importantes</h3>
+<li>¿Qué casos de uso son críticos para el éxito de la arquitectura?</li>
+-Determinar los casos de uso que tienen un impacto significativo en la arquitectura.
+<li>¿Cómo afectan estos casos de uso a los requisitos no funcionales como rendimiento, seguridad y escalabilidad?</li>
+-Evaluar el impacto en aspectos no funcionales.
+<li>¿Qué prioridades se deben establecer para estos casos de uso en función de su impacto y complejidad?</li>
+-Clasificar los casos de uso según su importancia y dificultad.
+<br>
+<h3>3ª Fase: Realización de un Esquema del Sistema</h3>
+¿Qué componentes clave deben estar presentes en el esquema del sistema?
+Definir los módulos y capas esenciales.
+¿Cómo se deben diseñar las interacciones entre los componentes para maximizar la eficiencia y la cohesión?
+Especificar las interfaces y protocolos de comunicación.
+¿Qué tecnologías y herramientas se utilizarán y por qué?
+Evaluar y justificar la selección de tecnologías.
 4ª Fase: Identificación de los Principales Riesgos y Definición de Solución
-¿Cuáles son los riesgos potenciales asociados con la arquitectura propuesta?
-Identificar riesgos técnicos, de rendimiento, y de seguridad.
-¿Cómo se pueden mitigar estos riesgos?
-Definir estrategias de mitigación y contingencia.
-¿Qué plan de acción se establecerá para gestionar los riesgos?
-Crear un plan de respuesta y asignar responsabilidades.
+¿Qué riesgos técnicos, operacionales y de negocio están asociados con la arquitectura?
+Identificar riesgos potenciales en todas las áreas.
+¿Cuáles son las estrategias de mitigación para cada riesgo identificado?
+Definir medidas preventivas y correctivas.
+¿Qué plan de contingencia se implementará en caso de que los riesgos se materialicen?
+Establecer planes de acción y asignar responsabilidades.
 5ª Fase: Creación de Arquitecturas Candidatas
-¿Cuántas arquitecturas candidatas se han desarrollado?
-Crear y evaluar varias opciones de arquitectura.
-¿Qué criterios se utilizan para comparar estas arquitecturas?
-Definir criterios de evaluación como costo, escalabilidad, mantenibilidad, etc.
-¿Cuál es la arquitectura más adecuada y por qué?
-Documentar la elección final y justificarla en base a los criterios establecidos.
+¿Cuántas arquitecturas candidatas se han desarrollado y cuáles son sus características principales?
+Documentar y comparar múltiples opciones.
+¿Qué criterios se han utilizado para evaluar y seleccionar la arquitectura óptima?
+Definir criterios como costo, rendimiento, escalabilidad y mantenibilidad.
+¿Cuál es la arquitectura seleccionada y qué justificaciones respaldan esta elección?
+Detallar la arquitectura elegida y la razón detrás de la selección.
 6ª Fase: Aspectos de Domain Driven Design
-¿Cómo se identifican y modelan los dominios y subdominios relevantes?
-Analizar el negocio y definir el modelo de dominio.
-¿Qué entidades y agregados se deben considerar en el diseño?
-Identificar entidades clave y sus relaciones.
-¿Cómo se implementarán los límites de contexto y las interfaces entre ellos?
-Definir los límites de contexto y las interacciones entre diferentes áreas del dominio.
+¿Cómo se han identificado y modelado los dominios y subdominios?
+Aplicar principios de Domain Driven Design para definir dominios y subdominios.
+¿Qué entidades y agregados se han definido y cómo se gestionan sus relaciones?
+Especificar entidades clave, agregados y sus interacciones.
+¿Cómo se han definido y aplicado los límites de contexto y las interfaces entre ellos?
+Detallar los límites de contexto y las estrategias para la integración entre ellos.
 
 <hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 

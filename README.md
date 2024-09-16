@@ -50,6 +50,10 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <li>En mi proyecto he utilizado Use Cases o Casos de Usos en  forma de GetQueries o queries para hacer una lectura o consultas.</li>
 <li>Podría integrar más casos de usos en el proyecto como la Gestión de Usuarios (Autenticación y Autorización), Gestión de Pedidos, Generación de Reportes, Notificaciones y Alertas, Gestión de Roles y Permisos, Carrito de Compras, etc. pero estos elementos son para un proyecto de gran escalabilidad y complejidad.</li>
 <h2>3ª Fase: Realizar un esquema del sistema</h2>
+En esta fase he decidido qué tipo de aplicación iba a desarrollar. Y esto dependerá de las restricciones de despliegue, de conectividad, de lo compleja que sea la interfaz del usuario y de las restricciones de despliegue, de conectividad, flexibilidad y tecnologías. 
+
+Por lo tanto, he decidido usar "aplicación web" porque llega a todo tipo de usuarios, tiene una interfaz de usuario estándar y multiplataforma. Además es fácil de desplegar y de actualizar. 
+
 <h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>

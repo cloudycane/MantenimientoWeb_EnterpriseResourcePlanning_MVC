@@ -145,6 +145,52 @@ Una vez realizados los pasos anteriores, tendremos una arquitectura candidata qu
 <h2>6ª Fase: Aspectos de Domain Driven Design</h2>
 <hr>
 
+Plan de Cuestionario para el Diseño de la Arquitectura de una Aplicación Web
+1ª Fase: Identificación de los Objetivos de la Iteración
+¿Cuáles son los objetivos principales de esta iteración?
+Definir objetivos funcionales y no funcionales.
+¿Cómo se alinean estos objetivos con los requisitos del negocio?
+¿Qué problemas específicos se buscan resolver en esta iteración?
+Identificar y documentar problemas actuales o áreas de mejora.
+¿Qué resultados se esperan al finalizar esta fase?
+Establecer métricas de éxito y criterios de aceptación.
+2ª Fase: Seleccionar los Casos de Uso Arquitecturalmente Importantes
+¿Cuáles son los casos de uso clave para esta aplicación?
+Definir los casos de uso que afectan directamente a la arquitectura.
+¿Qué aspectos de estos casos de uso impactan más en la arquitectura del sistema?
+Evaluar los requisitos técnicos y funcionales.
+¿Cómo se priorizan estos casos de uso en función de su importancia para el negocio?
+Determinar la prioridad en función del impacto y la complejidad.
+3ª Fase: Realizar un Esquema del Sistema
+¿Qué componentes principales deben incluirse en el esquema del sistema?
+Identificar módulos, capas y servicios necesarios.
+¿Cómo se interconectan estos componentes?
+Definir las interfaces y protocolos de comunicación.
+¿Qué tecnologías y herramientas se utilizarán en cada componente?
+Evaluar las opciones tecnológicas y sus ventajas/desventajas.
+4ª Fase: Identificación de los Principales Riesgos y Definición de Solución
+¿Cuáles son los riesgos potenciales asociados con la arquitectura propuesta?
+Identificar riesgos técnicos, de rendimiento, y de seguridad.
+¿Cómo se pueden mitigar estos riesgos?
+Definir estrategias de mitigación y contingencia.
+¿Qué plan de acción se establecerá para gestionar los riesgos?
+Crear un plan de respuesta y asignar responsabilidades.
+5ª Fase: Creación de Arquitecturas Candidatas
+¿Cuántas arquitecturas candidatas se han desarrollado?
+Crear y evaluar varias opciones de arquitectura.
+¿Qué criterios se utilizan para comparar estas arquitecturas?
+Definir criterios de evaluación como costo, escalabilidad, mantenibilidad, etc.
+¿Cuál es la arquitectura más adecuada y por qué?
+Documentar la elección final y justificarla en base a los criterios establecidos.
+6ª Fase: Aspectos de Domain Driven Design
+¿Cómo se identifican y modelan los dominios y subdominios relevantes?
+Analizar el negocio y definir el modelo de dominio.
+¿Qué entidades y agregados se deben considerar en el diseño?
+Identificar entidades clave y sus relaciones.
+¿Cómo se implementarán los límites de contexto y las interfaces entre ellos?
+Definir los límites de contexto y las interacciones entre diferentes áreas del dominio.
+
+<hr>
 <h1>Estructura/Arquitectura: Capa de Dominio o Core</h1> 
 <p>La capa más interno del proyecto. Aquí almacenemos las entidades que vamos a usar en el proyecto.</p>
 <br>

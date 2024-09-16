@@ -48,7 +48,7 @@ Enlace para la página: http://mantenimientoweb.somee.com/
 <li><u>Establecer la infraestructura de la base de datos:</u> configuration de connection strings para conectar con SQL Server y crear las primeras tablas necesarias como Empresas, Productos, etc. ya que el sistema necesita una base de datos para poder almacenar y gestionar la información desde las primeras iteraciones. Si el Entity Framework se trata de Table-First, las tablas se pueden crear dentro de SQL Management Studio y se trata de Code-First se hacen migraciones dentro del ApplicationDbContext/Consola de Nuget Package Manager</li>
 <h2>2ª Fase: Seleccionar los casos de uso (Use Cases) arquitecturalmente importantes</h2>
 <li>En mi proyecto he utilizado Use Cases o Casos de Usos en  forma de GetQueries o queries para hacer una lectura o consultas.</li>
-<li>Podría integrar más Casos de Usos en el proyecto como la gestión de usuarios (Autenticación y Autorización), Gestión de Pedidos, Generación de Reportes, Notificaciones y Alertas, Gestión de Roles y Permisos, Carrito de Compras, etc. pero estos elementos es para un proyecto de gran escalabilidad y complejidad.</li>
+<li>Podría integrar más casos de usos en el proyecto como la Gestión de Usuarios (Autenticación y Autorización), Gestión de Pedidos, Generación de Reportes, Notificaciones y Alertas, Gestión de Roles y Permisos, Carrito de Compras, etc. pero estos elementos son para un proyecto de gran escalabilidad y complejidad.</li>
 <h2>3ª Fase: Realizar un esquema del sistema</h2>
 <h2>4ª Fase: Identificación de los principales riesgos y definición de solución</h2>
 <h2>5ª Fase: Creación de arquitecturas candidatas</h2>
